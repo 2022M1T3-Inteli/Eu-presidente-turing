@@ -1,14 +1,22 @@
-# Inteli - Instituto de Tecnologia e Liderança 
+# Inteli - Instituto de Tecnologia e Liderança
 
 <p align="center">
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Eu, Presidente
 
-## Nome do Grupo
+## Grupo Turing
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+### Integrantes:
+
+- Arthur Alberto Cardoso Reis
+- Beatriz Hirasaki Leite
+- Israel Nunes Lopes Carvalho
+- Luiz Carlos da Silva Júnior
+- Marcos Aurélio Florëncio da Silva
+- Raissa Da Silva Sabino
+- Stefano Tosi Butori
 
 ## Descrição
 
@@ -16,11 +24,11 @@
 <br><br>
 Meu projeto é um exemplo de como utilizar o github.
 <br><br>
+
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
-
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
@@ -34,15 +42,15 @@ May the force be with you!
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|GDD.docx ou Documentação.docx<br>
+&emsp;|-->antigos<br>
+&emsp;|GDD.docx<br>
 |-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
+&emsp;|-->windows<br>
+&emsp;|-->android<br>
+&emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
-|readme.md<br>
+|README.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
 
@@ -66,7 +74,7 @@ Faça o Download do JOGO.apk no seu celular.
 Execute o APK e siga as instruções de seu telefone.
 
 ```sh
-Coloque código do prompt de comnando se for necessário
+Coloque código do prompt de comando se for necessário
 ```
 
 <b>Windows:</b>
@@ -111,22 +119,22 @@ Coloque código do prompt de comnando se for necessário
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+- 0.2.1 - 25/01/2022
+  - MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
+- 0.2.0 - 15/01/2022
+  - MUDANÇA: Remove `setDefaultXYZ()`
+  - ADD: Adiciona `init()`
+- 0.1.1 - 11/01/2022
+  - CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
+- 0.1.0 - 10/01/2022
+  - O primeiro lançamento adequado
+  - MUDANÇA: Renomeia `foo()` para `bar()`
+- 0.0.1 - 14/02/2022
+  - Projeto iniciado
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M1T3/Projeto2">Eu, Presidente</a> by <span property="cc:attributionName">INTELI, Arthur Alberto Cardoso Reis, Beatriz Hirasaki Leite, Israel Nunes Lopes Carvalho, Luiz Carlos da Silva Júnior, Marcos Aurélio Florêncio da Silva, Raissa da Silva Sabino, Stefano Tosi Butori</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
 
 ## 🎓 Referências
 
