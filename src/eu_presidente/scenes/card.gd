@@ -6,8 +6,14 @@ export var image1: StreamTexture
 export var image2: StreamTexture
 export var image3: StreamTexture
 
+export var text1: String
+export var text2: String
+export var text3: String
+
 onready var images_set = [image1, image2, image3]
 onready var sets = [images_set]
+
+onready var texts_set = [text1, text2, text3]
 
 var image_idx = 0
 
@@ -67,11 +73,16 @@ func _input(event):
 				first_press_pos = null
 	
 func change_image(idx):
+	change_text(idx)
 	for child in $MarginContainer/HBoxContainer.get_children():
 		child.value = 0
 	$ImageContainer/Image.texture = images[idx]
 	$MarginContainer/HBoxContainer.get_child(idx).value = 100
 
+
+func change_text(idx):
+	$Button/MarginContainer/HBoxContainer/VBoxContainer/Label.text = texts_set[idx]
+	
 func _on_PreviousBtn_pressed():
 	if image_idx == 0: image_idx = 0
 	else: image_idx -= 1

@@ -1,8 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://visuals/medias/politico corrupto.png" type="Texture" id=1]
 [ext_resource path="res://visuals/medias/brazil.jpg" type="Texture" id=2]
-[ext_resource path="res://visuals/medias/politico.png" type="Texture" id=3]
 [ext_resource path="res://visuals/icons/information.png" type="Texture" id=4]
 [ext_resource path="res://visuals/fonts/montserrat/Montserrat-Regular.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://scenes/card.gd" type="Script" id=7]
@@ -74,9 +72,9 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-image1 = ExtResource( 2 )
-image2 = ExtResource( 3 )
-image3 = ExtResource( 1 )
+text1 = "Parabéns! Você é o novo presidente do Brasil e terá que tomar uma série de decisões para garantir o sucesso de seu mandato"
+text2 = "Caso não seja bem sucedido, poderá sofrer consequências negativas ou até mesmo o impeachment"
+text3 = "E aí, você está pronto?"
 
 [node name="ImageContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -178,14 +176,18 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 20.0
+margin_right = -50.0
+margin_bottom = -20.0
 mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Button/MarginContainer"]
-margin_right = 1080.0
-margin_bottom = 380.0
+margin_right = 980.0
+margin_bottom = 340.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -193,47 +195,36 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Button/MarginContainer/HBoxContainer"]
-margin_right = 850.0
-margin_bottom = 380.0
+margin_right = 980.0
+margin_bottom = 340.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="Label" type="Label" parent="Button/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 16.0
-margin_right = 850.0
-margin_bottom = 363.0
+margin_right = 980.0
+margin_bottom = 277.0
 mouse_filter = 1
 custom_fonts/font = SubResource( 7 )
-text = "abcabcabcabcabcafdafafdfkaf
-lahsfhaifalfnalfaofisjfkasfhahah
-alhalhfaifhafihaofafonidofiaao
-hafhaifhaisfafjas0fa0fjafa0alads
-ahskhfaohaoshosifiasfalslfjaslfh"
-valign = 1
+text = "Parabéns! Você é o novo presidente do Brasil e terá que tomar uma série de decisões para garantir o sucesso do seu mandato"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="MarginContainer" type="MarginContainer" parent="Button/MarginContainer/HBoxContainer"]
-margin_left = 854.0
-margin_right = 1080.0
-margin_bottom = 380.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/margin_right = 0
-custom_constants/margin_top = 85
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 85
-
-[node name="TextureRect" type="TextureRect" parent="Button/MarginContainer/HBoxContainer/MarginContainer"]
-margin_left = 86.0
-margin_top = 85.0
-margin_right = 226.0
-margin_bottom = 295.0
+[node name="TextureRect" type="TextureRect" parent="Button/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_left = 840.0
+margin_top = 281.0
+margin_right = 980.0
+margin_bottom = 340.0
 rect_min_size = Vector2( 140, 0 )
 size_flags_horizontal = 8
 size_flags_vertical = 3
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="gui_input" from="." to="." method="_on_Card_gui_input"]
