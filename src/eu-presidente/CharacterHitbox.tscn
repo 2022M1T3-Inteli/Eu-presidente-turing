@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Character.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 171.5, 266.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 182.75, 264.75 )
+
+[node name="CharacterHitbox" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="LeftSwipeHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftSwipeHitbox"]
+position = Vector2( 172.5, 266.5 )
+shape = SubResource( 1 )
+
+[node name="RightSwipeHitbox" type="Area2D" parent="."]
+position = Vector2( 544, 536 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightSwipeHitbox"]
+position = Vector2( -9.25, -269.75 )
+shape = SubResource( 2 )
+
+[connection signal="mouse_entered" from="LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_mouse_entered"]
+[connection signal="mouse_exited" from="LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_mouse_exited"]
+[connection signal="mouse_entered" from="RightSwipeHitbox" to="." method="_on_RightSwipeHitbox_mouse_entered"]
+[connection signal="mouse_exited" from="RightSwipeHitbox" to="." method="_on_RightSwipeHitbox_mouse_exited"]
