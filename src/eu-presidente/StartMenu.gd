@@ -10,5 +10,5 @@ signal start_game
 
 # Emitir sinal para o "Main" quando o player quiser iniciar um novo jogo
 func _on_StartGame_pressed():
-	self.hide()
+	self.hide() # Esconde o menu inicial
 	emit_signal("start_game") 

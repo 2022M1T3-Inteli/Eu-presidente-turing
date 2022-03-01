@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Score.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/presidente.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Medium.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-BoldItalic.ttf" type="DynamicFontData" id=5]
@@ -32,7 +32,7 @@ size = 24
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 22
+size = 24
 font_data = ExtResource( 7 )
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -110,9 +110,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -360.0
 margin_top = -164.0
-margin_right = 360.0
+margin_right = 386.0
 margin_bottom = -62.0
 mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 custom_constants/separation = 100
 alignment = 1
 __meta__ = {
@@ -120,25 +122,28 @@ __meta__ = {
 }
 
 [node name="DecisionA" type="Label" parent="DecisionTextContainer"]
-margin_left = 24.0
-margin_top = 36.0
-margin_right = 284.0
-margin_bottom = 66.0
+margin_left = 29.0
+margin_top = 34.0
+margin_right = 281.0
+margin_bottom = 67.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "AAAAAAAAAAAAA......."
+text = "AAAAAAAAAAAAAAA..."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DecisionB" type="Label" parent="DecisionTextContainer"]
-margin_left = 384.0
-margin_top = 36.0
-margin_right = 696.0
-margin_bottom = 66.0
+margin_left = 381.0
+margin_top = 34.0
+margin_right = 717.0
+margin_bottom = 67.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "BBBBBBBBBBBBBBBBBBBB...."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CharacterContainer" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -157,7 +162,7 @@ __meta__ = {
 
 [node name="Portrait" type="Sprite" parent="CharacterContainer"]
 position = Vector2( 350, 344 )
-scale = Vector2( 6.39063, 6.39063 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
 [node name="Hitboxes" type="Node2D" parent="CharacterContainer"]
@@ -166,13 +171,13 @@ position = Vector2( 48, -244 )
 [node name="LeftSwipeHitbox" type="Area2D" parent="CharacterContainer/Hitboxes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterContainer/Hitboxes/LeftSwipeHitbox"]
-position = Vector2( -68, 534 )
+position = Vector2( -40, 540 )
 shape = SubResource( 8 )
 
 [node name="RightSwipeHitbox" type="Area2D" parent="CharacterContainer/Hitboxes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterContainer/Hitboxes/RightSwipeHitbox"]
-position = Vector2( 664, 534 )
+position = Vector2( 640, 540 )
 shape = SubResource( 8 )
 
 [node name="BottomBar" type="MarginContainer" parent="."]
@@ -235,7 +240,9 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 8 )
 
+[connection signal="input_event" from="CharacterContainer/Hitboxes/LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_input_event"]
 [connection signal="mouse_entered" from="CharacterContainer/Hitboxes/LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_mouse_entered"]
 [connection signal="mouse_exited" from="CharacterContainer/Hitboxes/LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_mouse_exited"]
+[connection signal="input_event" from="CharacterContainer/Hitboxes/RightSwipeHitbox" to="." method="_on_RightSwipeHitbox_input_event"]
 [connection signal="mouse_entered" from="CharacterContainer/Hitboxes/RightSwipeHitbox" to="." method="_on_RightSwipeHitbox_mouse_entered"]
 [connection signal="mouse_exited" from="CharacterContainer/Hitboxes/RightSwipeHitbox" to="." method="_on_RightSwipeHitbox_mouse_exited"]

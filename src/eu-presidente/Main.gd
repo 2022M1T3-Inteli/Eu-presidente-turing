@@ -12,5 +12,5 @@ extends Control
 
 # Iniciar jogo, deve mostrar o Card
 func new_game():
+	$Card.start_card()
 	$Card.show()
-	pass # Replace with function body.
