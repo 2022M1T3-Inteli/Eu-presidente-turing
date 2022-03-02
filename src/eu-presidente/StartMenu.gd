@@ -12,3 +12,7 @@ signal start_game
 func _on_StartGame_pressed():
 	self.hide() # Esconde o menu inicial
 	emit_signal("start_game") 
+
+
+func _on_Minigame_pressed():
+	get_tree().change_scene("res://minigame/World.tscn")

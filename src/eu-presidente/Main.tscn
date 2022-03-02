@@ -23,9 +23,9 @@ __meta__ = {
 }
 
 [node name="Card" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="StartMenu" parent="." instance=ExtResource( 1 )]
-visible = false
 mouse_filter = 2
 
 [connection signal="start_game" from="StartMenu" to="." method="new_game"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://minigame/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigame/Water.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+position = Vector2( 1, 1 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 312, 499 )
+
+[node name="Water" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 313, 297 )
