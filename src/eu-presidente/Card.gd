@@ -9,6 +9,9 @@ onready var decisionA: Label = $DecisionTextContainer/DecisionA # Texto da decis
 onready var decisionB: Label = $DecisionTextContainer/DecisionB # Texto da decisao B
 onready var score: Control = $ScoreContainer/Score # Indicadores de score
 onready var month: Label = $BottomBar/HBoxContainer/MarginContainer/Date # Mês do jogo
+onready var popup: PopupPanel = $InfoPanel # Painel de informacoes
+onready var info: Label = $InfoPanel/Info # Texto de informacoes
+onready var infoBtn: TextureButton = $BottomBar/HBoxContainer/MarginContainer2/InfoButton # Botao de informacoes
 
 var functionA: FuncRef = funcref(self, "card2") # Funcao da decisao A
 var functionB: FuncRef = funcref(self, "card3") # Funcao da decisao B
@@ -17,7 +20,7 @@ var functionB: FuncRef = funcref(self, "card3") # Funcao da decisao B
 var swipe_left: bool = false # Se verdadeiro, o personagem do card deve rotacionar para a esquerda
 var swipe_right: bool = false # Se verdadeiro o personagem do card deve rotacionar para a direita
 # Propriedades 
-var portrait_original_x: int = 0 # Valor da posicao x quando o personagem do card é renderizado
+var portrait_original_x: float = 0 # Valor da posicao x quando o personagem do card é renderizado
 var portrait_angular_velocity: float = PI/3.33 # Velocidade angular de rotacao do personagem do card
 
 
@@ -143,6 +146,9 @@ func start_card():
 	#score.update_political(1) # Pontos a serem adicionados/removidos do indiciador politico
 	# MES DO JOGO
 	month.text = "Janeiro"
+	# INFORMACOES ADICIONAIS
+	# info.text = ""
+	infoBtn.visible = true
 	
 func confident():
 	# TEXTOS E IMAGENS
@@ -154,6 +160,7 @@ func confident():
 	# SEGUNDA DECISAO
 	decisionB.text = "Temos muito trabalho\npela frente..." # Texto da segunda decisao
 	update_functionB("budget") # Card que sera selecionado com a segunda decisao
+	infoBtn.visible = false
 
 func unsure():
 	# TEXTOS E IMAGENS
@@ -187,7 +194,9 @@ func health():
 func education():
 	update_story("Ok, vamos priorizar a [b]educação[/b] então!")
 	decisionA.text = "..." 
-	decisionB.text = "Fevereiro" 
-	score.update_social(1)
-	score.update_economic(-1)
+	decisionB.text = "..." 
+	score.update_political(-1)
+	score.update_economic(1)
 
+func _on_InfoButton_pressed():
+	popup.visible = !popup.visible
