@@ -15,4 +15,5 @@ func _on_StartGame_pressed():
 
 
 func _on_Minigame_pressed():
-	get_tree().change_scene("res://minigame/World.tscn")
+	if get_tree().change_scene("res://minigame/World.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the minigame scene")

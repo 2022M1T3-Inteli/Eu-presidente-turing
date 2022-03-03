@@ -6,6 +6,16 @@
 [node name="World" type="Node2D"]
 position = Vector2( 1, 1 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 719.0
+margin_bottom = 1079.0
+color = Color( 0.0392157, 0.4, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
