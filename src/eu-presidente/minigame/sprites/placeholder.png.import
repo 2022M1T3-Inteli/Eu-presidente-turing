@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-5d20b7646a9bf5e3837cd733c3d7b058.stex"
+path="res://.import/placeholder.png-f38c228ef332cd5b138ef8caf51db693.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigame/sprites/player.png"
-dest_files=[ "res://.import/player.png-5d20b7646a9bf5e3837cd733c3d7b058.stex" ]
+source_file="res://minigame/sprites/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-f38c228ef332cd5b138ef8caf51db693.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-5d20b7646a9bf5e3837cd733c3d7b058.stex"
+path="res://.import/field.png-e1cdf319c393a6f403b050c49c5a21f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigame/sprites/player.png"
-dest_files=[ "res://.import/player.png-5d20b7646a9bf5e3837cd733c3d7b058.stex" ]
+source_file="res://minigame/terrain/field.png"
+dest_files=[ "res://.import/field.png-e1cdf319c393a6f403b050c49c5a21f2.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
