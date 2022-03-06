@@ -54,7 +54,7 @@ func _process(delta):
 		portrait.position.x = portrait_original_x 
 		portrait.rotation_degrees = 0
 	# Para evitar que a imagem rotacione alem de 45 graus ou saia da tela,
-	# limitamos aqui os valores possiveis para essas propriedade		
+	# limitamos aqui os valores possiveis para essas propriedades		
 	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -45, 45)
 	portrait.position.x = clamp(portrait.position.x, 250, 450)
 
