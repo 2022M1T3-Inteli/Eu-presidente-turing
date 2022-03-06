@@ -13,15 +13,15 @@ onready var popup: PopupPanel = $InfoPanel # Painel de informacoes
 onready var info: Label = $InfoPanel/Info # Texto de informacoes
 onready var infoBtn: TextureButton = $BottomBar/HBoxContainer/MarginContainer2/InfoButton # Botao de informacoes
 
-var functionA: FuncRef = funcref(self, "card2") # Funcao da decisao A
-var functionB: FuncRef = funcref(self, "card3") # Funcao da decisao B
+var functionA: FuncRef = funcref(self, "start_card") # Funcao da decisao A
+var functionB: FuncRef = funcref(self, "start_card") # Funcao da decisao B
 
 # Flags 
 var swipe_left: bool = false # Se verdadeiro, o personagem do card deve rotacionar para a esquerda
 var swipe_right: bool = false # Se verdadeiro o personagem do card deve rotacionar para a direita
 # Propriedades 
-var portrait_original_x: float = 0 # Valor da posicao x quando o personagem do card é renderizado
-var portrait_angular_velocity: float = PI/3.33 # Velocidade angular de rotacao do personagem do card
+var PORTRAIT_ORIGINAL_X: float = 0 # Valor da posicao x quando o personagem do card é renderizado
+var PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao do personagem do card
 
 
 # FUNCOES
@@ -31,7 +31,7 @@ var portrait_angular_velocity: float = PI/3.33 # Velocidade angular de rotacao d
 
 # Chamada quando o node entrar na cena pela primeira vez.
 func _ready():
-	portrait_original_x = portrait.position.x
+	PORTRAIT_ORIGINAL_X = portrait.position.x
 	start_card()
 
 # Chamada toda vez que o usuário der um input. 'event' é o evento em si.
@@ -44,14 +44,14 @@ func _process(delta):
 	# a esquerda ou direita, quando o jogador mover o mouse naquela direcao
 	if swipe_left:
 		# portrait.rotate(-PI/200) <- velocidade que testei
-		portrait.rotate(portrait_angular_velocity * delta * -1)
+		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta * -1)
 		portrait.position.x -= 2
 	elif swipe_right: 
 		# portrait.rotate(PI/200) <- velocidade que testei
-		portrait.rotate(portrait_angular_velocity * delta)
+		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta)
 		portrait.position.x += 2
 	else:
-		portrait.position.x = portrait_original_x 
+		portrait.position.x = PORTRAIT_ORIGINAL_X 
 		portrait.rotation_degrees = 0
 	# Para evitar que a imagem rotacione alem de 45 graus ou saia da tela,
 	# limitamos aqui os valores possiveis para essas propriedades		
