@@ -17,11 +17,17 @@ var functionA: FuncRef = funcref(self, "start_card") # Funcao da decisao A
 var functionB: FuncRef = funcref(self, "start_card") # Funcao da decisao B
 
 # Flags 
-var swipe_left: bool = false # Se verdadeiro, o personagem do card deve rotacionar para a esquerda
-var swipe_right: bool = false # Se verdadeiro o personagem do card deve rotacionar para a direita
+var hover_left: bool = false # Se verdadeiro, o personagem do card deve rotacionar para a esquerda
+var hover_right: bool = false # Se verdadeiro o personagem do card deve rotacionar para a direita
+var swiped_left: bool = false # Se verdadeiro, o card deve sair de cena pela esquerda
+var swiped_right: bool = false # Se verdadeiro, o card deve sair de cena pela direita
+
 # Propriedades 
-var PORTRAIT_ORIGINAL_X: float = 0 # Valor da posicao x quando o personagem do card é renderizado
-var PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao do personagem do card
+onready var PORTRAIT_ORIGINAL_X: float = portrait.position.x # Valor da posicao x quando o card é renderizado
+var PORTRAIT_SPEED_X: float = 220 # Rapidez com que o card se move horizontalmente
+var SPEED_SWIPE_MODIFIER: float = 5 # Coeficiente da rapidez quando o card sai de cena
+var PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao do card
+var CARD_INTERVAL: float = 0.6 # Intervalo entre um card e outro
 
 
 # FUNCOES
@@ -31,57 +37,61 @@ var PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao d
 
 # Chamada quando o node entrar na cena pela primeira vez.
 func _ready():
-	PORTRAIT_ORIGINAL_X = portrait.position.x
 	start_card()
-
-# Chamada toda vez que o usuário der um input. 'event' é o evento em si.
-func _input(_event):
-	pass
 
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
+	# Essas condicoes servem para determinar se a imagem deve ser arrastada para fora da tela
+	if swiped_left:
+		portrait.position.x -= PORTRAIT_SPEED_X * delta * SPEED_SWIPE_MODIFIER
+		return
+	if swiped_right:
+		portrait.position.x += PORTRAIT_SPEED_X * delta * SPEED_SWIPE_MODIFIER
+		return
+	
 	# Essas condicoes servem para determinar se a imagem deve se mexer para
 	# a esquerda ou direita, quando o jogador mover o mouse naquela direcao
-	if swipe_left:
+	if hover_left:
 		# portrait.rotate(-PI/200) <- velocidade que testei
 		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta * -1)
-		portrait.position.x -= 2
-	elif swipe_right: 
+		portrait.position.x -= PORTRAIT_SPEED_X * delta
+	elif hover_right: 
 		# portrait.rotate(PI/200) <- velocidade que testei
 		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta)
-		portrait.position.x += 2
+		portrait.position.x += PORTRAIT_SPEED_X * delta
 	else:
 		portrait.position.x = PORTRAIT_ORIGINAL_X 
 		portrait.rotation_degrees = 0
 	# Para evitar que a imagem rotacione alem de 45 graus ou saia da tela,
 	# limitamos aqui os valores possiveis para essas propriedades		
-	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -45, 45)
+	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -25, 25)
 	portrait.position.x = clamp(portrait.position.x, 250, 450)
+	portrait.position.y = clamp(portrait.position.y, 320, 350)
 
 # SWIPE ANIMATIONS
 # Esse conjunto de funcoes serve para determinar se o jogador esta com o mouse
 # a direita ou esquerda da imagem do personagem, para rodar as animacoes necessarias
 func _on_LeftSwipeHitbox_mouse_entered():
-	swipe_left = true
+	hover_left = true
 	# Espera para evitar que o evento "right mouse exited" seja executado antes
 	yield(get_tree().create_timer(0.01), "timeout")
 	decisionA.add_color_override("font_color", Color("333D29"))
 	decisionB.add_color_override("font_color", Color8(55,55,55,40))
 
 func _on_LeftSwipeHitbox_mouse_exited():
-	swipe_left = false
+	hover_left = false
 	decisionA.add_color_override("font_color", Color("#000000"))
 	decisionB.add_color_override("font_color", Color("#000000"))
 
 func _on_RightSwipeHitbox_mouse_entered():
-	swipe_right = true
+	hover_right = true
 	# Espera para evitar que o evento "left mouse exited" seja executado antes
 	yield(get_tree().create_timer(0.01), "timeout")
 	decisionA.add_color_override("font_color", Color8(55,55,55,40))
 	decisionB.add_color_override("font_color", Color("333D29"))
 
 func _on_RightSwipeHitbox_mouse_exited():
-	swipe_right = false
+	hover_right = false
 	decisionA.add_color_override("font_color", Color("#000000"))
 	decisionB.add_color_override("font_color", Color("#000000"))
 
@@ -91,6 +101,9 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
+			swiped_left = true
+			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
+			swiped_left = false
 			functionA.call_func()
 			
 
@@ -98,6 +111,9 @@ func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
+			swiped_right = true
+			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
+			swiped_right = false
 			functionB.call_func()
 			
 # HELPERS

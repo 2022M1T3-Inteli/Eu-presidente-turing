@@ -114,6 +114,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PortraitBackground" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -196.0
+margin_right = 184.0
+margin_bottom = 380.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.662745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CharacterContainer" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -130,7 +145,7 @@ __meta__ = {
 }
 
 [node name="Portrait" type="Sprite" parent="CharacterContainer"]
-position = Vector2( 350, 344 )
+position = Vector2( 350, 350 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
@@ -264,8 +279,8 @@ anchor_top = 0.146
 anchor_right = 0.996
 anchor_bottom = 0.906
 margin_left = -10.88
-margin_top = -21.68
-margin_right = 10.8799
+margin_top = -8.67999
+margin_right = 10.88
 margin_bottom = 5.51996
 custom_styles/panel = SubResource( 10 )
 __meta__ = {
@@ -279,9 +294,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -348.0
-margin_top = -404.0
+margin_top = -397.5
 margin_right = 348.0
-margin_bottom = 404.0
+margin_bottom = 397.5
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "Essa é a caixa de dicas! Aqui você encontra informações úteis para o jogo..."
