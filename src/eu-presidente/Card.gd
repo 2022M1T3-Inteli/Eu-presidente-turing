@@ -13,8 +13,11 @@ onready var popup: PopupPanel = $InfoPanel # Painel de informacoes
 onready var info: Label = $InfoPanel/Info # Texto de informacoes
 onready var infoBtn: TextureButton = $BottomBar/HBoxContainer/MarginContainer2/InfoButton # Botao de informacoes
 
-var functionA: FuncRef = funcref(self, "start_card") # Funcao da decisao A
-var functionB: FuncRef = funcref(self, "start_card") # Funcao da decisao B
+# Funcoes
+var functionA: FuncRef # Funcao da decisao A, seleciona o próximo card
+var functionB: FuncRef # Funcao da decisao B, seleciona o próximo card
+var current_card: String # Usado para o save/load
+var functionCurrent: FuncRef # Usado para o save/load
 
 # Flags 
 var hover_left: bool = false # Se verdadeiro, o personagem do card deve rotacionar para a esquerda
@@ -22,22 +25,21 @@ var hover_right: bool = false # Se verdadeiro o personagem do card deve rotacion
 var swiped_left: bool = false # Se verdadeiro, o card deve sair de cena pela esquerda
 var swiped_right: bool = false # Se verdadeiro, o card deve sair de cena pela direita
 
-# Propriedades 
-onready var PORTRAIT_ORIGINAL_X: float = portrait.position.x # Valor da posicao x quando o card é renderizado
-var PORTRAIT_SPEED_X: float = 220 # Rapidez com que o card se move horizontalmente
-var SPEED_SWIPE_MODIFIER: float = 5 # Coeficiente da rapidez quando o card sai de cena
-var PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao do card
-var CARD_INTERVAL: float = 0.6 # Intervalo entre um card e outro
 
+# CONSTANTES
+ 
+onready var PORTRAIT_ORIGINAL_X: float = portrait.position.x # Valor da posicao x quando o card é renderizado
+const PORTRAIT_SPEED_X: int = 220 # Rapidez com que o card se move horizontalmente
+const SPEED_SWIPE_MODIFIER: int = 5 # Coeficiente da rapidez quando o card sai de cena
+const PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao do card
+const CARD_INTERVAL: float = 0.6 # Intervalo entre um card e outro
+const SAVE_DIR: String = "user://saves/" # Diretorio do save
+const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 
 # FUNCOES
 
 # BUILT INS
 # Funcoes fornecidas pelo proprio Godot (comecam com _)
-
-# Chamada quando o node entrar na cena pela primeira vez.
-func _ready():
-	start_card()
 
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
@@ -101,21 +103,62 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
+			current_card = functionA.function
+			save_game()
 			swiped_left = true
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_left = false
 			functionA.call_func()
-			
 
 func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
+			current_card = functionB.function
+			save_game()
 			swiped_right = true
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_right = false
 			functionB.call_func()
-			
+
+# Essa funcao lida com o clique para mostrar ou esconder o popup de "mais informações"
+func _on_InfoButton_pressed():
+	popup.visible = !popup.visible
+
+# SAVE/LOAD
+# Funcoes para salvar ou carregar o jogo (fonte: https://www.youtube.com/watch?v=d0B770ZM8Ic)
+func save_game():
+	var data = {
+		"current_card": current_card,
+		"social": score.social,
+		"political": score.political,
+		"economic": score.economic,
+	}
+	
+	# Criar Diretorio se não existe
+	var dir = Directory.new()
+	if !dir.dir_exists(SAVE_DIR):
+		dir.make_dir_recursive(SAVE_DIR)
+	
+	var file = File.new()
+	var error = file.open(SAVE_PATH, File.WRITE)
+	if error == OK:
+		file.store_var(data)
+		file.close()
+	
+func load_game():
+	var file = File.new()
+	# Verificar se o arquivo de save existe
+	if file.file_exists(SAVE_PATH):
+		var error = file.open(SAVE_PATH, File.READ)
+		if error == OK:
+			var player_data = file.get_var()
+			file.close()
+			score.set_all(player_data.social, player_data.political, player_data.economic)
+			functionCurrent = funcref(self, player_data.current_card)
+			functionCurrent.call_func()
+	
+
 # HELPERS
 # Esse conjunto de funcoes sao auxiliares (helpers) para as (varias) funcoes de card abaixo
 
@@ -157,9 +200,9 @@ func start_card():
 	decisionB.text = "Ainda não..." # Texto da segunda decisao
 	update_functionB("unsure") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MODIFICAR OS INDICADORES
-	#score.update_social(1) # Pontos a serem adicionados/removidos do indicador social
-	#score.update_economic(1) # Pontos a serem adicionados/removidos do indicador economico
-	#score.update_political(1) # Pontos a serem adicionados/removidos do indiciador politico
+	score.update_social(5) # Pontos a serem adicionados/removidos do indicador social
+	score.update_economic(5) # Pontos a serem adicionados/removidos do indicador economico
+	score.update_political(5) # Pontos a serem adicionados/removidos do indiciador politico
 	# MES DO JOGO
 	month.text = "Janeiro"
 	# INFORMACOES ADICIONAIS
@@ -201,8 +244,11 @@ func budget():
 	
 func health():
 	update_story("Ok, vamos priorizar a [b]saúde[/b] então!")
+	update_character("ministra_economia") # Personagem do Card
 	decisionA.text = "..." 
+	update_functionA("health") # Card que sera selecionado com a primeira decisao
 	decisionB.text = "..." 
+	update_functionB("health") # Card que sera selecionado com a primeira decisao
 	month.text = "Fevereiro" 
 	score.update_social(1)
 	score.update_economic(-1)
@@ -214,5 +260,3 @@ func education():
 	score.update_political(-1)
 	score.update_economic(1)
 
-func _on_InfoButton_pressed():
-	popup.visible = !popup.visible
