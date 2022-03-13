@@ -2,6 +2,9 @@ extends Control
 
 # VARIAVEIS
 
+# Sinais
+signal finish_game
+
 # Elementos
 onready var portrait: Sprite = $CharacterContainer/Portrait # Personagem do card
 onready var story: RichTextLabel = $TextContainer/Text # Texto de historia do card
@@ -25,7 +28,6 @@ var hover_right: bool = false # Se verdadeiro o personagem do card deve rotacion
 var swiped_left: bool = false # Se verdadeiro, o card deve sair de cena pela esquerda
 var swiped_right: bool = false # Se verdadeiro, o card deve sair de cena pela direita
 
-
 # CONSTANTES
  
 onready var PORTRAIT_ORIGINAL_X: float = portrait.position.x # Valor da posicao x quando o card é renderizado
@@ -40,6 +42,8 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 
 # BUILT INS
 # Funcoes fornecidas pelo proprio Godot (comecam com _)
+func _ready():
+	get_node("/root/Global").is_game_over = check_game_over()
 
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
@@ -68,7 +72,6 @@ func _process(delta):
 	# limitamos aqui os valores possiveis para essas propriedades		
 	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -25, 25)
 	portrait.position.x = clamp(portrait.position.x, 250, 450)
-	portrait.position.y = clamp(portrait.position.y, 320, 350)
 
 # SWIPE ANIMATIONS
 # Esse conjunto de funcoes serve para determinar se o jogador esta com o mouse
@@ -103,12 +106,13 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
-			current_card = functionA.function
-			save_game()
 			swiped_left = true
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_left = false
+			current_card = functionA.function
+			save_game()
 			functionA.call_func()
+			check_low_score()
 
 func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
@@ -120,6 +124,7 @@ func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_right = false
 			functionB.call_func()
+			check_low_score()
 
 # Essa funcao lida com o clique para mostrar ou esconder o popup de "mais informações"
 func _on_InfoButton_pressed():
@@ -157,7 +162,7 @@ func load_game():
 			score.set_all(player_data.social, player_data.political, player_data.economic)
 			functionCurrent = funcref(self, player_data.current_card)
 			functionCurrent.call_func()
-	
+
 
 # HELPERS
 # Esse conjunto de funcoes sao auxiliares (helpers) para as (varias) funcoes de card abaixo
@@ -200,9 +205,10 @@ func start_card():
 	decisionB.text = "Ainda não..." # Texto da segunda decisao
 	update_functionB("unsure") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MODIFICAR OS INDICADORES
-	score.update_social(5) # Pontos a serem adicionados/removidos do indicador social
-	score.update_economic(5) # Pontos a serem adicionados/removidos do indicador economico
-	score.update_political(5) # Pontos a serem adicionados/removidos do indiciador politico
+	score.set_all(5, 5, 5) # Social, Politico, Economico - Setar Score para começar o jogo
+	# score.update_social(5) # Pontos a serem adicionados/removidos do indicador social
+	# score.update_economic(5) # Pontos a serem adicionados/removidos do indicador economico
+	# score.update_political(5) # Pontos a serem adicionados/removidos do indiciador politico
 	# MES DO JOGO
 	month.text = "Janeiro"
 	# INFORMACOES ADICIONAIS
@@ -260,3 +266,44 @@ func education():
 	score.update_political(-1)
 	score.update_economic(1)
 
+
+# LOW SCORE OR GAME OVER CHECKS
+# Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo
+func check_game_over():
+	return (score.social <= 0) || (score.political <= 0) || (score.economic <= 0)
+
+func check_low_score():
+	if check_game_over():
+		game_over()
+		return true
+	else:
+		return false
+		
+# TRIGGERED CARDS
+# Esses cards são ativados automaticamente caso o jogador tenha uma pontuação baixa
+
+func game_over():
+	# TEXTOS E IMAGENS
+	update_story("Presidente, infelizmente um dos seus indicadores ficou abaixo de 0 e você sofreu um processo de [b]impeachment[/b]. Tente novamente!") #  Narrativa do card
+	update_character("presidente") # Personagem do Card
+	# PRIMEIRA DECISAO
+	decisionA.text = "Voltar ao menu inicial" # Texto da primeira decisao
+	update_functionA("goto_start_menu") # Card que sera selecionado se o jogador clicar na primeira decisao
+	# SEGUNDA DECISAO
+	decisionB.text = "Voltar ao menu inicial" # Texto da segunda decisao
+	update_functionB("goto_start_menu") # Card que sera selecionado se o jogador clicar na segunda decisao
+	# INFORMACOES ADICIONAIS
+	infoBtn.visible = true
+	
+func goto_start_menu():
+	self.hide()
+	emit_signal("finish_game")
+
+func check_low_political():
+	pass
+	
+func low_economic():
+	pass
+	
+func low_social():
+	pass

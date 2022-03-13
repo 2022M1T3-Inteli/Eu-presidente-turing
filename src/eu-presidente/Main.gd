@@ -1,10 +1,17 @@
 extends Control
 
+onready var card: Control = $Card
+onready var startMenu: Control = $StartMenu
+
 # Iniciar jogo, deve mostrar o Card
 func new_game():
-	$Card.start_card()
-	$Card.show()
+	card.start_card()
+	card.show()
 
 func continue_game():
-	$Card.load_game()
-	$Card.show()
+	card.load_game()
+	card.show()
+
+func finish_game():
+	card.hide()
+	startMenu.show()

@@ -10,9 +10,9 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 
 func _ready():
 	continueBtn.hide()
-	# Se existir um arquivo de save, mostra o botão de continuar
+	# Mostra o botão de continuar se existir um arquivo de save com pontuação válida
 	var file = File.new()
-	if file.file_exists(SAVE_PATH):
+	if file.file_exists(SAVE_PATH) && !get_node("/root/Global").is_game_over:
 		continueBtn.show()
 
 # Emitir sinal para o "Main" quando o player quiser iniciar um novo jogo

@@ -1,9 +1,9 @@
 extends Control
 
 
-var social: int = 0
-var political: int = 0
-var economic: int = 0
+var social: int = 5
+var political: int = 5
+var economic: int = 5
 
 onready var social_label: Label = $HBoxContainer/VBoxContainer/SocialScore
 onready var political_label: Label = $HBoxContainer/VBoxContainer2/PoliticalScore
