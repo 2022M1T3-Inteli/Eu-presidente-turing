@@ -42,8 +42,6 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 
 # BUILT INS
 # Funcoes fornecidas pelo proprio Godot (comecam com _)
-func _ready():
-	get_node("/root/Global").is_game_over = check_game_over()
 
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
@@ -112,7 +110,7 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 			current_card = functionA.function
 			save_game()
 			functionA.call_func()
-			check_low_score()
+			check_scores()
 
 func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
@@ -124,7 +122,7 @@ func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_right = false
 			functionB.call_func()
-			check_low_score()
+			check_scores()
 
 # Essa funcao lida com o clique para mostrar ou esconder o popup de "mais informações"
 func _on_InfoButton_pressed():
@@ -150,7 +148,8 @@ func save_game():
 	if error == OK:
 		file.store_var(data)
 		file.close()
-	
+
+# Carrega o jogo, retorna "True" se o save foi carregado corretamente, "False" se não foi
 func load_game():
 	var file = File.new()
 	# Verificar se o arquivo de save existe
@@ -162,7 +161,8 @@ func load_game():
 			score.set_all(player_data.social, player_data.political, player_data.economic)
 			functionCurrent = funcref(self, player_data.current_card)
 			functionCurrent.call_func()
-
+			return true # Load carregado corretamente
+	return false # Erro no load
 
 # HELPERS
 # Esse conjunto de funcoes sao auxiliares (helpers) para as (varias) funcoes de card abaixo
@@ -269,15 +269,25 @@ func education():
 
 # LOW SCORE OR GAME OVER CHECKS
 # Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo
-func check_game_over():
-	return (score.social <= 0) || (score.political <= 0) || (score.economic <= 0)
-
-func check_low_score():
-	if check_game_over():
+func check_scores():
+	if is_game_over():
 		game_over()
 		return true
 	else:
 		return false
+
+func is_game_over():
+	return (score.social <= 0) || (score.political <= 0) || (score.economic <= 0)
+		
+func is_low_political():
+	pass
+	
+func is_low_economic():
+	pass
+	
+func is_low_social():
+	pass
+
 		
 # TRIGGERED CARDS
 # Esses cards são ativados automaticamente caso o jogador tenha uma pontuação baixa
@@ -296,14 +306,5 @@ func game_over():
 	infoBtn.visible = true
 	
 func goto_start_menu():
-	self.hide()
 	emit_signal("finish_game")
 
-func check_low_political():
-	pass
-	
-func low_economic():
-	pass
-	
-func low_social():
-	pass

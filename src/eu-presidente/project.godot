@@ -14,11 +14,6 @@ config/name="eu-presidente"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-GlobalScene="*res://Global.tscn"
-Global="*res://Global.gd"
-
 [display]
 
 window/size/width=720
