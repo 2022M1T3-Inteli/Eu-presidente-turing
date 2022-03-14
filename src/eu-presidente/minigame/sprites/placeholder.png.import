@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white circle.png-e835c08e2ee38ccacdd829f890bc5565.stex"
+path="res://.import/placeholder.png-f38c228ef332cd5b138ef8caf51db693.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main_menu/white circle.png"
-dest_files=[ "res://.import/white circle.png-e835c08e2ee38ccacdd829f890bc5565.stex" ]
+source_file="res://minigame/sprites/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-f38c228ef332cd5b138ef8caf51db693.stex" ]
 
 [params]
 

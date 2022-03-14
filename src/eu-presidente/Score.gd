@@ -14,7 +14,9 @@ onready var economic_modifier: Label = $HBoxContainer/VBoxContainer3/EconomicMod
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	social_label.text = String(social)
+	political_label.text = String(political)
+	economic_label.text = String(economic)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,3 +55,11 @@ func update_all(social_pts: int, political_pts: int, economic_pts: int):
 	update_social(social_pts)
 	update_political(political_pts)
 	update_economic(economic_pts)
+	
+func set_all(social_pts: int, political_pts: int, economic_pts: int):
+	social = social_pts
+	social_label.text = String(social)
+	political = political_pts
+	political_label.text = String(political)
+	economic = economic_pts
+	economic_label.text = String(economic)

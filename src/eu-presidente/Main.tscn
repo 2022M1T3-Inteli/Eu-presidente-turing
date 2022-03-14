@@ -27,3 +27,7 @@ visible = false
 
 [node name="StartMenu" parent="." instance=ExtResource( 1 )]
 mouse_filter = 2
+
+[connection signal="finish_game" from="Card" to="." method="finish_game"]
+[connection signal="load_game" from="StartMenu" to="." method="continue_game"]
+[connection signal="start_game" from="StartMenu" to="." method="new_game"]
