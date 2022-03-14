@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/legislativo.png-b285bd10d998c0722ccb2df04b43613b.stex"
+path="res://.import/first_encounter.png-9c739bd06ea63e27d4c33a3257fa9d0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigame/sprites/legislativo.png"
-dest_files=[ "res://.import/legislativo.png-b285bd10d998c0722ccb2df04b43613b.stex" ]
+source_file="res://minigame/sprites/first_encounter.png"
+dest_files=[ "res://.import/first_encounter.png-9c739bd06ea63e27d4c33a3257fa9d0d.stex" ]
 
 [params]
 

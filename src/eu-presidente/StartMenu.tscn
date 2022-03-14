@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/main_menu/presidentes.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/Lato/Lato-Black.ttf" type="DynamicFontData" id=2]
@@ -8,10 +8,6 @@
 [sub_resource type="DynamicFont" id=1]
 size = 90
 font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 46
-font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 46
@@ -40,59 +36,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Continue" type="Button" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.754
-anchor_right = 0.5
-anchor_bottom = 0.754
-margin_left = -248.0
-margin_top = -113.32
-margin_right = 252.0
-margin_bottom = -13.32
-custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "Continuar"
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="StartGame" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.872
 anchor_right = 0.5
 anchor_bottom = 0.872
 margin_left = -248.0
-margin_top = -112.76
+margin_top = -144.76
 margin_right = 252.0
-margin_bottom = -12.76
+margin_bottom = -44.7601
 custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
 custom_colors/font_color_hover = Color( 0.109804, 0.109804, 0.168627, 1 )
 custom_colors/font_color_pressed = Color( 0.117647, 0.117647, 0.172549, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Novo Jogo"
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Minigame" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 1.011
-anchor_right = 0.5
-anchor_bottom = 1.011
-margin_left = -125.5
-margin_top = -128.88
-margin_right = 129.5
-margin_bottom = -28.88
-custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
-custom_colors/font_color_hover = Color( 0.109804, 0.109804, 0.168627, 1 )
-custom_colors/font_color_pressed = Color( 0.117647, 0.117647, 0.172549, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Minigame"
+text = "Aperte para jogar"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -107,7 +64,6 @@ margin_left = -363.0
 margin_top = -305.0
 margin_right = 357.0
 margin_bottom = 173.0
-mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -117,6 +73,4 @@ position = Vector2( 361.5, 226 )
 scale = Vector2( 0.93238, 1.00618 )
 texture = ExtResource( 1 )
 
-[connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
-[connection signal="pressed" from="Minigame" to="." method="_on_Minigame_pressed"]

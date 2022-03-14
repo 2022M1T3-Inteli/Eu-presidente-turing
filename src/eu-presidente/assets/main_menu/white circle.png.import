@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water.png-af2fa5c9d160b069e68cf4bf32773516.stex"
+path="res://.import/white circle.png-e835c08e2ee38ccacdd829f890bc5565.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigame/terrain/water.png"
-dest_files=[ "res://.import/water.png-af2fa5c9d160b069e68cf4bf32773516.stex" ]
+source_file="res://assets/main_menu/white circle.png"
+dest_files=[ "res://.import/white circle.png-e835c08e2ee38ccacdd829f890bc5565.stex" ]
 
 [params]
 
