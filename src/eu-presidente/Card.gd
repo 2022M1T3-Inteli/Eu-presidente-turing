@@ -200,7 +200,7 @@ func start_card():
 	update_character("presidente") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Sim, claro!" # Texto da primeira decisao
-	update_functionA("confident") # Card que sera selecionado se o jogador clicar na primeira decisao
+	update_functionA("example") # Card que sera selecionado se o jogador clicar na primeira decisao
 	# SEGUNDA DECISAO
 	decisionB.text = "Ainda não..." # Texto da segunda decisao
 	update_functionB("unsure") # Card que sera selecionado se o jogador clicar na segunda decisao
@@ -214,6 +214,18 @@ func start_card():
 	# INFORMACOES ADICIONAIS
 	# info.text = ""
 	infoBtn.visible = true
+	
+func example():
+	update_story("bem vindo ao card de exemplo")
+	update_character("populacao")
+	decisionA.text = ("talvez")
+	update_functionA("confident")
+	decisionB.text = ("não")
+	update_functionB("budget")
+	score.update_economic(-3)
+	score.update_social(2)
+	infoBtn.show()
+	info.text = ("explicação")
 	
 func confident():
 	# TEXTOS E IMAGENS
