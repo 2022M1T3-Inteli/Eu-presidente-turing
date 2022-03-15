@@ -218,7 +218,7 @@ func start_card():
 func example():
 	update_story("bem vindo ao card de exemplo")
 	update_character("populacao")
-	decisionA.text = ("talvez")
+	decisionA.text = ("sim")
 	update_functionA("confident")
 	decisionB.text = ("não")
 	update_functionB("budget")
