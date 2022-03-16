@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ministro_saude.png-7edaffa4e52900cc138286862ee44c52.stex"
+path="res://.import/População.png-72901f4ab601947908537f7baec02115.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/ministro_saude.png"
-dest_files=[ "res://.import/ministro_saude.png-7edaffa4e52900cc138286862ee44c52.stex" ]
+source_file="res://assets/characters/População.png"
+dest_files=[ "res://.import/População.png-72901f4ab601947908537f7baec02115.stex" ]
 
 [params]
 

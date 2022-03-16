@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/populacao.png-7b08f66e79e7d8b4304594865d9367bf.stex"
+path="res://.import/Min. Economia.png-f7e00d11a4f07636e53975635cebec60.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/populacao.png"
-dest_files=[ "res://.import/populacao.png-7b08f66e79e7d8b4304594865d9367bf.stex" ]
+source_file="res://assets/characters/Min. Economia.png"
+dest_files=[ "res://.import/Min. Economia.png-f7e00d11a4f07636e53975635cebec60.stex" ]
 
 [params]
 
