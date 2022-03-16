@@ -212,10 +212,10 @@ func start_card():
 	update_character("Presidente") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Sim, claro!" # Texto da primeira decisao
-	update_functionA("confident") # Card que sera selecionado se o jogador clicar na primeira decisao
+	update_functionA("quociente1") # Card que sera selecionado se o jogador clicar na primeira decisao
 	# SEGUNDA DECISAO
 	decisionB.text = "Ainda não..." # Texto da segunda decisao
-	update_functionB("unsure") # Card que sera selecionado se o jogador clicar na segunda decisao
+	update_functionB("quociente1") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MODIFICAR OS INDICADORES
 	score.set_all(5, 5, 5) # Social, Politico, Economico - Setar Score para começar o jogo
 	# score.update_social(5) # Pontos a serem adicionados/removidos do indicador social
@@ -227,56 +227,91 @@ func start_card():
 	# info.text = ""
 	infoBtn.visible = true
 	
-func confident():
-	# TEXTOS E IMAGENS
-	update_story("Seu [b]Secretário[/b] se aproxima: Muito bem Sr. Presidente! Tenho certeza de que tudo irá dar certo.") #  Narrativa do card
-	update_character("secretario") # Personagem do Card
-	# PRIMEIRA DECISAO
-	decisionA.text = "Obrigado, secretário" # Texto da primeira decisao
-	update_functionA("budget") # Card que sera selecionado com a primeira decisao
-	# SEGUNDA DECISAO
-	decisionB.text = "Temos muito trabalho\npela frente..." # Texto da segunda decisao
-	update_functionB("budget") # Card que sera selecionado com a segunda decisao
-	infoBtn.visible = false
-
-func unsure():
-	# TEXTOS E IMAGENS
-	update_story("Seu [b]secretário[/b] vem lhe aconselhar: Não se preocupe, Sr. presidente, eu posso lhe ajudar caso tenha alguma dúvida.") #  Narrativa do card
-	update_character("Secretário") # Personagem do Card
-	# PRIMEIRA DECISAO
-	decisionA.text = "Obrigado, secretário" # Texto da primeira decisao
-	update_functionA("budget") # Card que sera selecionado com a primeira decisao
-	# SEGUNDA DECISAO
-	decisionB.text = "Temos muito trabalho\npela frente..." # Texto da segunda decisao
-	update_functionB("budget") # Card que sera selecionado com a segunda decisao
-
-func budget():
-	update_story("[b]Ministra da Economia:[/b] Presidente, precisamos escolher - qual setor será priorizado: [i]saúde[/i] ou [i]educação[/i]?") 
-	update_character("Min. Economia") # Personagem do Card
-	# PRIMEIRA DECISAO
-	decisionA.text = "Saúde" # Texto da primeira decisao
-	update_functionA("health") # Card que sera selecionado com a primeira decisao
-	# SEGUNDA DECISAO
-	decisionB.text = "Educacao" # Texto da segunda decisao
-	update_functionB("education") # Card que sera selecionado com a segunda decisao
+func quociente1():
+	update_story("Você está no Palácio, Presidente! Amanhã é a eleição para Deputado Federal e o senhor ainda não escolheu o candidato que quer apoiar. Você precisa falar com o Presidente do Congresso agora e se decidir...")
+	update_character("Secretário")
+	decisionA.text = "Tudo bem!"
+	update_functionA("quociente2")
+	decisionB.text = "Estou meio ansioso..."
+	update_functionB("quociente2")
 	
-func health():
-	update_story("Ok, vamos priorizar a [b]saúde[/b] então!")
-	update_character("Min. Saúde") # Personagem do Card
-	decisionA.text = "..." 
-	update_functionA("health") # Card que sera selecionado com a primeira decisao
-	decisionB.text = "..." 
-	update_functionB("health") # Card que sera selecionado com a primeira decisao
-	month.text = "Fevereiro" 
-	score.update_social(1)
-	score.update_economic(-1)
 	
-func education():
-	update_story("Ok, vamos priorizar a [b]educação[/b] então!")
-	decisionA.text = "..." 
-	decisionB.text = "..." 
-	score.update_political(-1)
-	score.update_economic(1)
+func quociente2():
+	update_story("Senhor Presidente, vamos lá.  O candidato Pedro Augusto tem uma proposta de combate à corrupção e o Fernando Alberto tem uma proposta de defesa dos direitos de minorias. Quem o senhor vai apoiar?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Pedro Augusto"
+	update_functionA("quociente3")
+	decisionB.text = "Fernando Alberto"
+	update_functionB("quociente4")
+	
+	
+func quociente3():
+	update_story("Uma ótima escolha, sem dúvida! O candidato Pedro Augusto está empenhado no combate à corrupção em todas as esferas do governo")
+	update_character("Secretário")
+	decisionA.text = "Acredito que ele tem boas chances de ganhar!"
+	update_functionA("nivel3")
+	decisionB.text = "Ele é um ótimo representante do povo"
+	update_functionB("nivel3")
+	
+	
+func quociente4():
+	update_story("Muito bem, o candidato Fernando Alberto sempre se preocupou com a proteção de grupos minoritários")
+	update_character("População")
+	decisionA.text = "Acredito que ele tré muitos votos"
+	update_functionA("nivel3")
+	decisionB.text = "Ele é um ótimo representante do povo"
+	update_functionB("nivel3")
+	
+func nivel3():
+	update_story("Já estamos no meio do ano e a eleição se aproxima, você vai dizer abertamente ao público qual candidato apoia?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Vou falar ao público quem eu apoio."
+	update_functionA("preeleicao")
+	decisionB.text = "Prefiro não dizer ao público"
+	update_functionB("preeleicao")
+	
+	
+func preeleicao():
+	update_story(" Já estamos no meio do ano e a eleição e seu candidato parece estar bem com o público em geral.")
+	update_character("Presidente da Câmara")
+	decisionA.text = "já imaginava, acredito em meu candidato."
+	update_functionA("nivel4")
+	decisionB.text = "Ok, mas é preciso ter calma."
+	update_functionB("nivel4")
+	
+	
+func nivel4():
+	update_story("Senhor presidente, lamento informar que o candidato perdeu as eleições, embora tenha recebido uma quantidade expressiva dos votos. Outros candidatos com uma votação menor foram eleitos. No calor da campanha, não demos a devida importância ao quociente eleitoral")
+	update_character("Secretário")
+	decisionA.text = "Tudo bem conversaremos com o vencedor."
+	update_functionA("nivel5")
+	decisionB.text = "Triste, estou decepcionado."
+	update_functionB("nivel5")
+	
+	
+func nivel5():
+	update_story("E olha que ele ganhou mais votos, mas mesmo assim não levou. Será que não é possível fazer nada a respeito?")
+	update_character("Secretário")
+	decisionA.text = "Acredito que não, as leis são as leis e o único jeitode muda-las é por meio do trabalho do Congresso."
+	update_functionA("nivel6")
+	decisionB.text = "Infelizmente não, isso iria contra a constituição"
+	update_functionB("nivel6")
+	
+	
+func nivel6():
+	pass
+	
+	
+#func nivel7():
+	#update_story("")
+	#update_character("")
+	#decisionA.text = ""
+	#pdate_functionA("")
+	#decisionB.text = ""
+	#update_functionB("")
+	
+
+	
 	
 # LOW SCORE OR GAME OVER CHECKS
 # Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo

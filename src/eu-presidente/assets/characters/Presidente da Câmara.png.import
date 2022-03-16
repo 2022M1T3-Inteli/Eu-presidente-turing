@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/presidente.png-1d85c936c851c80a32fa8ea8a58ed1fb.stex"
+path="res://.import/Presidente da Câmara.png-0629c8b30b7d77eb1b49981316c0d9b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/presidente.png"
-dest_files=[ "res://.import/presidente.png-1d85c936c851c80a32fa8ea8a58ed1fb.stex" ]
+source_file="res://assets/characters/Presidente da Câmara.png"
+dest_files=[ "res://.import/Presidente da Câmara.png-0629c8b30b7d77eb1b49981316c0d9b3.stex" ]
 
 [params]
 
