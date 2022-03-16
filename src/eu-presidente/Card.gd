@@ -15,6 +15,9 @@ onready var month: Label = $BottomBar/HBoxContainer/MarginContainer/Date # Mês 
 onready var popup: PopupPanel = $InfoPanel # Painel de informacoes
 onready var info: Label = $InfoPanel/Info # Texto de informacoes
 onready var infoBtn: TextureButton = $BottomBar/HBoxContainer/MarginContainer2/InfoButton # Botao de informacoes
+onready var ChangeCardSfx1: AudioStreamPlayer = $ChangeCardSfx1 # Efeito sonoro ao trocar de card
+onready var ChangeCardSfx2: AudioStreamPlayer = $ChangeCardSfx2 # Efeito sonoro ao trocar de card 2
+onready var ChangeCardSfx3: AudioStreamPlayer = $ChangeCardSfx3 # Efeito sonoro ao trocar de card 3
 
 # Funcoes
 var functionA: FuncRef # Funcao da decisao A, seleciona o próximo card
@@ -27,6 +30,9 @@ var hover_left: bool = false # Se verdadeiro, o personagem do card deve rotacion
 var hover_right: bool = false # Se verdadeiro o personagem do card deve rotacionar para a direita
 var swiped_left: bool = false # Se verdadeiro, o card deve sair de cena pela esquerda
 var swiped_right: bool = false # Se verdadeiro, o card deve sair de cena pela direita
+
+# Outras variaveis
+var random_sfx = null # Usado para o efeito sonoro
 
 # CONSTANTES
  
@@ -104,6 +110,7 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
+			change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
 			swiped_left = true
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_left = false
@@ -112,10 +119,12 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 			functionA.call_func()
 			check_scores()
 
+
 func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
+			change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
 			current_card = functionB.function
 			save_game()
 			swiped_right = true
@@ -307,4 +316,10 @@ func game_over():
 	
 func goto_start_menu():
 	emit_signal("finish_game")
+
+# Função para randomizar o efeito sonoro após selecionar um card
+func change_card_sfx(random,sound1,sound2,sound3):
+	random = [sound1, sound2, sound3]
+	random = random[randi() % random.size()]
+	random.play()
 

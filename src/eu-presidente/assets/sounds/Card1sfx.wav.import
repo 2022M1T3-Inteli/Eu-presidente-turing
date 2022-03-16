@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Card1sfx.wav-29f66951e38734d8fd6f14ea6cb0decd.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Card1sfx.wav"
+dest_files=[ "res://.import/Card1sfx.wav-29f66951e38734d8fd6f14ea6cb0decd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Score.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/characters/presidente.png" type="Texture" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://assets/icons/information-circle.svg" type="Texture" id=8]
 [ext_resource path="res://assets/icons/information-circle-outline.svg" type="Texture" id=9]
 [ext_resource path="res://Card.gd" type="Script" id=10]
+[ext_resource path="res://assets/sounds/Card1sfx.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/Card2sfx.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/Card3sfx.wav" type="AudioStream" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -306,6 +309,15 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ChangeCardSfx1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="ChangeCardSfx2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="ChangeCardSfx3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
 
 [connection signal="input_event" from="CharacterContainer/Hitboxes/LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_input_event"]
 [connection signal="mouse_entered" from="CharacterContainer/Hitboxes/LeftSwipeHitbox" to="." method="_on_LeftSwipeHitbox_mouse_entered"]
