@@ -1,6 +1,8 @@
 extends Node2D
 
 #const CARD = preload("res://Card.tscn")
+func _ready():
+	$WorldSong.play()
 
 func _process(delta):
 	pass
