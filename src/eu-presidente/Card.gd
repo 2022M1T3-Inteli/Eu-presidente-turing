@@ -7,6 +7,7 @@ signal finish_game
 
 # Elementos
 onready var portrait: Sprite = $CharacterContainer/Portrait # Personagem do card
+onready var characterName: Label = $CharacterContainer/Name # Nome do personagem do card
 onready var story: RichTextLabel = $TextContainer/Text # Texto de historia do card
 onready var decisionA: Label = $DecisionTextContainer/DecisionA # Texto da decisao A
 onready var decisionB: Label = $DecisionTextContainer/DecisionB # Texto da decisao B
@@ -184,6 +185,8 @@ func update_story(text: String) -> void:
 func update_character(name: String) -> void:
 	var path = "res://assets/characters/%s.png" % name
 	portrait.texture = load(path)
+	characterName.text = name
+	
 	
 # Atualiza a funcao executada quando o jogador escolhe a decisao A
 # Deve ser o nome de outro card que voce quer que seja escolhido quando o jogador tomar a decisao A
@@ -206,7 +209,7 @@ func update_functionB(fn_name: String) -> void:
 func start_card():
 	# TEXTOS E IMAGENS
 	update_story("Parabéns! Após meses de campanha, você foi eleito [b]presidente do Brasil[/b]. Você está confiante?") #  Narrativa do card
-	update_character("presidente") # Personagem do Card
+	update_character("Presidente") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Sim, claro!" # Texto da primeira decisao
 	update_functionA("confident") # Card que sera selecionado se o jogador clicar na primeira decisao
@@ -239,7 +242,7 @@ func confident():
 func unsure():
 	# TEXTOS E IMAGENS
 	update_story("Seu [b]secretário[/b] vem lhe aconselhar: Não se preocupe, Sr. presidente, eu posso lhe ajudar caso tenha alguma dúvida.") #  Narrativa do card
-	update_character("secretario") # Personagem do Card
+	update_character("Secretário") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Obrigado, secretário" # Texto da primeira decisao
 	update_functionA("budget") # Card que sera selecionado com a primeira decisao
@@ -249,7 +252,7 @@ func unsure():
 
 func budget():
 	update_story("[b]Ministra da Economia:[/b] Presidente, precisamos escolher - qual setor será priorizado: [i]saúde[/i] ou [i]educação[/i]?") 
-	update_character("ministra_economia") # Personagem do Card
+	update_character("Min. Economia") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Saúde" # Texto da primeira decisao
 	update_functionA("health") # Card que sera selecionado com a primeira decisao
@@ -259,7 +262,7 @@ func budget():
 	
 func health():
 	update_story("Ok, vamos priorizar a [b]saúde[/b] então!")
-	update_character("ministra_economia") # Personagem do Card
+	update_character("Min. Saúde") # Personagem do Card
 	decisionA.text = "..." 
 	update_functionA("health") # Card que sera selecionado com a primeira decisao
 	decisionB.text = "..." 
@@ -274,8 +277,7 @@ func education():
 	decisionB.text = "..." 
 	score.update_political(-1)
 	score.update_economic(1)
-
-
+	
 # LOW SCORE OR GAME OVER CHECKS
 # Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo
 func check_scores():

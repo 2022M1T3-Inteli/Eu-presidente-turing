@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Score.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/characters/presidente.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/Presidente.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Medium.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-BoldItalic.ttf" type="DynamicFontData" id=5]
@@ -36,6 +36,10 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 340, 301.5 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 20
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 24
@@ -143,6 +147,8 @@ margin_right = 356.0
 margin_bottom = 439.5
 mouse_filter = 2
 mouse_default_cursor_shape = 2
+custom_constants/margin_right = 30
+custom_constants/margin_top = 530
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -166,6 +172,16 @@ shape = SubResource( 8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterContainer/Hitboxes/RightSwipeHitbox"]
 position = Vector2( 640, 540 )
 shape = SubResource( 8 )
+
+[node name="Name" type="Label" parent="CharacterContainer"]
+margin_top = 551.0
+margin_right = 682.0
+margin_bottom = 578.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Nome do Personagem"
+align = 1
+valign = 1
 
 [node name="DecisionTextContainer" type="HBoxContainer" parent="."]
 anchor_left = 0.5

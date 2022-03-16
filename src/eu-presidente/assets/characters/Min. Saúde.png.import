@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/secretario.png-b7a8583d651bf6599526ce6355aaad09.stex"
+path="res://.import/Min. Saúde.png-fb100ec4ac30b70300c3a7696b910ec1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/secretario.png"
-dest_files=[ "res://.import/secretario.png-b7a8583d651bf6599526ce6355aaad09.stex" ]
+source_file="res://assets/characters/Min. Saúde.png"
+dest_files=[ "res://.import/Min. Saúde.png-fb100ec4ac30b70300c3a7696b910ec1.stex" ]
 
 [params]
 
