@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Score.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/characters/Presidente.png" type="Texture" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://assets/sounds/Card1sfx.wav" type="AudioStream" id=11]
 [ext_resource path="res://assets/sounds/Card2sfx.wav" type="AudioStream" id=12]
 [ext_resource path="res://assets/sounds/Card3sfx.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Thin.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Italic.ttf" type="DynamicFontData" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -56,8 +58,24 @@ content_margin_top = 20.0
 content_margin_bottom = 20.0
 bg_color = Color( 0.316406, 0.190583, 0.0778656, 1 )
 
-[sub_resource type="DynamicFont" id=9]
-size = 30
+[sub_resource type="DynamicFont" id=12]
+size = 22
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 22
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 22
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 22
 font_data = ExtResource( 4 )
 
 [node name="Card" type="Control"]
@@ -66,6 +84,15 @@ anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -568, 48 )
 mouse_filter = 2
 script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.65098, 0.541176, 0.392157, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -122,7 +149,6 @@ __meta__ = {
 }
 
 [node name="PortraitBackground" type="ColorRect" parent="."]
-show_behind_parent = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -131,7 +157,7 @@ margin_left = -196.0
 margin_right = 184.0
 margin_bottom = 380.0
 mouse_filter = 2
-color = Color( 0, 0, 0, 0.662745 )
+color = Color( 0.00392157, 0, 0, 0.721569 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -307,7 +333,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Info" type="Label" parent="InfoPanel"]
+[node name="Info" type="RichTextLabel" parent="InfoPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -316,15 +342,12 @@ margin_left = -348.0
 margin_top = -397.5
 margin_right = 348.0
 margin_bottom = 397.5
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 9 )
-text = "Essa é a caixa de dicas! Aqui você encontra informações úteis para o jogo..."
-align = 1
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_fonts/mono_font = SubResource( 12 )
+custom_fonts/bold_italics_font = SubResource( 13 )
+custom_fonts/italics_font = SubResource( 14 )
+custom_fonts/bold_font = SubResource( 15 )
+custom_fonts/normal_font = SubResource( 16 )
+bbcode_enabled = true
 
 [node name="ChangeCardSfx1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

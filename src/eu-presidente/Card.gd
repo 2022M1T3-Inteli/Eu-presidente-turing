@@ -14,7 +14,7 @@ onready var decisionB: Label = $DecisionTextContainer/DecisionB # Texto da decis
 onready var score: Control = $ScoreContainer/Score # Indicadores de score
 onready var month: Label = $BottomBar/HBoxContainer/MarginContainer/Date # Mês do jogo
 onready var popup: PopupPanel = $InfoPanel # Painel de informacoes
-onready var info: Label = $InfoPanel/Info # Texto de informacoes
+onready var info: RichTextLabel = $InfoPanel/Info # Texto de informacoes
 onready var infoBtn: TextureButton = $BottomBar/HBoxContainer/MarginContainer2/InfoButton # Botao de informacoes
 onready var ChangeCardSfx1: AudioStreamPlayer = $ChangeCardSfx1 # Efeito sonoro ao trocar de card
 onready var ChangeCardSfx2: AudioStreamPlayer = $ChangeCardSfx2 # Efeito sonoro ao trocar de card 2
@@ -52,6 +52,7 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 
 func _ready():
 	start_card()
+	infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
 
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
@@ -119,7 +120,8 @@ func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 			swiped_left = true
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
 			swiped_left = false
-			current_card = functionA.function
+			current_card = functionA.function # Necessário registrar o card atual para a feature de save/load
+			infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
 			save_game()
 			functionA.call_func()
 			check_scores()
@@ -130,7 +132,8 @@ func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
 			change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
-			current_card = functionB.function
+			current_card = functionB.function # Necessário registrar o card atual para a feature de save/load
+			infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
 			save_game()
 			swiped_right = true
 			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
@@ -191,6 +194,10 @@ func update_character(name: String) -> void:
 	portrait.texture = load(path)
 	characterName.text = name
 	
+# Mostra o ícone de mais informações e atualiza o box com o texto passado
+func update_info(text: String) -> void:
+	infoBtn.show()
+	info.bbcode_text = text
 	
 # Atualiza a funcao executada quando o jogador escolhe a decisao A
 # Deve ser o nome de outro card que voce quer que seja escolhido quando o jogador tomar a decisao A
@@ -228,8 +235,8 @@ func start_card():
 	# MES DO JOGO
 	month.text = "Fevereiro"
 	# INFORMACOES ADICIONAIS
-	# info.text = ""
-	infoBtn.visible = true
+	update_info("Esse box trará mais informações úteis sobre os tópicos sendo discutidos.")
+
 	
 func quociente1():
 	update_story("Uma ótima escolha, Presidente! E com relação ao suporte ao candidato durante a campanha, o senhor pretende demonstrar publicamente seu apoio, participando de programas de televisão, dividindo palanques e concedendo entrevistas?")
@@ -239,6 +246,8 @@ func quociente1():
 	decisionB.text = "Não"
 	update_functionB("quociente3")
 	month.text = "Março"
+	score.update_social(2)
+	score.update_political(2)
 	
 	
 func quociente2():
@@ -252,7 +261,7 @@ func quociente2():
 	
 	
 func quociente3():
-	update_story("Entendo, a democracia funciona melhor quando os poderes são independentes. Mas agora já estamos no meio do ano e seria interessante liberar verbas para a construção de creches propostas pelo candidato {}. O senhor concordaria em liberar essas verbas?")
+	update_story("Entendo, a democracia somente funciona quando os poderes são independentes. Mas agora já estamos no meio do ano e seria interessante liberar verbas para a construção de creches. O senhor concordaria em liberar essas verbas?")
 	update_character("Presidente da Câmara")
 	decisionA.text = "Sim"
 	update_functionA("quociente4")
@@ -274,25 +283,54 @@ func quociente4():
 func quociente5():
 	update_story("De fato, manter sua independência é a melhor estratégia para atingir seus objetivos de melhorar nosso país. De todo modo, estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
-	decisionA.text = "Não se posicionar"
+	decisionA.text = "Se posicionar"
 	update_functionA("quociente6")
-	decisionB.text = "Se posicionar"
+	decisionB.text = "Não se posicionar"
 	update_functionB("quociente6")
 	month.text = "Outubro"
 	
 	
 func quociente6():
-	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato {} perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. Agora, teremos que escolher nossas novas prioridades: proteger os direitos dos cidadãos ou melhorar a economia?")
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
 	update_character("Secretário")
 	decisionA.text = "Vamos proteger os direitos fundamentais"
-	update_functionA("minigame")
-	decisionB.text = "Vamos priorizar a economia"
-	update_functionB("minigame")
-	month.text = "Dia seguinte as eleições"
-	
+	update_functionA("minigame_level_2")
+	decisionB.text = "Botão de teste (perder o jogo)"
+	update_functionB("lose_points")
+	month.text = "Dia seguinte às eleições"
+	update_info("""
+O quociente eleitoral ("QE") é o valor obtido a partir da seguinte fórmula: 
 
-func minigame():
-	get_tree().change_scene("res://minigame/fase2/World.tscn")
+[i]QE = número de votos válidos (todos os votos menos os em branco e os votos nulos) / número de vagas[/i].
+
+Ele serve para definir o mínimo de votos que os partidos precisam para ter direito a ocupar as vagas nas eleições proporcionais: câmara dos deputados, Câmaras de Vereadores, Assembléias legislativas dos estados e Câmara Legislativa do Distrito Federal.
+
+[b]Um Exemplo prático:[/b]
+
+Partido/coligação | Votos nominais + votos de legenda
+Partido A 		| 4.900
+Partido B 		| 3.350
+Partido C 		| 550
+Votos em branco | 300 (não contam)
+Votos nulos | 250 (não contam)
+Vagas a preencher 	| 9
+Total de votos válidos | 3.800
+
+QE = 8.800 / 9 = 977,77... => [b]QE = 977[/b]
+
+Logo, apenas os partidos A e B conseguiram atingir o quociente eleitoral e terão direito a preencher as vagas disponíveis.
+
+Fonte: Tribunal Superior Eleitoral ("TSE")
+""")
+
+func lose_points():
+	score.update_political(-10)
+	score.update_social(-10)
+	score.update_economic(-10)
+
+func minigame_level_2():
+	if get_tree().change_scene("res://minigame/fase2/World.tscn") != OK:
+		print ("An unexpected error occured when trying to switch scenes")
 	
 # LOW SCORE OR GAME OVER CHECKS
 # Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo
@@ -322,15 +360,13 @@ func is_low_social():
 func game_over():
 	# TEXTOS E IMAGENS
 	update_story("Presidente, infelizmente um dos seus indicadores ficou abaixo de 0 e você sofreu um processo de [b]impeachment[/b]. Tente novamente!") #  Narrativa do card
-	update_character("presidente") # Personagem do Card
+	update_character("Presidente") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Voltar ao menu inicial" # Texto da primeira decisao
 	update_functionA("goto_start_menu") # Card que sera selecionado se o jogador clicar na primeira decisao
 	# SEGUNDA DECISAO
 	decisionB.text = "Voltar ao menu inicial" # Texto da segunda decisao
 	update_functionB("goto_start_menu") # Card que sera selecionado se o jogador clicar na segunda decisao
-	# INFORMACOES ADICIONAIS
-	infoBtn.visible = true
 	
 func goto_start_menu():
 	emit_signal("finish_game")

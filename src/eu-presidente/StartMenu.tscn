@@ -49,13 +49,13 @@ __meta__ = {
 
 [node name="Continue" type="Button" parent="."]
 anchor_left = 0.5
-anchor_top = 0.754
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.754
-margin_left = -263.0
-margin_top = 45.68
-margin_right = 309.0
-margin_bottom = 145.68
+anchor_bottom = 0.5
+margin_left = -286.0
+margin_top = 191.0
+margin_right = 286.0
+margin_bottom = 291.0
 custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -68,13 +68,13 @@ __meta__ = {
 
 [node name="StartGame" type="Button" parent="."]
 anchor_left = 0.5
-anchor_top = 0.872
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.872
-margin_left = -237.0
-margin_top = -208.76
-margin_right = 263.0
-margin_bottom = -108.76
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = 326.0
+margin_right = 250.0
+margin_bottom = 426.0
 custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
 custom_colors/font_color_hover = Color( 0.109804, 0.109804, 0.168627, 1 )
 custom_colors/font_color_pressed = Color( 0.117647, 0.117647, 0.172549, 1 )
@@ -114,6 +114,9 @@ custom_fonts/font = SubResource( 5 )
 text = "Versao 1.4
 Equipe Turing"
 valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
