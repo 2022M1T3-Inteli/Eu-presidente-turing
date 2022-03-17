@@ -50,6 +50,9 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 # BUILT INS
 # Funcoes fornecidas pelo proprio Godot (comecam com _)
 
+func _ready():
+	start_card()
+
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
 	# Essas condicoes servem para determinar se a imagem deve ser arrastada para fora da tela
@@ -77,6 +80,7 @@ func _process(delta):
 	# limitamos aqui os valores possiveis para essas propriedades		
 	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -25, 25)
 	portrait.position.x = clamp(portrait.position.x, 250, 450)
+
 
 # SWIPE ANIMATIONS
 # Esse conjunto de funcoes serve para determinar se o jogador esta com o mouse
@@ -208,13 +212,13 @@ func update_functionB(fn_name: String) -> void:
 
 func start_card():
 	# TEXTOS E IMAGENS
-	update_story("Parabéns! Após meses de campanha, você foi eleito [b]presidente do Brasil[/b]. Você está confiante?") #  Narrativa do card
-	update_character("Presidente") # Personagem do Card
+	update_story("Senhor Presidente, que bom vê-lo aqui. Estamos na véspera da eleição para Deputado. O candidato {A} propõe a defesa do meio ambiente e o candidato {B} propõe a defesa das minorias. O senhor já decidiu quem vai apoiar?") #  Narrativa do card
+	update_character("Presidente da Câmara") # Personagem do Card
 	# PRIMEIRA DECISAO
-	decisionA.text = "Sim, claro!" # Texto da primeira decisao
+	decisionA.text = "Candidato {A}" # Texto da primeira decisao
 	update_functionA("quociente1") # Card que sera selecionado se o jogador clicar na primeira decisao
 	# SEGUNDA DECISAO
-	decisionB.text = "Ainda não..." # Texto da segunda decisao
+	decisionB.text = "Candidato {B}" # Texto da segunda decisao
 	update_functionB("quociente1") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MODIFICAR OS INDICADORES
 	score.set_all(5, 5, 5) # Social, Politico, Economico - Setar Score para começar o jogo
@@ -222,101 +226,73 @@ func start_card():
 	# score.update_economic(5) # Pontos a serem adicionados/removidos do indicador economico
 	# score.update_political(5) # Pontos a serem adicionados/removidos do indiciador politico
 	# MES DO JOGO
-	month.text = "Janeiro"
+	month.text = "Fevereiro"
 	# INFORMACOES ADICIONAIS
 	# info.text = ""
 	infoBtn.visible = true
 	
 func quociente1():
-	update_story("Você está no Palácio, Presidente! Amanhã é a eleição para Deputado Federal e o senhor ainda não escolheu o candidato que quer apoiar. Você precisa falar com o Presidente do Congresso agora e se decidir...")
+	update_story("Uma ótima escolha, Presidente! E com relação ao suporte ao candidato durante a campanha, o senhor pretende demonstrar publicamente seu apoio, participando de programas de televisão, dividindo palanques e concedendo entrevistas?")
 	update_character("Secretário")
-	decisionA.text = "Tudo bem!"
+	decisionA.text = "Sim"
 	update_functionA("quociente2")
-	decisionB.text = "Estou meio ansioso..."
-	update_functionB("quociente2")
+	decisionB.text = "Não"
+	update_functionB("quociente3")
+	month.text = "Março"
 	
 	
 func quociente2():
-	update_story("Senhor Presidente, vamos lá.  O candidato Pedro Augusto tem uma proposta de combate à corrupção e o Fernando Alberto tem uma proposta de defesa dos direitos de minorias. Quem o senhor vai apoiar?")
+	update_story("Sem dúvida, seu apoio será lembrado. Mas agora já estamos no meio do ano e precisamos discutir propagandas eleitorais. Estamos pensando em uma campanha nas redes sociais pra melhorar a popularidade do candidato. Podemos agendar uma sessão de fotos?")
 	update_character("Presidente da Câmara")
-	decisionA.text = "Pedro Augusto"
-	update_functionA("quociente3")
-	decisionB.text = "Fernando Alberto"
-	update_functionB("quociente4")
+	decisionA.text = "Sim"
+	update_functionA("quociente4")
+	decisionB.text = "Não"
+	update_functionB("quociente5")
+	month.text = "Junho"
 	
 	
 func quociente3():
-	update_story("Uma ótima escolha, sem dúvida! O candidato Pedro Augusto está empenhado no combate à corrupção em todas as esferas do governo")
-	update_character("Secretário")
-	decisionA.text = "Acredito que ele tem boas chances de ganhar!"
-	update_functionA("nivel3")
-	decisionB.text = "Ele é um ótimo representante do povo"
-	update_functionB("nivel3")
-	score.update_political(1)
-	score.update_economic(1)
-	
+	update_story("Entendo, a democracia funciona melhor quando os poderes são independentes. Mas agora já estamos no meio do ano e seria interessante liberar verbas para a construção de creches propostas pelo candidato {}. O senhor concordaria em liberar essas verbas?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Sim"
+	update_functionA("quociente4")
+	decisionB.text = "Não"
+	update_functionB("quociente5")
+	month.text = "Junho"
 	
 	
 func quociente4():
-	update_story("Muito bem, o candidato Fernando Alberto sempre se preocupou com a proteção de grupos minoritários")
-	update_character("População")
-	decisionA.text = "Acredito que ele tré muitos votos"
-	update_functionA("nivel3")
-	decisionB.text = "Ele é um ótimo representante do povo"
-	update_functionB("nivel3")
-	score.update_social(1)
-	score.update_political(1)
-	
-func nivel3():
-	update_story("Já estamos no meio do ano e a eleição se aproxima, você vai dizer abertamente ao público qual candidato apoia?")
-	update_character("Presidente da Câmara")
-	decisionA.text = "Vou falar ao público quem eu apoio."
-	update_functionA("preeleicao")
-	decisionB.text = "Prefiro não dizer ao público"
-	update_functionB("preeleicao")
-	
-	
-func preeleicao():
-	update_story(" Já estamos no meio do ano e a eleição e seu candidato parece estar bem com o público em geral.")
-	update_character("Presidente da Câmara")
-	decisionA.text = "já imaginava, acredito em meu candidato."
-	update_functionA("nivel4")
-	decisionB.text = "Ok, mas é preciso ter calma."
-	update_functionB("nivel4")
-	
-	
-func nivel4():
-	update_story("Senhor presidente, lamento informar que o candidato perdeu as eleições, embora tenha recebido uma quantidade expressiva dos votos. Outros candidatos com uma votação menor foram eleitos. No calor da campanha, não demos a devida importância ao quociente eleitoral")
+	update_story("Agora vamos ganhar essas eleições. Sua ajuda foi fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
-	decisionA.text = "Tudo bem conversaremos com o vencedor."
-	update_functionA("nivel5")
-	decisionB.text = "Triste, estou decepcionado."
-	update_functionB("nivel5")
-	
-	
-func nivel5():
-	update_story("E olha que ele ganhou mais votos, mas mesmo assim não levou. Será que não é possível fazer nada a respeito?")
+	decisionA.text = "Não se posicionar"
+	update_functionA("quociente6")
+	decisionB.text = "Se posicionar"
+	update_functionB("quociente6")
+	month.text = "Outubro"
+
+
+func quociente5():
+	update_story("De fato, manter sua independência é a melhor estratégia para atingir seus objetivos de melhorar nosso país. De todo modo, estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
-	decisionA.text = "Acredito que não, as leis são as leis e o único jeitode muda-las é por meio do trabalho do Congresso."
-	update_functionA("nivel6")
-	decisionB.text = "Infelizmente não, isso iria contra a constituição"
-	update_functionB("nivel6")
+	decisionA.text = "Não se posicionar"
+	update_functionA("quociente6")
+	decisionB.text = "Se posicionar"
+	update_functionB("quociente6")
+	month.text = "Outubro"
 	
 	
-func nivel6():
-	pass
-	
-	
-#func nivel7():
-	#update_story("")
-	#update_character("")
-	#decisionA.text = ""
-	#pdate_functionA("")
-	#decisionB.text = ""
-	#update_functionB("")
+func quociente6():
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato {} perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. Agora, teremos que escolher nossas novas prioridades: proteger os direitos dos cidadãos ou melhorar a economia?")
+	update_character("Secretário")
+	decisionA.text = "Vamos proteger os direitos fundamentais"
+	update_functionA("minigame")
+	decisionB.text = "Vamos priorizar a economia"
+	update_functionB("minigame")
+	month.text = "Dia seguinte as eleições"
 	
 
-	
+func minigame():
+	get_tree().change_scene("res://minigame/fase2/World.tscn")
 	
 # LOW SCORE OR GAME OVER CHECKS
 # Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo

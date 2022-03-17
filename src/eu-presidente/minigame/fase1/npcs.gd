@@ -42,7 +42,7 @@ func mov_pos(path):
 		velocity.y += 1
 	if $first_npc/KinematicBody2D.position.y > path.position.y:
 		velocity.y -= 1
-	if delta_x <= 1 and delta_y <= 1:
+	if delta_x <= 20 and delta_y <= 20:
 		#$first_npc/KinematicBody2D/AnimatedSprite.stop()
 		#$first_npc/KinematicBody2D/AnimatedSprite.frame = 0
 		switch_path(path)

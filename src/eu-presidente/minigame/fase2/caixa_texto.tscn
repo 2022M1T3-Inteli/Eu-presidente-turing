@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://minigame/fase1/caixa_texto.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.054902, 0.054902, 0.054902, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://minigame/MEGAMAN10 copy.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 3 )
+
+[node name="NPC_texto" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="caixaDeTexto" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -250.0
+margin_right = -50.0
+margin_bottom = -50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="caixaDeTexto"]
+margin_right = 620.0
+margin_bottom = 200.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="caixaDeTexto"]
+margin_right = 620.0
+margin_bottom = 200.0
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="caixaDeTexto/MarginContainer"]
+visible = false
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 590.0
+margin_bottom = 170.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="caixaDeTexto/MarginContainer"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 590.0
+margin_bottom = 170.0
+
+[node name="asterisco" type="Label" parent="caixaDeTexto/MarginContainer/HBoxContainer"]
+margin_right = 33.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 7, 0 )
+rect_pivot_offset = Vector2( 383, 81 )
+size_flags_horizontal = 0
+size_flags_vertical = 9
+custom_fonts/font = SubResource( 2 )
+text = "* "
+
+[node name="texto" type="Label" parent="caixaDeTexto/MarginContainer/HBoxContainer"]
+margin_left = 37.0
+margin_right = 536.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 383, 81 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+autowrap = true
+clip_text = true
+
+[node name="proximo" type="Label" parent="caixaDeTexto/MarginContainer/HBoxContainer"]
+margin_left = 540.0
+margin_top = 113.0
+margin_right = 560.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 7, 0 )
+rect_pivot_offset = Vector2( 383, 81 )
+size_flags_vertical = 8
+custom_fonts/font = SubResource( 2 )
+text = "V"
+
+[node name="Tween" type="Tween" parent="."]

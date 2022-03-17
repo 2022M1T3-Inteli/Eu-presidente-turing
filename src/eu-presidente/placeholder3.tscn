@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://placeholder3.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 5 )
+
+[node name="placeholder" type="Button"]
+margin_right = 714.0
+margin_bottom = 1123.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 119.0
+margin_top = 117.0
+margin_right = 548.0
+margin_bottom = 190.0
+custom_fonts/font = SubResource( 2 )
+text = "PLACEHOLDER 3/5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 79.0
+margin_top = 461.0
+margin_right = 656.0
+margin_bottom = 638.0
+custom_fonts/font = SubResource( 4 )
+text = "IMAGINE AQUI O PERSONAGEM PENSANDO CONSIGO MESMO ANTES DE DORMIR"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 23.0
+margin_top = 845.0
+margin_right = 693.0
+margin_bottom = 1016.0
+custom_fonts/font = SubResource( 6 )
+text = "Avisaram que amanhã vão cortar a energia do bairro. Tenho que lembrar de avisar a professora que não vou conseguir fazer a tarefa de casa no computador. Tomara que ela não brigue comigo!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="." to="." method="_on_placeholder_pressed"]

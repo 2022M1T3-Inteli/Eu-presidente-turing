@@ -18,7 +18,7 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_card_congresso_body_entered(body):
-	get_tree().change_scene("res://Main.tscn")
+	get_tree().change_scene("res://Card.tscn")
 
 
 func _on_entrada_congresso_body_exited(body):

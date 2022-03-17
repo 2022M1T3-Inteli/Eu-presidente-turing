@@ -1,25 +1,24 @@
 extends Control
 
 signal load_game
-signal start_game
 
 onready var continueBtn: Button = $Continue
-		
-# Emitir sinal para o "Main" quando o player quiser iniciar um novo jogo
+
+
 func _on_StartGame_pressed():
-	self.hide() # Esconde o menu inicial
-	emit_signal("start_game") 
+	get_tree().change_scene("res://placeholder1.tscn")
 
-func _on_Minigame_pressed():
-	if get_tree().change_scene("res://minigame/World.tscn") != OK:
-		print ("An unexpected error occured when trying to switch to the minigame scene")
 
+#TODO: implementar
 func _on_Continue_pressed():
-	self.hide() # Esconde o menu inicial
+	self.hide()
 	emit_signal("load_game")
-	
+
+
+#TODO: implementar
 func show_continue():
 	continueBtn.show()
-	
+
+#TODO: implementar
 func hide_continue():
 	continueBtn.hide()
