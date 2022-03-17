@@ -252,6 +252,9 @@ func quociente3():
 	update_functionA("nivel3")
 	decisionB.text = "Ele é um ótimo representante do povo"
 	update_functionB("nivel3")
+	score.update_political(1)
+	score.update_economic(1)
+	
 	
 	
 func quociente4():
@@ -261,6 +264,8 @@ func quociente4():
 	update_functionA("nivel3")
 	decisionB.text = "Ele é um ótimo representante do povo"
 	update_functionB("nivel3")
+	score.update_social(1)
+	score.update_political(1)
 	
 func nivel3():
 	update_story("Já estamos no meio do ano e a eleição se aproxima, você vai dizer abertamente ao público qual candidato apoia?")
