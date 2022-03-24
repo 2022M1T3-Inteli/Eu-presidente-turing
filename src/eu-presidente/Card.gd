@@ -393,8 +393,9 @@ func orctet5():
 	update_story("Parabéns senhor Presidente. Seguir o que estava estabelecido e não ceder à pressões é característica de grandes líderes. Agora que o orçamento está definido, o Congresso está discutindo uma PEC do voto impresso enquanto o Judiciário voltou a debater direitos fundamentais. Qual assunto o senhor prefere enfrentar primeiro")
 	update_character("Secretário")
 	decisionA.text = "PEC"
-	update_functionA("orctet6")
+	update_functionA("orctet5")
 	decisionB.text = ("Direitos Fundamentais")
+	update_functionB("orctec5")
 	month.text = "Dezembro, ano 2"
 	
 	
@@ -448,6 +449,8 @@ func game_over():
 	update_functionB("goto_start_menu") # Card que sera selecionado se o jogador clicar na segunda decisao
 	
 func goto_start_menu():
+	current_card = "start_card"
+	save_game()
 	emit_signal("finish_game")
 
 # Função para randomizar o efeito sonoro após selecionar um card

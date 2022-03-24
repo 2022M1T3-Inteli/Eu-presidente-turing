@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var global = get_node("/root/Global")
+
 #const CARD = preload("res://Card.tscn")
 func _ready():
 	$WorldSong.play()
@@ -18,7 +20,7 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_card_congresso_body_entered(body):
-	get_tree().change_scene("res://Card.tscn")
+	get_tree().change_scene("res://Main.tscn")
 
 
 func _on_entrada_congresso_body_exited(body):

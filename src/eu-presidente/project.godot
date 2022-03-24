@@ -14,6 +14,10 @@ config/name="eu-presidente"
 run/main_scene="res://Main.tscn"
 config/icon="res://assets/main_menu/presidentes.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
 window/size/width=720
