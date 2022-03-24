@@ -294,10 +294,10 @@ func quociente6():
 	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
 	update_character("Secretário")
 	decisionA.text = "Vamos proteger os direitos fundamentais"
-	update_functionA("minigame_level_2")
-	decisionB.text = "Botão de teste (perder o jogo)"
-	update_functionB("lose_points")
-	month.text = "Dia seguinte às eleições"
+	update_functionA("orctet1")
+	decisionB.text = "OK"
+	update_functionB("orctet1")
+	month.text = "Dia seguinte as eleições"
 	update_info("""
 O quociente eleitoral ("QE") é o valor obtido a partir da seguinte fórmula: 
 
@@ -323,6 +323,85 @@ Logo, apenas os partidos A e B conseguiram atingir o quociente eleitoral e terã
 Fonte: Tribunal Superior Eleitoral ("TSE")
 """)
 
+func orctet1():
+	update_story("Presidente, é hora de definir a Lei de Diretrizes Orçamentárias para o próximo ano. Será necessário decidir as prioridades de investimento e as principais áreas de desenvolvimento")
+	update_character("Secretário")
+	decisionA.text = "Pra que fazer isso?"
+	update_functionA("orctet2")
+	decisionB.text = "É muito difícil?"
+	update_functionB("orctet2")
+	month.text = "Fevereiro, ano 2"
+	
+	
+func orctet2():
+	update_story("É necessário aplicar os recursos dos impostos em serviços públicos e isso dá bastante trabalho. Minha equipe técnica informou que o Plano Plurianual prevê 35% do orçamento para educação e saúde. Podemos direcionar essas verbas conforme previsto?")
+	update_character("Min. Economia")
+	decisionA.text = "Investir em educação e saúde."
+	update_functionA("orctet3a")
+	decisionB.text = "Vou consultar o Presidente da Câmara."
+	update_functionB("orctet3b")
+	month.text = "Abril, ano 2"
+	
+	
+func orctet3a():
+	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Seguir PPA"
+	update_functionA("orctet4a")
+	decisionB.text = "Descumprir a Lei"
+	update_functionB("orctet4b")
+	month.text = "Julho, ano 2"
+	score.update_social(2)
+	score.update_political(1)
+	
+	
+func orctet3b():
+	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Seguir PPA"
+	update_functionA("orctet4a")
+	decisionB.text = "Descumprir a Lei"
+	update_functionB("orctet4b")
+	month.text = "Julho, ano 2"
+	
+	
+func orctet4a():
+	update_story("O Congresso debateu e votou o Lei de Diretrizes Orçamentárias, sendo necessário agora definir o orçamento. A prioridade é saúde e educação, mas os servidores públicos estão pedindo aumento. Não será possível fazer os dois sem descumprir o “Teto de Gastos”. Como vamos destinar os recursos públicos?")
+	update_character("Secretário")
+	decisionA.text = "Saúde e educação"
+	update_functionA("orctet5")
+	decisionB.text = "Servidores públicos"
+	update_functionB("orctet5")
+	month.text = "Novembro, ano 2"
+	score.update_social(1)
+	
+	
+func orctet4b():
+	update_story("O Congresso debateu e votou o Lei de Diretrizes Orçamentárias, sendo necessário agora definir o orçamento. A prioridade é saúde e educação, mas os servidores públicos estão pedindo aumento. Não será possível fazer os dois sem descumprir o “Teto de Gastos”. Como vamos destinar os recursos públicos?")
+	update_character("Secretário")
+	decisionA.text = "Saúde e educação"
+	update_functionA("orctet5")
+	decisionB.text = "Servidores públicos"
+	update_functionB("orctet5")
+	month.text = "Novembro, ano 2"
+	score.update_political(-4)
+	score.update_economic(-3)
+	score.update_social(-3)
+	
+	
+func orctet5():
+	update_story("Parabéns senhor Presidente. Seguir o que estava estabelecido e não ceder à pressões é característica de grandes líderes. Agora que o orçamento está definido, o Congresso está discutindo uma PEC do voto impresso enquanto o Judiciário voltou a debater direitos fundamentais. Qual assunto o senhor prefere enfrentar primeiro")
+	update_character("Secretário")
+	decisionA.text = "PEC"
+	update_functionA("orctet6")
+	decisionB.text = ("Direitos Fundamentais")
+	month.text = "Dezembro, ano 2"
+	
+	
+func orctet6():
+	pass
+	
+	
 func lose_points():
 	score.update_political(-10)
 	score.update_social(-10)
