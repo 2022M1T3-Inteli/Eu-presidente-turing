@@ -38,7 +38,7 @@ var random_sfx = null # Usado para o efeito sonoro
 # CONSTANTES
  
 onready var PORTRAIT_ORIGINAL_X: float = portrait.position.x # Valor da posicao x quando o card é renderizado
-const PORTRAIT_SPEED_X: int = 220 # Rapidez com que o card se move horizontalmente
+const PORTRAIT_SPEED_X: int = 400 # Rapidez com que o card se move horizontalmente
 const SPEED_SWIPE_MODIFIER: int = 5 # Coeficiente da rapidez quando o card sai de cena
 const PORTRAIT_ANGULAR_VELOCITY: float = PI/3.33 # Velocidade angular de rotacao do card
 const CARD_INTERVAL: float = 0.6 # Intervalo entre um card e outro
