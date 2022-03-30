@@ -68,19 +68,19 @@ func _process(delta):
 	# a esquerda ou direita, quando o jogador mover o mouse naquela direcao
 	if hover_left:
 		# portrait.rotate(-PI/200) <- velocidade que testei
-		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta * -1)
+#		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta * -1)
 		portrait.position.x -= PORTRAIT_SPEED_X * delta
 	elif hover_right: 
 		# portrait.rotate(PI/200) <- velocidade que testei
-		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta)
+#		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta)
 		portrait.position.x += PORTRAIT_SPEED_X * delta
 	else:
 		portrait.position.x = PORTRAIT_ORIGINAL_X 
-		portrait.rotation_degrees = 0
+#		portrait.rotation_degrees = 0
 	# Para evitar que a imagem rotacione alem de 45 graus ou saia da tela,
 	# limitamos aqui os valores possiveis para essas propriedades		
 	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -25, 25)
-	portrait.position.x = clamp(portrait.position.x, 250, 450)
+	portrait.position.x = clamp(portrait.position.x, 200, 500)
 
 
 # SWIPE ANIMATIONS
@@ -393,9 +393,9 @@ func orctet5():
 	update_story("Parabéns senhor Presidente. Seguir o que estava estabelecido e não ceder à pressões é característica de grandes líderes. Agora que o orçamento está definido, o Congresso está discutindo uma PEC do voto impresso enquanto o Judiciário voltou a debater direitos fundamentais. Qual assunto o senhor prefere enfrentar primeiro")
 	update_character("Secretário")
 	decisionA.text = "PEC"
-	update_functionA("orctet5")
+	update_functionA("game_over")
 	decisionB.text = ("Direitos Fundamentais")
-	update_functionB("orctec5")
+	update_functionB("game_over")
 	month.text = "Dezembro, ano 2"
 	
 	
