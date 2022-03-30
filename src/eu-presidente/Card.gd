@@ -393,14 +393,132 @@ func orctet5():
 	update_story("Parabéns senhor Presidente. Seguir o que estava estabelecido e não ceder à pressões é característica de grandes líderes. Agora que o orçamento está definido, o Congresso está discutindo uma PEC do voto impresso enquanto o Judiciário voltou a debater direitos fundamentais. Qual assunto o senhor prefere enfrentar primeiro")
 	update_character("Secretário")
 	decisionA.text = "PEC"
-	update_functionA("game_over")
+	update_functionA("pec1")
 	decisionB.text = ("Direitos Fundamentais")
-	update_functionB("game_over")
+	update_functionB("pec1")
 	month.text = "Dezembro, ano 2"
 	
 	
-func orctet6():
-	pass
+func pec1():
+	update_story("No congresso nacional estão falando em uma PEC dos Jogos eletrônicos, isso altera a lei que taxa impostos sobre os jogos.")
+	update_character("Secretário")
+	decisionA.text = "Mas para que estão querendo fazer isso."
+	update_functionA("pec2")
+	decisionB.text = "Nossa, deve ser importante."
+	update_functionB("pec2")
+	month.text = "Fevereiro, ano 3"
+	
+	
+func pec2():
+	update_story("Essa PEC favorece a indústria nacional e torna alguns jogos brasileiros mais competitivos no Brasil e no mundo.")
+	update_character("Secretário")
+	decisionA.text = "Preciso conversar com o presidente do congresso."
+	update_functionA("pec3")
+	decisionB.text = "Não posso opinar nas decisões do legislativo. Eu acho que vou ficar quieto."
+	update_functionB("pec3")
+	month.text = "Março, ano 3"
+	
+	
+func pec3():
+	update_story("Presidente soube que você quer conversar comigo. Se for sobre a PEC o senado está a favor dessa ideia mais a população não gostou muito, parte da população já apelidou de PEC man.")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Não quero  me posicionar"
+	update_functionA("pec4")
+	decisionB.text = ("Preciso me posicionar")
+	update_functionB("pec4")
+	month.text = "Abril, ano 3"
+	score.update_political(2)
+	
+	
+	
+func pec4():
+	update_story("Senhor presidente se for aprovada os impostos em cima de jogos aumentarão muito, se a indústria brasileira não for capaz de atender a população ela ficará revoltada, mas se a gente der conta nossa economia ira se fortalecer.")
+	update_character("Min. Economia")
+	decisionA.text = "Entendi, acho que vai ser simples decidir"
+	update_functionA("pec5")
+	decisionB.text = "Será muito difícil decidir."
+	update_functionB("pec5")
+	month.text = "Maio, ano 3"
+	
+	
+func pec5():
+	update_story("Qual será sua posição sobre a PEC dos Jogos Eletrônicos?")
+	update_character("Secretário")
+	decisionA.text = "A favor da PEC"
+	update_functionA("pec6")
+	decisionB.text = "Contra PEC"
+	update_functionB("pec6")
+	month.text = "Junho, ano 3"
+	
+	
+func pec6():
+	update_story("Foi bom o senhor se posicionar.Essa PEC estáva em processo de votação final, e foi aprovada! ")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Esperava esse resultado."
+	update_functionA("mpdec1")
+	decisionB.text = "Não esperava esse resultado."
+	update_functionB("mpdec1")
+	month.text = "Julho, ano 3"
+	
+	
+func mpdec1():
+	update_story("Senhor presidente, a PEC passou pelo Congresso nacional. Mas indústrias precisam de equipamentos para produzir seus jogos")
+	update_character("Secretário")
+	decisionA.text = "Nossa, não pensei nisso"
+	update_functionA("mpdec2")
+	decisionB.text = "Verdade, você tem razão."
+	update_functionB("mpdec2")
+	month.text = "Agosto, ano 3"
+	
+func mpdec2():
+	update_story("Eu acho que o meio para solucionar esse problema pode ser por meio de uma MP ou Decreto.")
+	update_character("Secretário")
+	decisionA.text = "Por que?"
+	update_functionA("mpdec3")
+	decisionB.text = "Sério?"
+	update_functionB("mpdec3")
+	month.text = "Setembro, ano 3"
+	
+	
+func mpdec3():
+	update_story("MP( medida provisória) você pode fazer e publicar como a mesma força de lei e decreto apenas irá complementar o que está na lei.")
+	update_character("Secretário")
+	decisionA.text = "Isso pode ser útil."
+	update_functionA("mpdec4")
+	decisionB.text = "Será mesmo que pode ser útil?"
+	update_functionB("mpdec4")
+	month.text = "Outubro"
+	
+	
+func mpdec4():
+	update_story(" Uma MP pode ser muito útil, claro que você não pode colocar qualquer coisa! um exemplo são as cláusulas pétras, leis relacionadas aos direitos fundamentais de nossa democracia.")
+	update_character("Secretário")
+	decisionA.text = "escolho emitir uma MP."
+	update_functionA("mpdec5")
+	decisionB.text = "me fale mais sobre os decretos"
+	update_functionB("mpdec")
+	month.text = "Novembro, ano 3"
+	
+	
+func mpdec5():
+	update_story("o decreto é semelhante a MP, ele possui força de uma lei e pode complementar a sua decisão. Agora o senhor precisa decidir!")
+	update_character("Secretário")
+	decisionA.text = " Emitir uma mp e um decreto"
+	update_functionA("mpdec6")
+	decisionB.text = "aumentar o investimento na economia"
+	update_functionB("mpdec6")
+	month.text = "Dezembro, ano 3 "
+	
+	
+func mpdec6():
+	update_story("Parabéns presidente! foram publicadas uma MP e um Decreto e agora a indústria brasileira podem comprar equipamento de fora, mas produzir jogos brasileiros!")
+	update_character("Secretário")
+	decisionA.text = "Fizemos um ótimo trabalho"
+	update_functionA("game_over")
+	decisionB.text = "Isso aí, estou satisfeito."
+	update_functionB("game_over")
+	month.text = "Dezembro, ano 3"
+	
 	
 	
 func lose_points():
