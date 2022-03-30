@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://placeholder2.gd" type="Script" id=1]
-[ext_resource path="res://intro/boy_room.png" type="Texture" id=2]
-[ext_resource path="res://intro/bedroom.png" type="Texture" id=3]
+[ext_resource path="res://assets/intro/boy_room.png" type="Texture" id=2]
+[ext_resource path="res://assets/intro/bedroom.png" type="Texture" id=3]
+[ext_resource path="res://assets/themes/text_box.tres" type="StyleBox" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 28
+size = 30
 font_data = SubResource( 1 )
 
 [node name="init_btn" type="Button"]
@@ -32,13 +33,19 @@ flip_h = true
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 16.0
-margin_top = 908.0
+margin_top = 856.0
 margin_right = 703.0
-margin_bottom = 1053.0
+margin_bottom = 1056.0
+custom_styles/panel = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Panel"]
-margin_right = 685.0
-margin_bottom = 143.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 672.0
+margin_bottom = 181.0
 custom_fonts/font = SubResource( 2 )
 text = "Essa noite choveu demais e inundou tudo no bairro. Não bastasse a tristeza dos meus pais, vou perder a aula super difícil de matemática que vale ponto!"
 valign = 1

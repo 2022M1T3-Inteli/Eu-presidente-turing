@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boy_bus.png-88e203f5bd9a0978096f4d2602464354.stex"
+path="res://.import/bedroom.png-57e0fc70da388d7b4a2d9dbba210eab8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://intro/boy_bus.png"
-dest_files=[ "res://.import/boy_bus.png-88e203f5bd9a0978096f4d2602464354.stex" ]
+source_file="res://assets/intro/bedroom.png"
+dest_files=[ "res://.import/bedroom.png-57e0fc70da388d7b4a2d9dbba210eab8.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

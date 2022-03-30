@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://minigame/fase1/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigame/sprites/doors.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://minigame/sprites/arvores.png" type="Texture" id=9]
 [ext_resource path="res://minigame/sounds_mg/Song1.wav" type="AudioStream" id=10]
 [ext_resource path="res://minigame/fase1/caixa_texto.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/themes/text_box.tres" type="StyleBox" id=12]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 399.375, 24.25 )
@@ -373,10 +374,13 @@ extents = Vector2( 143, 35.5 )
 extents = Vector2( 26.5, 81.5 )
 
 [sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 53, 33.25 )
+extents = Vector2( 98, 36 )
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 53, 10 )
+
+[sub_resource type="RectangleShape2D" id=76]
+extents = Vector2( 373.25, 74.3125 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 27, 137.5 )
@@ -407,6 +411,50 @@ extents = Vector2( 46.875, 62.5 )
 
 [sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 26, 46.5 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 4 )
+region = Rect2( 160, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=45]
 atlas = ExtResource( 4 )
@@ -464,55 +512,11 @@ region = Rect2( 384, 32, 32, 32 )
 atlas = ExtResource( 4 )
 region = Rect2( 416, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 4 )
-region = Rect2( 160, 160, 32, 32 )
-
 [sub_resource type="SpriteFrames" id=59]
 animations = [ {
-"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
 "loop": true,
-"name": "looking",
+"name": "sleeping",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
@@ -520,9 +524,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
 "loop": true,
-"name": "sleeping",
+"name": "looking",
 "speed": 5.0
 } ]
 
@@ -1050,7 +1054,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrada_congresso"]
-position = Vector2( -0.5, 3.75 )
+position = Vector2( -2.5, 1 )
 shape = SubResource( 20 )
 
 [node name="card_congresso" type="Area2D" parent="."]
@@ -1064,6 +1068,12 @@ position = Vector2( -2, -40 )
 shape = SubResource( 21 )
 
 [node name="border_collisions" type="Node2D" parent="."]
+
+[node name="BorderUp" type="StaticBody2D" parent="border_collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border_collisions/BorderUp"]
+position = Vector2( 374.75, -93.3125 )
+shape = SubResource( 76 )
 
 [node name="StaticBody2D_esq1" type="StaticBody2D" parent="border_collisions"]
 position = Vector2( -26, 955 )
@@ -1185,7 +1195,6 @@ position = Vector2( 46.25, 2085.25 )
 scale = Vector2( 3.73437, 3.32812 )
 frames = SubResource( 59 )
 animation = "sleeping"
-frame = 2
 playing = true
 
 [node name="Area2D" type="Area2D" parent="npcs/fox"]
@@ -1242,6 +1251,37 @@ position = Vector2( 22, 736 )
 stream = ExtResource( 10 )
 
 [node name="NPC_texto" parent="." instance=ExtResource( 11 )]
+
+[node name="Instructions 1" type="Label" parent="."]
+margin_left = 432.0
+margin_top = 1009.0
+margin_right = 556.0
+margin_bottom = 1091.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/normal = ExtResource( 12 )
+text = "Para se mover, aperte as teclas de direção do teclado ou \"W, A, S e D\""
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions 2" type="Label" parent="."]
+margin_left = 440.0
+margin_top = 821.0
+margin_right = 552.0
+margin_bottom = 909.0
+rect_pivot_offset = Vector2( 452, 180 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/normal = ExtResource( 12 )
+text = "Para falar com outros personagens, aperte a tecla  \"ESPAÇO\""
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="animation_finished" from="Buildings/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="entrada_congresso" to="." method="_on_Area2D_body_entered"]

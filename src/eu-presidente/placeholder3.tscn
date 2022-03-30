@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://placeholder3.gd" type="Script" id=1]
-[ext_resource path="res://intro/sleepingboy1.png" type="Texture" id=2]
+[ext_resource path="res://assets/intro/sleepingboy1.png" type="Texture" id=2]
+[ext_resource path="res://assets/themes/text_box.tres" type="StyleBox" id=3]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 28
+size = 30
 font_data = SubResource( 1 )
 
 [node name="init_btn" type="Button"]
@@ -19,20 +20,25 @@ __meta__ = {
 }
 
 [node name="bedroom" type="Sprite" parent="."]
-position = Vector2( 343, 458 )
+position = Vector2( 360, 520 )
 scale = Vector2( 0.647265, 0.746625 )
 texture = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 16.0
-margin_top = 866.0
+margin_top = 864.0
 margin_right = 703.0
-margin_bottom = 1053.0
+margin_bottom = 1056.0
+custom_styles/panel = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Panel"]
-margin_top = -1.0
-margin_right = 685.0
-margin_bottom = 182.0
+margin_left = 24.0
+margin_top = 14.0
+margin_right = 664.0
+margin_bottom = 171.0
 custom_fonts/font = SubResource( 2 )
 text = "Avisaram que amanhã vão cortar a energia aqui no bairro. Não vou conseguir fazer a tarefa de casa no computador. Tomara que a professora não brigue comigo!"
 valign = 1

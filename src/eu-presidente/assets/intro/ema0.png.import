@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sleepingboy2.png-c89ab48031508888042df41a3a7f33eb.stex"
+path="res://.import/ema0.png-d84f40a47f2244731c4c8a756a0ffac1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://intro/sleepingboy2.png"
-dest_files=[ "res://.import/sleepingboy2.png-c89ab48031508888042df41a3a7f33eb.stex" ]
+source_file="res://assets/intro/ema0.png"
+dest_files=[ "res://.import/ema0.png-d84f40a47f2244731c4c8a756a0ffac1.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
