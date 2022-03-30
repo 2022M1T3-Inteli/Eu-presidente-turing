@@ -496,7 +496,7 @@ func mpdec4():
 	decisionA.text = "escolho emitir uma MP."
 	update_functionA("mpdec5")
 	decisionB.text = "me fale mais sobre os decretos"
-	update_functionB("mpdec")
+	update_functionB("mpdec5")
 	month.text = "Novembro, ano 3"
 	
 	
