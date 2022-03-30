@@ -1,69 +1,52 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://placeholder1.gd" type="Script" id=1]
+[ext_resource path="res://intro/boy_bus.png" type="Texture" id=2]
+[ext_resource path="res://intro/bus.png" type="Texture" id=3]
+[ext_resource path="res://intro/background.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 60
+size = 30
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-size = 40
-font_data = SubResource( 3 )
-
-[sub_resource type="DynamicFontData" id=5]
-font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
-
-[sub_resource type="DynamicFont" id=6]
-size = 30
-font_data = SubResource( 5 )
-
-[node name="placeholder" type="Button"]
-margin_right = 708.0
+[node name="init_btn" type="Button"]
+margin_right = 729.0
 margin_bottom = 1096.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 119.0
-margin_top = 117.0
-margin_right = 548.0
-margin_bottom = 190.0
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 405.375, 539 )
+scale = Vector2( 0.524531, 0.69125 )
+texture = ExtResource( 4 )
+
+[node name="bus" type="Sprite" parent="."]
+position = Vector2( 216, 661 )
+scale = Vector2( 0.523, 0.496833 )
+texture = ExtResource( 3 )
+
+[node name="boy" type="Sprite" parent="."]
+position = Vector2( 658.625, 731.25 )
+scale = Vector2( 0.16525, 0.156333 )
+texture = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 16.0
+margin_top = 908.0
+margin_right = 703.0
+margin_bottom = 1053.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_right = 685.0
+margin_bottom = 143.0
 custom_fonts/font = SubResource( 2 )
-text = "PLACEHOLDER 1/5"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="."]
-margin_left = 79.0
-margin_top = 461.0
-margin_right = 656.0
-margin_bottom = 638.0
-custom_fonts/font = SubResource( 4 )
-text = "IMAGINE AQUI UM(A) MENINO(A) NUM ONIBUS INDO PRA ESCOLA"
+text = "De novo, o ônibus atrasou e vou tomar bronca da professora por não chegar no horário..."
+valign = 1
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 25.0
-margin_top = 927.0
-margin_right = 695.0
-margin_bottom = 1004.0
-custom_fonts/font = SubResource( 6 )
-text = "De novo, o ônibus atrasou e tomei bronca da professora por não chegar no horário..."
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="pressed" from="." to="." method="_on_placeholder_pressed"]
+[connection signal="pressed" from="." to="." method="_on_init_btn_pressed"]

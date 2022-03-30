@@ -1,69 +1,44 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://placeholder4.gd" type="Script" id=1]
+[ext_resource path="res://intro/sleepingboy2.png" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 60
+size = 28
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-size = 40
-font_data = SubResource( 3 )
-
-[sub_resource type="DynamicFontData" id=5]
-font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
-
-[sub_resource type="DynamicFont" id=6]
-size = 30
-font_data = SubResource( 5 )
-
-[node name="placeholder" type="Button"]
-margin_right = 712.0
-margin_bottom = 1060.0
+[node name="init_btn" type="Button"]
+margin_right = 729.0
+margin_bottom = 1096.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 119.0
-margin_top = 117.0
-margin_right = 548.0
-margin_bottom = 190.0
+[node name="bedroom" type="Sprite" parent="."]
+position = Vector2( 343, 458 )
+scale = Vector2( 0.647265, 0.746625 )
+texture = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 16.0
+margin_top = 866.0
+margin_right = 703.0
+margin_bottom = 1053.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_top = -1.0
+margin_right = 685.0
+margin_bottom = 182.0
 custom_fonts/font = SubResource( 2 )
-text = "PLACEHOLDER 4/5"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="."]
-margin_left = 79.0
-margin_top = 461.0
-margin_right = 656.0
-margin_bottom = 638.0
-custom_fonts/font = SubResource( 4 )
-text = "...O PERSONAGEM PENSANDO ANTES DE DORMIR"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-margin_left = 25.0
-margin_top = 896.0
-margin_right = 695.0
-margin_bottom = 973.0
-custom_fonts/font = SubResource( 6 )
 text = "Quem sabe se eu fosse o presidente, conseguiria contribuir para o desenvolvimento do meus país!"
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="." to="." method="_on_placeholder_pressed"]
+[connection signal="pressed" from="." to="." method="_on_init_btn_pressed"]

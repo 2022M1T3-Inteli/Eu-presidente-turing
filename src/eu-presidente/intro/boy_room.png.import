@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/presidente.png-1d85c936c851c80a32fa8ea8a58ed1fb.stex"
+path="res://.import/boy_room.png-267310a0b41b26fa373491c9b081f40a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/presidente.png"
-dest_files=[ "res://.import/presidente.png-1d85c936c851c80a32fa8ea8a58ed1fb.stex" ]
+source_file="res://intro/boy_room.png"
+dest_files=[ "res://.import/boy_room.png-267310a0b41b26fa373491c9b081f40a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
