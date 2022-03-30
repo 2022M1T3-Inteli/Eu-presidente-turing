@@ -45,7 +45,7 @@ margin_bottom = 1053.0
 margin_right = 685.0
 margin_bottom = 143.0
 custom_fonts/font = SubResource( 2 )
-text = "De novo, o ônibus atrasou e vou tomar bronca da professora por não chegar no horário..."
+text = "De novo, o ônibus atrasou e vou tomar bronca da professora por não chegar no horário. Se ao menos o Prefeito aumentasse a frota de ônibus..."
 valign = 1
 autowrap = true
 
