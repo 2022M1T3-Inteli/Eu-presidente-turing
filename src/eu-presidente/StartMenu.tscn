@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/characters/capa.png" type="Texture" id=1]
+[ext_resource path="res://assets/sounds/somstart.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/fonts/Roboto_Mono/RobotoMono-Medium.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://StartMenu.gd" type="Script" id=4]
 
@@ -121,6 +122,10 @@ valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SoundSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -13.0
 
 [connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
