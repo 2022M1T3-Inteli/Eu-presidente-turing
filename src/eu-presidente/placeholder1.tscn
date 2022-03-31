@@ -67,4 +67,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -13.0
+
 [connection signal="pressed" from="." to="." method="_on_init_btn_pressed"]

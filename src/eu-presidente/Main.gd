@@ -2,8 +2,10 @@ extends Control
 
 onready var card: Control = $Card
 onready var startMenu: Control = $StartMenu
+onready var musicaInicial := $Music
 
 onready var global = get_node("/root/Global")
+
 
 func _ready():
 	if global.is_first_load:
@@ -13,6 +15,10 @@ func _ready():
 	# Mostra o botão de continuar se o save foi carregado e o jogo não acabou
 	if card.load_game() && !card.is_game_over():
 		startMenu.show_continue()
+
+func _process(delta):
+	if musicaInicial.playing == false:
+		musicaInicial.play()
 
 # Iniciar jogo, deve mostrar o Card inicial
 func new_game():

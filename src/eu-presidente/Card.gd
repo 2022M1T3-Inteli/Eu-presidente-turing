@@ -53,6 +53,7 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 func _ready():
 	start_card()
 	infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
+	#$SongCard.play()
 
 # Chamada todo frame. 'delta' é o tempo (em segundos) desde o último frame.
 func _process(delta):
