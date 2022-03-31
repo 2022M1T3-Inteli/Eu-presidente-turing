@@ -17,12 +17,15 @@ func _ready():
 		startMenu.show_continue()
 
 func _process(delta):
-	if musicaInicial.playing == false:
+	if !musicaInicial.playing && global.is_on_menu:
 		musicaInicial.play()
+	elif musicaInicial.playing && !global.is_on_menu:
+		musicaInicial.stop()
 
 # Iniciar jogo, deve mostrar o Card inicial
 func new_game():
 	startMenu.hide()
+	global.is_on_menu = false
 	var save = File.new()
 	if save.file_exists("user://saves/save.dat"):
 		#Delete savegame
@@ -33,6 +36,7 @@ func new_game():
 
 # Continuar jogo, deve mostrar o card carregado com o "_ready"
 func continue_game():
+	global.is_on_menu = false
 	startMenu.hide()
 	card.show()
 
