@@ -1,10 +1,9 @@
 extends Button
 
-onready var selectSfx := $Select
+onready var selextSfx := $SelectSfx
 
 func _ready():
-	selectSfx.play() #toca o som do start
-
+	selextSfx.play()
 
 func _on_init_btn_pressed():
 	get_tree().change_scene("res://placeholder2.tscn")

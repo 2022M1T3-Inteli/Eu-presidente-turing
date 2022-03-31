@@ -6,6 +6,7 @@ signal load_game
 onready var continueBtn: Button = $Continue
 onready var presidentinho := $presidentinho
 onready var animacao := $presidentinho/AnimatedSprite
+onready var selectSfx := $SelectSfx
 
 var time = 0
 var pos = Vector2(360, -75)
@@ -30,6 +31,7 @@ func _on_StartGame_pressed():
 	emit_signal("new_game")
 
 func _on_Continue_pressed():
+	selectSfx.play()
 	self.hide()
 	emit_signal("load_game")
 
