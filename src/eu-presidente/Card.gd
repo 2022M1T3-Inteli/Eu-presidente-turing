@@ -487,39 +487,46 @@ func mpdec3():
 	update_functionA("mpdec4")
 	decisionB.text = "Será mesmo que pode ser útil?"
 	update_functionB("mpdec4")
-	month.text = "Outubro"
+	month.text = "Outubro, ano 3"
 	
 	
 func mpdec4():
 	update_story(" Uma MP pode ser muito útil, claro que você não pode colocar qualquer coisa! um exemplo são as cláusulas pétras, leis relacionadas aos direitos fundamentais de nossa democracia.")
 	update_character("Secretário")
-	decisionA.text = "escolho emitir uma MP."
+	decisionA.text = "Escolho emitir uma MP."
 	update_functionA("mpdec5")
-	decisionB.text = "me fale mais sobre os decretos"
+	decisionB.text = "Me fale mais sobre os decretos"
 	update_functionB("mpdec5")
 	month.text = "Novembro, ano 3"
 	
 	
 func mpdec5():
-	update_story("o decreto é semelhante a MP, ele possui força de uma lei e pode complementar a sua decisão. Agora o senhor precisa decidir!")
+	update_story("O decreto é semelhante à MP, ele possui força de uma lei e pode complementar a sua decisão. Agora o senhor precisa decidir!")
 	update_character("Secretário")
-	decisionA.text = " Emitir uma mp e um decreto"
+	decisionA.text = " Emitir uma MP e um Decreto"
 	update_functionA("mpdec6")
-	decisionB.text = "aumentar o investimento na economia"
+	decisionB.text = "Aumentar o investimento na economia"
 	update_functionB("mpdec6")
 	month.text = "Dezembro, ano 3 "
 	
 	
 func mpdec6():
-	update_story("Parabéns presidente! foram publicadas uma MP e um Decreto e agora a indústria brasileira podem comprar equipamento de fora, mas produzir jogos brasileiros!")
+	update_story("Parabéns presidente! Foram publicadas uma MP e um Decreto e agora a indústria brasileira podem comprar equipamento de fora, mas produzir jogos brasileiros!")
 	update_character("Secretário")
 	decisionA.text = "Fizemos um ótimo trabalho"
-	update_functionA("game_over")
+	update_functionA("game_won")
 	decisionB.text = "Isso aí, estou satisfeito."
-	update_functionB("game_over")
+	update_functionB("game_won")
 	month.text = "Dezembro, ano 3"
 	
-	
+func game_won():
+	update_story("Parabéns! Você concluiu seu mandato com sucesso.")
+	update_character("Secretário")
+	decisionA.text = "Parabéns!"
+	update_functionA("goto_start_menu")
+	decisionB.text = "Vamos para a próxima!"
+	update_functionB("goto_start_menu")
+	month.text = "Dezembro, ano 4"
 	
 func lose_points():
 	score.update_political(-10)
