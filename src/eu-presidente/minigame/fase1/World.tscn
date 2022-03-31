@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://minigame/fase1/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://minigame/sprites/doors.png" type="Texture" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://minigame/terrain/outside.png" type="Texture" id=8]
 [ext_resource path="res://minigame/sprites/arvores.png" type="Texture" id=9]
 [ext_resource path="res://minigame/sounds_mg/Song1.wav" type="AudioStream" id=10]
-[ext_resource path="res://minigame/fase1/caixa_texto.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/themes/text_box.tres" type="StyleBox" id=12]
+[ext_resource path="res://minigame/sprites/ema1.png" type="Texture" id=13]
+[ext_resource path="res://minigame/sprites/ema0.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 399.375, 24.25 )
@@ -368,93 +369,73 @@ extents = Vector2( 17, 29 )
 extents = Vector2( 42.125, 43.75 )
 
 [sub_resource type="RectangleShape2D" id=32]
-extents = Vector2( 143, 35.5 )
+extents = Vector2( 143, 49.75 )
 
-[sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 26.5, 81.5 )
+[sub_resource type="SpriteFrames" id=81]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.5
+} ]
 
-[sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 98, 36 )
-
-[sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 53, 10 )
-
-[sub_resource type="RectangleShape2D" id=76]
-extents = Vector2( 373.25, 74.3125 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 27, 137.5 )
-
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 26.5, 146.875 )
-
-[sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 17.125, 235.5 )
-
-[sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 37.5938, 45.5 )
-
-[sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 23.25, 59.75 )
-
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 10.5, 137.75 )
-
-[sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 17.5, 142.625 )
-
-[sub_resource type="RectangleShape2D" id=28]
-extents = Vector2( 10, 232.75 )
-
-[sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 46.875, 62.5 )
-
-[sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 26, 46.5 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 4 )
-region = Rect2( 160, 160, 32, 32 )
+[sub_resource type="RectangleShape2D" id=82]
+extents = Vector2( 616.1, 725.483 )
 
 [sub_resource type="AtlasTexture" id=40]
+flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=41]
+flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=42]
+flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=43]
+flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=44]
+flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 160, 160, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=45]
 flags = 4
@@ -528,19 +509,14 @@ region = Rect2( 416, 32, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=59]
 animations = [ {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
-"loop": true,
-"name": "sleeping",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
 "loop": true,
-"name": "looking",
+"name": "sleeping",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
@@ -563,17 +539,17 @@ region = Rect2( 32, 32, 32, 32 )
 atlas = ExtResource( 6 )
 region = Rect2( 64, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=67]
+[sub_resource type="AtlasTexture" id=70]
 atlas = ExtResource( 6 )
-region = Rect2( 0, 64, 32, 32 )
+region = Rect2( 0, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=68]
+[sub_resource type="AtlasTexture" id=71]
 atlas = ExtResource( 6 )
-region = Rect2( 32, 64, 32, 32 )
+region = Rect2( 32, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=69]
+[sub_resource type="AtlasTexture" id=72]
 atlas = ExtResource( 6 )
-region = Rect2( 64, 64, 32, 32 )
+region = Rect2( 64, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=73]
 atlas = ExtResource( 6 )
@@ -587,17 +563,17 @@ region = Rect2( 32, 0, 32, 32 )
 atlas = ExtResource( 6 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=70]
+[sub_resource type="AtlasTexture" id=67]
 atlas = ExtResource( 6 )
-region = Rect2( 0, 96, 32, 32 )
+region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=68]
 atlas = ExtResource( 6 )
-region = Rect2( 32, 96, 32, 32 )
+region = Rect2( 32, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=72]
+[sub_resource type="AtlasTexture" id=69]
 atlas = ExtResource( 6 )
-region = Rect2( 64, 96, 32, 32 )
+region = Rect2( 64, 64, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=62]
 animations = [ {
@@ -606,9 +582,9 @@ animations = [ {
 "name": "walk_left",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
 "loop": true,
-"name": "walk_right",
+"name": "walk_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 73 ), SubResource( 74 ), SubResource( 75 ) ],
@@ -616,14 +592,67 @@ animations = [ {
 "name": "walk_down",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "walk_right",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=63]
-extents = Vector2( 13.1818, 15.9091 )
+extents = Vector2( 13.1818, 17.9545 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 98, 36 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 53, 10 )
+
+[sub_resource type="RectangleShape2D" id=76]
+extents = Vector2( 373.25, 74.3125 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 27, 137.5 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 26.5, 146.875 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 17.125, 235.5 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 37.5938, 45.5 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 23.25, 59.75 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 10.5, 137.75 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 17.5, 142.625 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 10, 232.75 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 46.875, 62.5 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 26, 46.5 )
+
+[sub_resource type="DynamicFontData" id=77]
+font_path = "res://minigame/MEGAMAN10 copy.ttf"
+
+[sub_resource type="DynamicFont" id=78]
+size = 20
+font_data = SubResource( 77 )
+
+[sub_resource type="DynamicFontData" id=79]
+font_path = "res://minigame/MEGAMAN10 copy.ttf"
+
+[sub_resource type="DynamicFont" id=80]
+size = 20
+font_data = SubResource( 79 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 8, -2 )
@@ -656,16 +685,6 @@ tile_data = PoolIntArray( -131067, 1, 0 )
 position = Vector2( 387.125, -19.875 )
 scale = Vector2( 0.861979, 0.700521 )
 frames = SubResource( 19 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 376, 1034 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-limit_left = 10
-limit_top = -150
-limit_right = 1480
-limit_bottom = 2180
 
 [node name="cenario_props" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -785,7 +804,7 @@ position = Vector2( 0.5, 6 )
 shape = SubResource( 11 )
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 31, 539 )
+position = Vector2( 27, 555 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -997,7 +1016,7 @@ position = Vector2( 2, -2 )
 shape = SubResource( 12 )
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 219, 430 )
+position = Vector2( 223, 435 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1007,7 +1026,7 @@ position = Vector2( 57, 0 )
 shape = SubResource( 32 )
 
 [node name="StaticBody2D22" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 224, 308 )
+position = Vector2( 224, 324 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1017,7 +1036,7 @@ position = Vector2( 57, 0 )
 shape = SubResource( 32 )
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 218, 556 )
+position = Vector2( 219, 564 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1027,7 +1046,7 @@ position = Vector2( 57, 0 )
 shape = SubResource( 32 )
 
 [node name="StaticBody2D24" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1245, 553 )
+position = Vector2( 1245, 564 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1037,17 +1056,17 @@ position = Vector2( 57, 0 )
 shape = SubResource( 32 )
 
 [node name="StaticBody2D25" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1250, 435 )
+position = Vector2( 1250, 452 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D25"]
-position = Vector2( 57, 0 )
+position = Vector2( 57, -14.25 )
 shape = SubResource( 32 )
 
 [node name="StaticBody2D26" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1241, 309 )
+position = Vector2( 1248, 322 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1056,15 +1075,108 @@ __meta__ = {
 position = Vector2( 57, 0 )
 shape = SubResource( 32 )
 
-[node name="StaticBody2D27" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1056, 491 )
+[node name="ema" type="AnimatedSprite" parent="."]
+position = Vector2( 619.5, 986.5 )
+scale = Vector2( 0.0470703, 0.0444532 )
+frames = SubResource( 81 )
+playing = true
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D27"]
-position = Vector2( 5, -3 )
-shape = SubResource( 33 )
+[node name="StaticBody2D" type="StaticBody2D" parent="ema"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ema/StaticBody2D"]
+position = Vector2( -21.2451, -106.855 )
+shape = SubResource( 82 )
+
+[node name="ema2" type="AnimatedSprite" parent="."]
+position = Vector2( 168, 837.5 )
+scale = Vector2( 0.0470703, 0.0444532 )
+frames = SubResource( 81 )
+playing = true
+flip_h = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ema2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ema2/StaticBody2D"]
+position = Vector2( -21.2451, -106.855 )
+shape = SubResource( 82 )
+
+[node name="npcs" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="Player" parent="npcs" instance=ExtResource( 1 )]
+position = Vector2( 767, 1864 )
+scale = Vector2( 2, 2 )
+
+[node name="Camera2D" type="Camera2D" parent="npcs/Player"]
+current = true
+limit_left = 10
+limit_top = -150
+limit_right = 1480
+limit_bottom = 2180
+
+[node name="fox" type="AnimatedSprite" parent="npcs"]
+position = Vector2( 46.25, 2085.25 )
+scale = Vector2( 3.73437, 3.32812 )
+frames = SubResource( 59 )
+animation = "sleeping"
+frame = 5
+playing = true
+
+[node name="Area2D" type="Area2D" parent="npcs/fox"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="npcs/fox/Area2D"]
+polygon = PoolVector2Array( 31.5314, -30.4226, 45.7239, -25.3146, 72.2343, -15.3991, 80.8034, -1.87793, 84.8201, 25.1644, 81.0711, 25.1644, 78.1255, -0.37561, 69.0209, -12.0939, 44.3849, -20.8076, 29.6569, -26.817 )
+
+[node name="Area2D2" type="Area2D" parent="npcs/fox"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="npcs/fox/Area2D2"]
+polygon = PoolVector2Array( 11.7155, -7.28638, 18.6778, -1.87793, 22.6946, 8.0376, 22.4268, 23.3616, 18.9456, 24.2629, 19.2134, 8.33807, 16.2678, -0.37561, 11.1799, -4.28168 )
+
+[node name="Area2D3" type="Area2D" parent="npcs/fox"]
+position = Vector2( 9.30544, -2.47888 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="npcs/fox/Area2D3"]
+position = Vector2( 6.8954, -6.9859 )
+polygon = PoolVector2Array( 31.5314, -30.4226, 45.7239, -25.3146, 72.2343, -15.3991, 80.8034, -1.87793, 84.8201, 25.1644, 81.0711, 25.1644, 78.1255, -0.37561, 69.0209, -12.0939, 44.3849, -20.8076, 29.6569, -26.817 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="npcs/fox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/fox/StaticBody2D"]
+position = Vector2( 1.00418, 12.5446 )
+shape = SubResource( 60 )
+
+[node name="first_npc" type="Node2D" parent="npcs"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="npcs/first_npc"]
+position = Vector2( 563, 1525 )
+scale = Vector2( 2.2, 2.2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="npcs/first_npc/KinematicBody2D"]
+frames = SubResource( 62 )
+animation = "walk_up"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/first_npc/KinematicBody2D"]
+position = Vector2( 0, 1.59088 )
+shape = SubResource( 63 )
+
+[node name="Position2D" type="Position2D" parent="npcs/first_npc"]
+position = Vector2( 1436, 1511 )
+
+[node name="Position2D2" type="Position2D" parent="npcs/first_npc"]
+position = Vector2( 819, 1497 )
+
+[node name="Position2D3" type="Position2D" parent="npcs/first_npc"]
+position = Vector2( 819, 740 )
+
+[node name="Position2D4" type="Position2D" parent="npcs/first_npc"]
+position = Vector2( 22, 736 )
 
 [node name="entrada_congresso" type="Area2D" parent="."]
 position = Vector2( 388.5, 32 )
@@ -1091,7 +1203,7 @@ shape = SubResource( 21 )
 [node name="BorderUp" type="StaticBody2D" parent="border_collisions"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="border_collisions/BorderUp"]
-position = Vector2( 374.75, -93.3125 )
+position = Vector2( 364.5, -118 )
 shape = SubResource( 76 )
 
 [node name="StaticBody2D_esq1" type="StaticBody2D" parent="border_collisions"]
@@ -1206,77 +1318,34 @@ position = Vector2( 29.5, 762 )
 [node name="Position2D_dir_path2" type="Position2D" parent="border_collisions"]
 position = Vector2( 32, 369.5 )
 
-[node name="npcs" type="Node" parent="."]
-script = ExtResource( 7 )
-
-[node name="fox" type="AnimatedSprite" parent="npcs"]
-position = Vector2( 46.25, 2085.25 )
-scale = Vector2( 3.73437, 3.32812 )
-frames = SubResource( 59 )
-animation = "sleeping"
-playing = true
-
-[node name="Area2D" type="Area2D" parent="npcs/fox"]
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="npcs/fox/Area2D"]
-polygon = PoolVector2Array( 31.5314, -30.4226, 45.7239, -25.3146, 72.2343, -15.3991, 80.8034, -1.87793, 84.8201, 25.1644, 81.0711, 25.1644, 78.1255, -0.37561, 69.0209, -12.0939, 44.3849, -20.8076, 29.6569, -26.817 )
-
-[node name="Area2D2" type="Area2D" parent="npcs/fox"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="npcs/fox/Area2D2"]
-polygon = PoolVector2Array( 11.7155, -7.28638, 18.6778, -1.87793, 22.6946, 8.0376, 22.4268, 23.3616, 18.9456, 24.2629, 19.2134, 8.33807, 16.2678, -0.37561, 11.1799, -4.28168 )
-
-[node name="Area2D3" type="Area2D" parent="npcs/fox"]
-position = Vector2( 9.30544, -2.47888 )
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="npcs/fox/Area2D3"]
-position = Vector2( 6.8954, -6.9859 )
-polygon = PoolVector2Array( 31.5314, -30.4226, 45.7239, -25.3146, 72.2343, -15.3991, 80.8034, -1.87793, 84.8201, 25.1644, 81.0711, 25.1644, 78.1255, -0.37561, 69.0209, -12.0939, 44.3849, -20.8076, 29.6569, -26.817 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="npcs/fox"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/fox/StaticBody2D"]
-position = Vector2( 1.00418, 12.5446 )
-shape = SubResource( 60 )
-
-[node name="first_npc" type="Node2D" parent="npcs"]
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="npcs/first_npc"]
-position = Vector2( 563, 1525 )
-scale = Vector2( 2.2, 2.2 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="npcs/first_npc/KinematicBody2D"]
-frames = SubResource( 62 )
-animation = "walk_up"
-frame = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/first_npc/KinematicBody2D"]
-position = Vector2( 0, -0.454529 )
-shape = SubResource( 63 )
-
-[node name="Position2D" type="Position2D" parent="npcs/first_npc"]
-position = Vector2( 1436, 1511 )
-
-[node name="Position2D2" type="Position2D" parent="npcs/first_npc"]
-position = Vector2( 819, 1497 )
-
-[node name="Position2D3" type="Position2D" parent="npcs/first_npc"]
-position = Vector2( 819, 740 )
-
-[node name="Position2D4" type="Position2D" parent="npcs/first_npc"]
-position = Vector2( 22, 736 )
-
 [node name="WorldSong" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 
-[node name="NPC_texto" parent="." instance=ExtResource( 11 )]
-
 [node name="Instructions 1" type="Label" parent="."]
-margin_left = 432.0
-margin_top = 1009.0
-margin_right = 556.0
-margin_bottom = 1091.0
+margin_left = 230.0
+margin_top = 991.0
+margin_right = 537.0
+margin_bottom = 1081.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 78 )
+custom_styles/normal = ExtResource( 12 )
+text = "Onde estou? Eu não estava agira mesmo na minha cama?\" \"Embora seja estranho, esse lugar me parece familiar..."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions 2" type="Label" parent="."]
+visible = false
+margin_left = 248.0
+margin_top = 991.5
+margin_right = 515.0
+margin_bottom = 1079.5
+rect_pivot_offset = Vector2( 452, 180 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 80 )
 custom_styles/normal = ExtResource( 12 )
 text = "Para se mover, aperte as teclas de direção do teclado ou \"W, A, S e D\""
 align = 1
@@ -1286,13 +1355,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Instructions 2" type="Label" parent="."]
-margin_left = 440.0
-margin_top = 821.0
-margin_right = 552.0
-margin_bottom = 909.0
+[node name="Instructions 3" type="Label" parent="."]
+visible = false
+margin_left = 248.0
+margin_top = 991.5
+margin_right = 515.0
+margin_bottom = 1079.5
 rect_pivot_offset = Vector2( 452, 180 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 80 )
 custom_styles/normal = ExtResource( 12 )
 text = "Para falar com outros personagens, aperte a tecla  \"ESPAÇO\""
 align = 1
@@ -1302,7 +1373,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="first_npc_start" from="." to="npcs" method="_on_World_first_npc_start"]
+[connection signal="first_npc_stop" from="." to="npcs" method="_on_World_first_npc_stop"]
 [connection signal="animation_finished" from="Buildings/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="npcs/fox/Area2D" to="npcs" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="npcs/fox/Area2D2" to="npcs" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="npcs/fox/Area2D3" to="npcs" method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="entrada_congresso" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="entrada_congresso" to="." method="_on_entrada_congresso_body_exited"]
 [connection signal="body_entered" from="card_congresso" to="." method="_on_card_congresso_body_entered"]
@@ -1310,6 +1386,3 @@ __meta__ = {
 [connection signal="body_entered" from="border_collisions/Area2D_esq_path2" to="." method="_on_StaticBody2D_esq_path2_body_entered"]
 [connection signal="body_entered" from="border_collisions/Area2D_dir_path1" to="." method="_on_Area2D_dir_path1_body_entered"]
 [connection signal="body_entered" from="border_collisions/Area2D_dir_path2" to="." method="_on_Area2D_dir_path2_body_entered"]
-[connection signal="body_entered" from="npcs/fox/Area2D" to="npcs" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="npcs/fox/Area2D2" to="npcs" method="_on_Area2D2_body_entered"]
-[connection signal="body_entered" from="npcs/fox/Area2D3" to="npcs" method="_on_Area2D3_body_entered"]

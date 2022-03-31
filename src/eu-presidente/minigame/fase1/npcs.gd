@@ -7,26 +7,37 @@ var pos1 = true
 var pos2 = false
 var pos3 = false
 
+var first_npc = true
+
 func _ready():
 	$first_npc/KinematicBody2D.position = $first_npc/Position2D.position
 	
 func _process(delta):
 	
-	var path
-	
-	if pos1:
-		path = $first_npc/Position2D2
-		mov_pos(path)
-	elif pos2:
-		path = $first_npc/Position2D3
-		mov_pos(path)
-	elif pos3:
-		path = $first_npc/Position2D4
-		mov_pos(path)
-	elif pos0:
-		pos0 = false
-		pos1 = true
+	if first_npc:
+		var path
 		
+		if pos1:
+			path = $first_npc/Position2D2
+			mov_pos(path)
+		elif pos2:
+			path = $first_npc/Position2D3
+			mov_pos(path)
+		elif pos3:
+			path = $first_npc/Position2D4
+			mov_pos(path)
+		elif pos0:
+			pos0 = false
+			pos1 = true
+
+func _on_World_first_npc_start():
+	first_npc = true
+
+
+func _on_World_first_npc_stop():
+	first_npc = false
+	$first_npc/KinematicBody2D/AnimatedSprite.stop()
+	
 
 func mov_pos(path):
 	
@@ -43,10 +54,7 @@ func mov_pos(path):
 	if $first_npc/KinematicBody2D.position.y > path.position.y:
 		velocity.y -= 1
 	if delta_x <= 20 and delta_y <= 20:
-		#$first_npc/KinematicBody2D/AnimatedSprite.stop()
-		#$first_npc/KinematicBody2D/AnimatedSprite.frame = 0
 		switch_path(path)
-		#return
 
 	$first_npc/KinematicBody2D.move_and_slide(velocity.normalized() * speed)
 	player_animation(path, velocity)

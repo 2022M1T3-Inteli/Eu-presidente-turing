@@ -1,17 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://placeholder1.gd" type="Script" id=1]
 [ext_resource path="res://assets/intro/boy_bus.png" type="Texture" id=2]
 [ext_resource path="res://assets/intro/bus.png" type="Texture" id=3]
 [ext_resource path="res://assets/intro/background.png" type="Texture" id=4]
 [ext_resource path="res://assets/themes/text_box.tres" type="StyleBox" id=5]
-[ext_resource path="res://assets/sounds/somstart.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
-font_path = "res://assets/fonts/Lato/Lato-Black.ttf"
+font_path = "res://minigame/MEGAMAN10 copy.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 30
+size = 38
 font_data = SubResource( 1 )
 
 [node name="init_btn" type="Button"]
@@ -67,9 +66,5 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="SelectSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-volume_db = -13.0
 
 [connection signal="pressed" from="." to="." method="_on_init_btn_pressed"]
