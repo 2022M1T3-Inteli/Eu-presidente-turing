@@ -19,6 +19,7 @@ onready var infoBtn: TextureButton = $BottomBar/HBoxContainer/MarginContainer2/I
 onready var ChangeCardSfx1: AudioStreamPlayer = $ChangeCardSfx1 # Efeito sonoro ao trocar de card
 onready var ChangeCardSfx2: AudioStreamPlayer = $ChangeCardSfx2 # Efeito sonoro ao trocar de card 2
 onready var ChangeCardSfx3: AudioStreamPlayer = $ChangeCardSfx3 # Efeito sonoro ao trocar de card 3
+onready var SongCard: AudioStreamPlayer = $SongCard # Música do card
 
 # Funcoes
 var functionA: FuncRef # Funcao da decisao A, seleciona o próximo card
@@ -421,7 +422,7 @@ func pec2():
 	
 	
 func pec3():
-	update_story("Presidente soube que você quer conversar comigo. Se for sobre a PEC o senado está a favor dessa ideia mais a população não gostou muito, parte da população já apelidou de PEC man.")
+	update_story("Presidente soube que você quer conversar comigo. Se for sobre a PEC o senado está a favor dessa ideia mas a população não gostou muito, parte da população já apelidou de PEC man.")
 	update_character("Presidente da Câmara")
 	decisionA.text = "Não quero  me posicionar"
 	update_functionA("pec4")
