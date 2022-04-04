@@ -248,8 +248,6 @@ func quociente1():
 	decisionB.text = "Não"
 	update_functionB("quociente3")
 	month.text = "Março"
-	score.update_social(2)
-	score.update_political(2)
 	
 	
 func quociente2():
@@ -260,6 +258,8 @@ func quociente2():
 	decisionB.text = "Não"
 	update_functionB("quociente5")
 	month.text = "Junho"
+	score.update_political(1)
+	score.update_social(-1)
 	
 	
 func quociente3():
@@ -270,6 +270,7 @@ func quociente3():
 	decisionB.text = "Não"
 	update_functionB("quociente5")
 	month.text = "Junho"
+	score.update_political(-1)
 	
 	
 func quociente4():
@@ -280,6 +281,8 @@ func quociente4():
 	decisionB.text = "Se posicionar"
 	update_functionB("quociente6")
 	month.text = "Outubro"
+	score.update_economic(-1)
+	score.update_social(1)
 
 
 func quociente5():
@@ -290,6 +293,9 @@ func quociente5():
 	decisionB.text = "Não se posicionar"
 	update_functionB("quociente6")
 	month.text = "Outubro"
+	score.update_economic(1)
+	score.update_social(-2)
+	score.update_political(-1)
 	
 	
 func quociente6():
@@ -300,6 +306,8 @@ func quociente6():
 	decisionB.text = "OK"
 	update_functionB("orctet1")
 	month.text = "Dia seguinte as eleições"
+	score.update_social(1)
+	score.update_political(-1)
 	update_info("""
 O quociente eleitoral ("QE") é o valor obtido a partir da seguinte fórmula: 
 
