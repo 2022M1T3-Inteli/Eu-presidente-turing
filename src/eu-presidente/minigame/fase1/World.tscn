@@ -217,6 +217,236 @@ animations = [ {
 "speed": 2.0
 } ]
 
+[sub_resource type="SpriteFrames" id=81]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.5
+} ]
+
+[sub_resource type="RectangleShape2D" id=82]
+extents = Vector2( 616.1, 725.483 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 160, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 192, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 224, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 256, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 288, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 320, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 352, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 384, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 416, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 160, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=59]
+animations = [ {
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
+"loop": true,
+"name": "looking",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "sleeping",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=60]
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 96, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=62]
+animations = [ {
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 73 ), SubResource( 74 ), SubResource( 75 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 13.1818, 17.9545 )
+
 [sub_resource type="TileSet" id=2]
 2/name = "arvores.png 2"
 2/texture = ExtResource( 9 )
@@ -371,236 +601,6 @@ extents = Vector2( 42.125, 43.75 )
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 143, 49.75 )
 
-[sub_resource type="SpriteFrames" id=81]
-animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "default",
-"speed": 0.5
-} ]
-
-[sub_resource type="RectangleShape2D" id=82]
-extents = Vector2( 616.1, 725.483 )
-
-[sub_resource type="AtlasTexture" id=40]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=41]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=42]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=43]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=44]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 128, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=34]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=35]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 32, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=36]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 64, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=37]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 96, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=38]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 128, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=39]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 160, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=45]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=46]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=47]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=48]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 96, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=49]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 128, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=50]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 160, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=51]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 192, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=52]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 224, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=53]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 256, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=54]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 288, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=55]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 320, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=56]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 352, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=57]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 384, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=58]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 416, 32, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=59]
-animations = [ {
-"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
-"loop": true,
-"name": "sleeping",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
-"loop": true,
-"name": "looking",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=60]
-
-[sub_resource type="AtlasTexture" id=64]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=65]
-atlas = ExtResource( 6 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=66]
-atlas = ExtResource( 6 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=70]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=71]
-atlas = ExtResource( 6 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=72]
-atlas = ExtResource( 6 )
-region = Rect2( 64, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=73]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=74]
-atlas = ExtResource( 6 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=75]
-atlas = ExtResource( 6 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=67]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=68]
-atlas = ExtResource( 6 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=69]
-atlas = ExtResource( 6 )
-region = Rect2( 64, 64, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=62]
-animations = [ {
-"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
-"loop": true,
-"name": "walk_left",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
-"loop": true,
-"name": "walk_up",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 73 ), SubResource( 74 ), SubResource( 75 ) ],
-"loop": true,
-"name": "walk_down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
-"loop": true,
-"name": "walk_right",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=63]
-extents = Vector2( 13.1818, 17.9545 )
-
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 98, 36 )
 
@@ -686,395 +686,6 @@ position = Vector2( 387.125, -19.875 )
 scale = Vector2( 0.861979, 0.700521 )
 frames = SubResource( 19 )
 
-[node name="cenario_props" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( -131071, 10, 0, -131067, 10, 0, -131063, 10, 0, 131072, 0, 0, 131073, 18, 0, 131080, 1, 0, 131081, 18, 0, 196608, 19, 0, 196609, -1610612725, 0, 196616, 15, 0, 196617, -1610612725, 0, 262145, -1610612725, 0, 262152, -1610612729, 0, 262153, -1610612725, 0, 327682, 13, 0, 393216, 8, 0, 393223, 14, 0, 393227, 8, 0, 458752, 8, 0, 458753, 9, 0, 458754, 9, 0, 458755, 9, 0, 458756, -1073741818, 0, 458759, 6, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 8, 0, 524288, 8, 0, 524299, 8, 0, 589824, 8, 0, 589835, 8, 0, 655361, 9, 0, 655362, 9, 0, 655363, 9, 0, 655364, -1073741818, 0, 655367, 6, 0, 655368, 9, 0, 655369, 9, 0, 655370, 9, 0, 720897, 16, 0, 720906, 13, 0, 851967, 4, 0, 786433, 17, 0, 786441, 17, 0, 786442, 4, 0, 851969, 3, 0, 851971, 13, 0, 851972, -1073741818, 0, 851975, 6, 0, 851976, 16, 0, 851977, 3, 0, 983039, 4, 0, 917514, 4, 0, 1048577, 3, 0, 1048580, -1073741818, 0, 1048583, 6, 0, 1048584, 14, 0, 1048585, 3, 0 )
-
-[node name="colisoes_troncos" type="Node" parent="cenario_props"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 1430, 1764 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D"]
-position = Vector2( -1, 7 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 1247, 1893 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D2"]
-position = Vector2( 2, 5 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 1430, 2018 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D3"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 22, 2019 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D4"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 223, 1892 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D5"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 182, 1681 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D9"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D10" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 1206, 1674 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D10"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 20, 1764 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D6"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 46, 1294 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D7"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 1455, 1293 )
-scale = Vector2( 2, 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D8"]
-position = Vector2( 0.5, 6 )
-shape = SubResource( 11 )
-
-[node name="StaticBody2D11" type="StaticBody2D" parent="cenario_props/colisoes_troncos"]
-position = Vector2( 27, 555 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_troncos/StaticBody2D11"]
-position = Vector2( 4, 10 )
-shape = SubResource( 31 )
-
-[node name="colisoes_arbustos" type="Node" parent="cenario_props"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 557, 942 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 438, 938 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D2"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 305, 938 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D3"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 176, 938 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D4"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 177, 1321 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D5"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 309, 1319 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D6"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 435, 1323 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D7"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 555, 1327 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D8"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 944, 1321 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D9"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D10" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1073, 1321 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D10"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D11" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1202, 1320 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D11"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D12" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1331, 1321 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D12"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D13" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1332, 940 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D13"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D14" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1203, 939 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D14"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D15" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1074, 937 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D15"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D16" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 943, 940 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D16"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D17" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 556, 1710 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D17"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D18" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 945, 1708 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D18"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D19" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 558, 2096 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D19"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D20" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 943, 2090 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D20"]
-position = Vector2( 2, -2 )
-shape = SubResource( 12 )
-
-[node name="StaticBody2D21" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 223, 435 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D21"]
-position = Vector2( 57, 0 )
-shape = SubResource( 32 )
-
-[node name="StaticBody2D22" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 224, 324 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D22"]
-position = Vector2( 57, 0 )
-shape = SubResource( 32 )
-
-[node name="StaticBody2D23" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 219, 564 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D23"]
-position = Vector2( 57, 0 )
-shape = SubResource( 32 )
-
-[node name="StaticBody2D24" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1245, 564 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D24"]
-position = Vector2( 57, 0 )
-shape = SubResource( 32 )
-
-[node name="StaticBody2D25" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1250, 452 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D25"]
-position = Vector2( 57, -14.25 )
-shape = SubResource( 32 )
-
-[node name="StaticBody2D26" type="StaticBody2D" parent="cenario_props/colisoes_arbustos"]
-position = Vector2( 1248, 322 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario_props/colisoes_arbustos/StaticBody2D26"]
-position = Vector2( 57, 0 )
-shape = SubResource( 32 )
-
 [node name="ema" type="AnimatedSprite" parent="."]
 position = Vector2( 619.5, 986.5 )
 scale = Vector2( 0.0470703, 0.0444532 )
@@ -1110,7 +721,7 @@ shape = SubResource( 82 )
 script = ExtResource( 7 )
 
 [node name="Player" parent="npcs" instance=ExtResource( 1 )]
-position = Vector2( 767, 1864 )
+position = Vector2( 760, 2115 )
 scale = Vector2( 2, 2 )
 
 [node name="Camera2D" type="Camera2D" parent="npcs/Player"]
@@ -1125,7 +736,7 @@ position = Vector2( 46.25, 2085.25 )
 scale = Vector2( 3.73437, 3.32812 )
 frames = SubResource( 59 )
 animation = "sleeping"
-frame = 5
+frame = 3
 playing = true
 
 [node name="Area2D" type="Area2D" parent="npcs/fox"]
@@ -1177,6 +788,397 @@ position = Vector2( 819, 740 )
 
 [node name="Position2D4" type="Position2D" parent="npcs/first_npc"]
 position = Vector2( 22, 736 )
+
+[node name="cenario_props" type="TileMap" parent="npcs"]
+position = Vector2( 8, -2 )
+scale = Vector2( 2, 2 )
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( -131071, 10, 0, -131067, 10, 0, -131063, 10, 0, 131072, 0, 0, 131073, 18, 0, 131080, 1, 0, 131081, 18, 0, 196608, 19, 0, 196609, -1610612725, 0, 196616, 15, 0, 196617, -1610612725, 0, 262145, -1610612725, 0, 262152, -1610612729, 0, 262153, -1610612725, 0, 327682, 13, 0, 393216, 8, 0, 393223, 14, 0, 393227, 8, 0, 458752, 8, 0, 458753, 9, 0, 458754, 9, 0, 458755, 9, 0, 458756, -1073741818, 0, 458759, 6, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 8, 0, 524288, 8, 0, 524299, 8, 0, 589824, 8, 0, 589835, 8, 0, 655361, 9, 0, 655362, 9, 0, 655363, 9, 0, 655364, -1073741818, 0, 655367, 6, 0, 655368, 9, 0, 655369, 9, 0, 655370, 9, 0, 720897, 16, 0, 720906, 13, 0, 851967, 4, 0, 786433, 17, 0, 786441, 17, 0, 786442, 4, 0, 851969, 3, 0, 851971, 13, 0, 851972, -1073741818, 0, 851975, 6, 0, 851976, 16, 0, 851977, 3, 0, 983039, 4, 0, 917514, 4, 0, 1048577, 3, 0, 1048580, -1073741818, 0, 1048583, 6, 0, 1048584, 14, 0, 1048585, 3, 0 )
+
+[node name="colisoes_troncos" type="Node" parent="npcs/cenario_props"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 1430, 1764 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D"]
+position = Vector2( -1, 7 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 1247, 1893 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D2"]
+position = Vector2( 2, 5 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 1430, 2018 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D3"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 22, 2019 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D4"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 223, 1892 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D5"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 182, 1681 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D9"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 1206, 1674 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D10"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 20, 1764 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D6"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 46, 1294 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D7"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 1455, 1293 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D8"]
+position = Vector2( 0.5, 6 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="npcs/cenario_props/colisoes_troncos"]
+position = Vector2( 27, 555 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_troncos/StaticBody2D11"]
+position = Vector2( 4, 10 )
+shape = SubResource( 31 )
+
+[node name="colisoes_arbustos" type="Node" parent="npcs/cenario_props"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 557, 942 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 438, 938 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D2"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 305, 938 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D3"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 176, 938 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D4"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 177, 1321 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D5"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 309, 1319 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D6"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 435, 1323 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D7"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 555, 1327 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D8"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 944, 1321 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D9"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1073, 1321 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D10"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1202, 1320 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D11"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1331, 1321 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D12"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1332, 940 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D13"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1203, 939 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D14"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1074, 937 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D15"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 943, 940 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D16"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 556, 1710 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D17"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 945, 1708 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D18"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 558, 2096 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D19"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 943, 2090 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D20"]
+position = Vector2( 2, -2 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 223, 435 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D21"]
+position = Vector2( 57, 0 )
+shape = SubResource( 32 )
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 224, 324 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D22"]
+position = Vector2( 57, 0 )
+shape = SubResource( 32 )
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 219, 564 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D23"]
+position = Vector2( 57, 0 )
+shape = SubResource( 32 )
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1245, 564 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D24"]
+position = Vector2( 57, 0 )
+shape = SubResource( 32 )
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1250, 452 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D25"]
+position = Vector2( 57, -14.25 )
+shape = SubResource( 32 )
+
+[node name="StaticBody2D26" type="StaticBody2D" parent="npcs/cenario_props/colisoes_arbustos"]
+position = Vector2( 1248, 322 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcs/cenario_props/colisoes_arbustos/StaticBody2D26"]
+position = Vector2( 57, 0 )
+shape = SubResource( 32 )
 
 [node name="entrada_congresso" type="Area2D" parent="."]
 position = Vector2( 388.5, 32 )
@@ -1322,10 +1324,10 @@ position = Vector2( 32, 369.5 )
 stream = ExtResource( 10 )
 
 [node name="Instructions 1" type="Label" parent="."]
-margin_left = 230.0
-margin_top = 991.0
-margin_right = 537.0
-margin_bottom = 1081.0
+margin_left = 220.0
+margin_top = 915.5
+margin_right = 527.0
+margin_bottom = 1005.5
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 78 )
 custom_styles/normal = ExtResource( 12 )
@@ -1339,10 +1341,10 @@ __meta__ = {
 
 [node name="Instructions 2" type="Label" parent="."]
 visible = false
-margin_left = 248.0
-margin_top = 991.5
-margin_right = 515.0
-margin_bottom = 1079.5
+margin_left = 234.0
+margin_top = 917.0
+margin_right = 501.0
+margin_bottom = 1005.0
 rect_pivot_offset = Vector2( 452, 180 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 80 )
@@ -1357,10 +1359,10 @@ __meta__ = {
 
 [node name="Instructions 3" type="Label" parent="."]
 visible = false
-margin_left = 248.0
-margin_top = 991.5
-margin_right = 515.0
-margin_bottom = 1079.5
+margin_left = 237.0
+margin_top = 918.5
+margin_right = 504.0
+margin_bottom = 1006.5
 rect_pivot_offset = Vector2( 452, 180 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 80 )
