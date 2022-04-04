@@ -24,8 +24,8 @@ func _process(delta):
 
 # Iniciar jogo, deve mostrar o Card inicial
 func new_game():
-	startMenu.hide()
 	global.is_on_menu = false
+	startMenu.hide()
 	var save = File.new()
 	if save.file_exists("user://saves/save.dat"):
 		#Delete savegame
@@ -42,6 +42,7 @@ func continue_game():
 
 # Terminar jogo, deve esconder o card e o botão de continuar
 func finish_game():
+	global.is_on_menu = true
 	card.hide()
 	startMenu.show()
 	startMenu.hide_continue()

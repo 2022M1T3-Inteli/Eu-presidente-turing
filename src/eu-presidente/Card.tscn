@@ -368,6 +368,7 @@ stream = ExtResource( 13 )
 
 [node name="SongCard" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
+volume_db = -7.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/New Anim" = SubResource( 17 )
