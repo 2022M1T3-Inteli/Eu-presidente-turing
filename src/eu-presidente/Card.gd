@@ -277,9 +277,9 @@ func quociente4():
 	update_story("Agora vamos ganhar essas eleições. Sua ajuda foi fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
 	decisionA.text = "Não se posicionar"
-	update_functionA("quociente6")
+	update_functionA("quociente5")
 	decisionB.text = "Se posicionar"
-	update_functionB("quociente6")
+	update_functionB("quociente5")
 	month.text = "Outubro"
 	score.update_economic(-1)
 	score.update_social(1)
@@ -289,16 +289,16 @@ func quociente5():
 	update_story("De fato, manter sua independência é a melhor estratégia para atingir seus objetivos de melhorar nosso país. De todo modo, estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
 	decisionA.text = "Se posicionar"
-	update_functionA("quociente6")
+	update_functionA("quociente6a")
 	decisionB.text = "Não se posicionar"
-	update_functionB("quociente6")
+	update_functionB("quociente6b")
 	month.text = "Outubro"
 	score.update_economic(1)
 	score.update_social(-2)
 	score.update_political(-1)
 	
 	
-func quociente6():
+func quociente6a():
 	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
 	update_character("Secretário")
 	decisionA.text = "Vamos proteger os direitos fundamentais"
@@ -332,6 +332,19 @@ Logo, apenas os partidos A e B conseguiram atingir o quociente eleitoral e terã
 
 Fonte: Tribunal Superior Eleitoral ("TSE")
 """)
+
+
+func quociente6b():
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
+	update_character("Secretário")
+	decisionA.text = "Vamos proteger os direitos fundamentais"
+	update_functionA("orctet1")
+	decisionB.text = "OK"
+	update_functionB("orctet1")
+	month.text = "Dia seguinte as eleições"
+	score.update_social(1)
+	score.update_social(-2)
+	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
 
 func orctet1():
 	update_story("Presidente, é hora de definir a Lei de Diretrizes Orçamentárias para o próximo ano. Será necessário decidir as prioridades de investimento e as principais áreas de desenvolvimento")
@@ -379,11 +392,12 @@ func orctet4a():
 	update_story("O Congresso debateu e votou o Lei de Diretrizes Orçamentárias, sendo necessário agora definir o orçamento. A prioridade é saúde e educação, mas os servidores públicos estão pedindo aumento. Não será possível fazer os dois sem descumprir o “Teto de Gastos”. Como vamos destinar os recursos públicos?")
 	update_character("Secretário")
 	decisionA.text = "Saúde e educação"
-	update_functionA("orctet5")
+	update_functionA("orctet5a")
 	decisionB.text = "Servidores públicos"
-	update_functionB("orctet5")
+	update_functionB("orctet5b")
 	month.text = "Novembro, ano 2"
 	score.update_social(1)
+	score.update_economic(1)
 	
 	
 func orctet4b():
@@ -392,14 +406,14 @@ func orctet4b():
 	decisionA.text = "Saúde e educação"
 	update_functionA("orctet5")
 	decisionB.text = "Servidores públicos"
-	update_functionB("orctet5")
+	update_functionB("orctet5b")
 	month.text = "Novembro, ano 2"
 	score.update_political(-4)
-	score.update_economic(-3)
-	score.update_social(-3)
+	score.update_economic(-4)
+	score.update_social(-4)
 	
 	
-func orctet5():
+func orctet5a():
 	update_story("Parabéns senhor Presidente. Seguir o que estava estabelecido e não ceder à pressões é característica de grandes líderes. Agora que o orçamento está definido, o Congresso está discutindo uma PEC do voto impresso enquanto o Judiciário voltou a debater direitos fundamentais. Qual assunto o senhor prefere enfrentar primeiro")
 	update_character("Secretário")
 	decisionA.text = "PEC"
@@ -407,6 +421,20 @@ func orctet5():
 	decisionB.text = ("Direitos Fundamentais")
 	update_functionB("pec1")
 	month.text = "Dezembro, ano 2"
+	score.update_social(2)
+	score.update_political(-2)
+	
+	
+func orctet5b():
+	update_story("Parabéns senhor Presidente. Seguir o que estava estabelecido e não ceder à pressões é característica de grandes líderes. Agora que o orçamento está definido, o Congresso está discutindo uma PEC do voto impresso enquanto o Judiciário voltou a debater direitos fundamentais. Qual assunto o senhor prefere enfrentar primeiro")
+	update_character("Secretário")
+	decisionA.text = "PEC"
+	update_functionA("pec1")
+	decisionB.text = "Direitos Fundamentais"
+	update_functionB("pec1")
+	month.text = "Dezembro, ano 2"
+	score.update_social(-2)
+	score.update_political(1)
 	
 	
 func pec1():
