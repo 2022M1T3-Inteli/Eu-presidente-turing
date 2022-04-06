@@ -451,53 +451,78 @@ func pec2():
 	update_story("Essa PEC favorece a indústria nacional e torna alguns jogos brasileiros mais competitivos no Brasil e no mundo.")
 	update_character("Secretário")
 	decisionA.text = "Preciso conversar com o presidente do congresso."
-	update_functionA("pec3")
+	update_functionA("pec3a")
 	decisionB.text = "Não posso opinar nas decisões do legislativo. Eu acho que vou ficar quieto."
-	update_functionB("pec3")
+	update_functionB("pec3b")
 	month.text = "Março, ano 3"
 	
 	
-func pec3():
+func pec3a():
 	update_story("Presidente soube que você quer conversar comigo. Se for sobre a PEC o senado está a favor dessa ideia mas a população não gostou muito, parte da população já apelidou de PEC man.")
 	update_character("Presidente da Câmara")
 	decisionA.text = "Não quero  me posicionar"
-	update_functionA("pec4")
+	update_functionA("pec4a")
 	decisionB.text = ("Preciso me posicionar")
-	update_functionB("pec4")
+	update_functionB("pec4b")
 	month.text = "Abril, ano 3"
-	score.update_political(2)
 	
 	
+func pec3b():
+	update_story("Presidente soube que você quer conversar comigo. Se for sobre a PEC o senado está a favor dessa ideia mas a população não gostou muito, parte da população já apelidou de PEC man.")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Não quero  me posicionar"
+	update_functionA("pec4a")
+	decisionB.text = ("Preciso me posicionar")
+	update_functionB("pec4b")
+	month.text = "Abril, ano 3"
+	score.update_political(1)
 	
-func pec4():
-	update_story("Senhor presidente se for aprovada os impostos em cima de jogos aumentarão muito, se a indústria brasileira não for capaz de atender a população ela ficará revoltada, mas se a gente der conta nossa economia ira se fortalecer.")
+func pec4a():
+	update_story("Senhor presidente se for aprovada a PEC os impostos em cima de jogos aumentarão muito e a população ficará revoltada. Qual será sua posição sobre a PEC dos Jogos Eletrônicos?")
 	update_character("Min. Economia")
-	decisionA.text = "Entendi, acho que vai ser simples decidir"
-	update_functionA("pec5")
-	decisionB.text = "Será muito difícil decidir."
-	update_functionB("pec5")
-	month.text = "Maio, ano 3"
-	
-	
-func pec5():
-	update_story("Qual será sua posição sobre a PEC dos Jogos Eletrônicos?")
-	update_character("Secretário")
 	decisionA.text = "A favor da PEC"
-	update_functionA("pec6")
+	update_functionA("pec6a")
 	decisionB.text = "Contra PEC"
-	update_functionB("pec6")
-	month.text = "Junho, ano 3"
+	update_functionB("pec6b")
+	month.text = "Maio, ano 3"
+	score.update_social(-2)
+	score.update_economic(-1)
+	
+func pec4b():
+	update_story("Senhor presidente se for aprovada a PEC os impostos em cima de jogos aumentarão muito e a população ficará revoltada. Qual será sua posição sobre a PEC dos Jogos Eletrônicos?")
+	update_character("Min. Economia")
+	decisionA.text = "A favor da PEC"
+	update_functionA("pec6a")
+	decisionB.text = "Contra PEC"
+	update_functionB("pec6b")
+	month.text = "Maio, ano 3"
+	score.update_political(-2)
+	score.update_economic(-1)
 	
 	
-func pec6():
-	update_story("Foi bom o senhor se posicionar.Essa PEC estáva em processo de votação final, e foi aprovada! ")
+	
+func pec6a():
+	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final, e foi aprovada!")
 	update_character("Presidente da Câmara")
 	decisionA.text = "Esperava esse resultado."
 	update_functionA("mpdec1")
 	decisionB.text = "Não esperava esse resultado."
 	update_functionB("mpdec1")
 	month.text = "Julho, ano 3"
+	score.update_social(-3)
+	score.update_economic(1)
 	
+func pec6b():
+	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final, e foi aprovada!")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Esperava esse resultado."
+	update_functionA("mpdec1")
+	decisionB.text = "Não esperava esse resultado."
+	update_functionB("mpdec1")
+	month.text = "Julho, ano 3"
+	score.update_social(2)
+	score.update_economic(-1)
+	score.update_political(-1)
 	
 func mpdec1():
 	update_story("Senhor presidente, a PEC passou pelo Congresso nacional. Mas indústrias precisam de equipamentos para produzir seus jogos")
@@ -556,6 +581,9 @@ func mpdec6():
 	decisionB.text = "Isso aí, estou satisfeito."
 	update_functionB("game_won")
 	month.text = "Dezembro, ano 3"
+	
+	
+
 	
 func game_won():
 	update_story("Parabéns! Você concluiu seu mandato com sucesso.")
