@@ -114,34 +114,33 @@ func _on_RightSwipeHitbox_mouse_exited():
 
 # CLICK LISTENERS
 # Esse conjunto de funcoes lida com o clique do mouse para selecionar uma das opcoes binarias
+func card_transition(fn_name, interval, direction):
+	change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
+	if direction == 'left':
+		swiped_left = true
+	else:
+		swiped_right = true
+	yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
+	swiped_left = false
+	swiped_right = false
+	current_card = fn_name # Necessário registrar o card atual para a feature de save/load
+	infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
+	save_game()
+	functionA.call_func()
+	check_scores()
+
 func _on_LeftSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
-			change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
-			swiped_left = true
-			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
-			swiped_left = false
-			current_card = functionA.function # Necessário registrar o card atual para a feature de save/load
-			infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
-			save_game()
-			functionA.call_func()
-			check_scores()
+			card_transition(functionA.function, get_tree().create_timer(CARD_INTERVAL), 'left')
 
 
 func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \
 		and event.button_index == BUTTON_LEFT \
 		and event.pressed:
-			change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
-			current_card = functionB.function # Necessário registrar o card atual para a feature de save/load
-			infoBtn.visible = false # Se houver informações a serem mostradas, rodar a função update_info no próprio card
-			save_game()
-			swiped_right = true
-			yield(get_tree().create_timer(CARD_INTERVAL), "timeout")
-			swiped_right = false
-			functionB.call_func()
-			check_scores()
+			card_transition(functionB.function, get_tree().create_timer(CARD_INTERVAL), 'right')
 
 # Essa funcao lida com o clique para mostrar ou esconder o popup de "mais informações"
 func _on_InfoButton_pressed():
