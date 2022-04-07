@@ -23,11 +23,9 @@ func _ready():
 	
 	hide_textbox()
 	fila_texto("SECRETÁRIO: Olá Presidente, ainda bem que te encontrei...")
-	fila_texto("...o senhor precisa se decidir sobre a votação para Deputado!")
 	fila_texto("PRESIDENTE: Como assim? Onde estou?")
 	fila_texto("SECRETÁRIO: Você está em Brasília, Presidente!")
-	fila_texto("Estamos nos preparando para a eleição para Deputado e o senhor ainda não definiu seu candidato.")
-	fila_texto("Você precisa falar com o Presidente da Câmara o quanto antes e se decidir...")
+	fila_texto("Você precisa ir para o Congresso...")
 	fila_texto("Apenas lembrando, o Congresso fica no centro da Praça dos Poderes")
 	fila_texto("Sugiro que o senhor se encaminhe para lá o quanto antes")
 

@@ -216,113 +216,103 @@ func update_functionB(fn_name: String) -> void:
 
 func start_card():
 	# TEXTOS E IMAGENS
-	update_story("Senhor Presidente, que bom vê-lo aqui. Estamos na véspera da eleição para Deputado. O candidato João propõe a defesa do meio ambiente e a candidata Ana propõe a defesa das minorias. O senhor já decidiu quem vai apoiar?") #  Narrativa do card
+	update_story("Bem vindo ao Congresso, Presidente! Temos que tomar muitas decisões, você está pronto?") #  Narrativa do card
 	update_character("Presidente da Câmara") # Personagem do Card
 	# PRIMEIRA DECISAO
-	decisionA.text = "Candidato João" # Texto da primeira decisao
-	update_functionA("quociente1") # Card que sera selecionado se o jogador clicar na primeira decisao
+	decisionA.text = "Sim, claro" # Texto da primeira decisao
+	update_functionA("start1") # Card que sera selecionado se o jogador clicar na primeira decisao
 	# SEGUNDA DECISAO
-	decisionB.text = "Candidata Ana" # Texto da segunda decisao
-	update_functionB("quociente1") # Card que sera selecionado se o jogador clicar na segunda decisao
+	decisionB.text = "Estou um pouco inseguro..." # Texto da segunda decisao
+	update_functionB("start2") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MODIFICAR OS INDICADORES
 	score.set_all(5, 5, 5) # Social, Politico, Economico - Setar Score para começar o jogo
 	# score.update_social(5) # Pontos a serem adicionados/removidos do indicador social
 	# score.update_economic(5) # Pontos a serem adicionados/removidos do indicador economico
 	# score.update_political(5) # Pontos a serem adicionados/removidos do indiciador politico
 	# MES DO JOGO
-	month.text = "Fevereiro"
+	month.text = "Janeiro, ano 1"
+	# INFORMACOES ADICIONAIS
+	update_info("Esse box trará mais informações úteis sobre os tópicos sendo discutidos.")
+	
+func start1():
+	# TEXTOS E IMAGENS
+	update_story("\n\nMuito bem, se tiver qualquer dúvida, clique no botão no canto inferior direito, quando ele aparecer.") #  Narrativa do card
+	update_character("Presidente da Câmara") # Personagem do Card
+	# PRIMEIRA DECISAO
+	decisionA.text = "Tudo bem" # Texto da primeira decisao
+	update_functionA("orctet1") # Card que sera selecionado se o jogador clicar na primeira decisao
+	# SEGUNDA DECISAO
+	decisionB.text = "Ok, vamos lá" # Texto da segunda decisao
+	update_functionB("orctet1") # Card que sera selecionado se o jogador clicar na segunda decisao
+	# MES DO JOGO
+	month.text = "Fevereiro, ano 1"
 	# INFORMACOES ADICIONAIS
 	update_info("Esse box trará mais informações úteis sobre os tópicos sendo discutidos.")
 
-	
-func quociente1():
-	update_story("Uma ótima escolha, Presidente! E com relação ao suporte ao candidato durante a campanha, o senhor pretende demonstrar publicamente seu apoio, participando de programas de televisão, dividindo palanques e concedendo entrevistas?")
-	update_character("Secretário")
-	decisionA.text = "Sim"
-	update_functionA("quociente2")
-	decisionB.text = "Não"
-	update_functionB("quociente3")
-	month.text = "Março"
-	
-	
-func quociente2():
-	update_story("Sem dúvida, seu apoio será lembrado. Mas agora já estamos no meio do ano e precisamos discutir propagandas eleitorais. Estamos pensando em uma campanha nas redes sociais pra melhorar a popularidade do candidato. Podemos agendar uma sessão de fotos?")
-	update_character("Presidente da Câmara")
-	decisionA.text = "Sim"
-	update_functionA("quociente4")
-	decisionB.text = "Não"
-	update_functionB("quociente6a")
-	month.text = "Junho"
-	score.update_political(1)
-	score.update_social(-1)
-	
-	
-func quociente3():
-	update_story("Entendo, a democracia somente funciona quando os poderes são independentes. Mas agora já estamos no meio do ano e seria interessante liberar verbas para a construção de creches. O senhor concordaria em liberar essas verbas?")
-	update_character("Presidente da Câmara")
-	decisionA.text = "Sim"
-	update_functionA("quociente4")
-	decisionB.text = "Não"
-	update_functionB("quociente6a")
-	month.text = "Junho"
-	score.update_political(-1)
-	
-	
-func quociente4():
-	update_story("Agora vamos ganhar essas eleições. Sua ajuda foi fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
-	update_character("Secretário")
-	decisionA.text = "Não se posicionar"
-	update_functionA("quociente6a")
-	decisionB.text = "Se posicionar"
-	update_functionB("quociente6b")
-	month.text = "Outubro"
-	score.update_economic(-1)
-	score.update_social(1)
-	
-	
-func quociente6a():
-	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
-	update_character("Secretário")
-	decisionA.text = "Vamos proteger os direitos fundamentais"
-	update_functionA("orctet1")
-	decisionB.text = "OK"
-	update_functionB("orctet1")
-	month.text = "Dia seguinte as eleições"
-	score.update_social(1)
-	score.update_political(-1)
-	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
-
-func quociente6b():
-	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
-	update_character("Secretário")
-	decisionA.text = "Vamos proteger os direitos fundamentais"
-	update_functionA("orctet1")
-	decisionB.text = "OK"
-	update_functionB("orctet1")
-	month.text = "Dia seguinte as eleições"
-	score.update_social(1)
-	score.update_social(-2)
-	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
+func start2():
+	update_story("\n\nFique calmo, Presidente. Caso se sinta inseguro, pode clicar no botão no canto inferior direito para mais informações.") #  Narrativa do card
+	update_character("Presidente da Câmara") # Personagem do Card
+	# PRIMEIRA DECISAO
+	decisionA.text = "Tudo bem" # Texto da primeira decisao
+	update_functionA("orctet1") # Card que sera selecionado se o jogador clicar na primeira decisao
+	# SEGUNDA DECISAO
+	decisionB.text = "Ok, vamos lá" # Texto da segunda decisao
+	update_functionB("orctet1") # Card que sera selecionado se o jogador clicar na segunda decisao
+	# MES DO JOGO
+	month.text = "Fevereiro, ano 1"
+	# INFORMACOES ADICIONAIS
+	update_info("Esse box trará mais informações úteis sobre os tópicos sendo discutidos.")
 
 func orctet1():
 	update_story("Presidente, é hora de definir a Lei de Diretrizes Orçamentárias para o próximo ano. Será necessário decidir as prioridades de investimento e as principais áreas de desenvolvimento")
-	update_character("Secretário")
-	decisionA.text = "Pra que fazer isso?"
-	update_functionA("orctet2")
+	update_character("Min. Economia")
+	decisionA.text = "Quais são nossas prioridades?"
+	update_functionA("orctet2a")
 	decisionB.text = "É muito difícil?"
-	update_functionB("orctet2")
-	month.text = "Fevereiro, ano 2"
+	update_functionB("orctet2b")
+	month.text = "Março, ano 1"
 	update_info("LDA (Lei de Diretrizes Orçamentárias) é o documento que define o que o governo pretende gastar no ano atual.")
 	
-func orctet2():
+func orctet2a():
+	update_story("Nossa prioridade é atender aos interesses da população. Qual setor você deseja priorizar?")
+	update_character("Min. Economia")
+	decisionA.text = "Saúde e Educação"
+	update_functionA("remendo1a")
+	decisionB.text = "Economia"
+	update_functionB("remendo1b")
+	
+	
+func orctet2b():
 	update_story("É necessário aplicar os recursos dos impostos em serviços públicos e isso dá bastante trabalho. Minha equipe técnica informou que o Plano Plurianual prevê 35% do orçamento para educação e saúde. Podemos direcionar essas verbas conforme previsto?")
 	update_character("Min. Economia")
 	decisionA.text = "Investir em educação e saúde."
-	update_functionA("orctet3a")
-	decisionB.text = "Vou consultar o Presidente da Câmara."
-	update_functionB("orctet3b")
-	month.text = "Abril, ano 2"
+	update_functionA("remendo1a")
+	decisionB.text = "Economia"
+	update_functionB("remendo1b")
+	month.text = "Abril, ano 1"
 	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
+	
+func remendo1a():
+	update_story("Tudo bem Presidente, nossos recursos foram distribuídos. Agora vamos discutir sobre o Plano Plurianual.")
+	update_character("Secretário")
+	decisionA.text = "Perfeito"
+	update_functionA("orctet3a")
+	decisionB.text = "Vamos iniciar a discussão"
+	update_functionB("orctet3a")
+	month.text = "Maio, ano 1"
+	score.update_social(1)
+	score.update_economic(-1)
+	
+func remendo1b():
+	update_story("Tudo bem Presidente, nossos recursos foram distribuídos. Agora vamos discutir sobre o Plano Plurianual.")
+	update_character("Secretário")
+	decisionA.text = "Perfeito"
+	update_functionA("orctet3a")
+	decisionB.text = "Vamos iniciar a discussão"
+	update_functionB("orctet3a")
+	month.text = "Maio, ano 1"
+	score.update_social(-1)
+	score.update_economic(1)
 	
 func orctet3a():
 	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
@@ -332,20 +322,19 @@ func orctet3a():
 	decisionB.text = "Descumprir a Lei"
 	update_functionB("orctet4b")
 	month.text = "Julho, ano 2"
-	score.update_social(2)
-	score.update_political(1)
+#	score.update_social(2)
+#	score.update_political(1)
 	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
-	
-func orctet3b():
-	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
-	update_character("Presidente da Câmara")
-	decisionA.text = "Seguir PPA"
-	update_functionA("orctet4a")
-	decisionB.text = "Descumprir a Lei"
-	update_functionB("orctet4b")
-	month.text = "Julho, ano 2"
-	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
+#func orctet3b():
+#	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
+#	update_character("Presidente da Câmara")
+#	decisionA.text = "Seguir PPA"
+#	update_functionA("orctet4a")
+#	decisionB.text = "Descumprir a Lei"
+#	update_functionB("orctet4b")
+#	month.text = "Julho, ano 2"
+#	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
 func orctet4a():
 	update_story("O Congresso debateu e votou o Lei de Diretrizes Orçamentárias, sendo necessário agora definir o orçamento. A prioridade é saúde e educação, mas os servidores públicos estão pedindo aumento. Não será possível fazer os dois sem descumprir o “Teto de Gastos”. Como vamos destinar os recursos públicos?")
@@ -398,6 +387,7 @@ func orctet5b():
 	score.update_social(-2)
 	score.update_political(1)
 	update_info("PEC (Proposta de emenda constitucional) é uma modificação da constituição, resultando em mudanças pontuais do texto constitucional.")
+	
 	
 func pec1():
 	update_story("No congresso nacional estão falando em uma PEC dos Jogos eletrônicos, isso altera a lei que taxa impostos sobre os jogos.")
@@ -538,14 +528,109 @@ func mpdec6():
 	update_story("Parabéns presidente! Foram publicadas uma MP e um Decreto e agora a indústria brasileira podem comprar equipamento de fora, mas produzir jogos brasileiros!")
 	update_character("Secretário")
 	decisionA.text = "Fizemos um ótimo trabalho"
-	update_functionA("game_won")
+	update_functionA("quociente0")
 	decisionB.text = "Isso aí, estou satisfeito."
-	update_functionB("game_won")
+	update_functionB("quociente0")
 	month.text = "Dezembro, ano 3"
-	
+	score.update_political(-1)
 	
 
+func quociente0():
+	# TEXTOS E IMAGENS
+	update_story("Senhor Presidente, que bom vê-lo aqui. Estamos perto do final do seu mandato e próximo das eleições para Deputado. O candidato João propõe a defesa do meio ambiente e a candidata Ana propõe a defesa das minorias. O senhor já decidiu quem vai apoiar?") #  Narrativa do card
+	update_character("Presidente da Câmara") # Personagem do Card
+	# PRIMEIRA DECISAO
+	decisionA.text = "Candidato João" # Texto da primeira decisao
+	update_functionA("quociente1") # Card que sera selecionado se o jogador clicar na primeira decisao
+	# SEGUNDA DECISAO
+	decisionB.text = "Candidata Ana" # Texto da segunda decisao
+	update_functionB("quociente1") # Card que sera selecionado se o jogador clicar na segunda decisao
+	# MES DO JOGO
+	month.text = "Fevereiro, ano "
+	# INFORMACOES ADICIONAIS
+	update_info("Esse box trará mais informações úteis sobre os tópicos sendo discutidos.")
+
 	
+func quociente1():
+	update_story("Uma ótima escolha, Presidente! E com relação ao suporte ao candidato durante a campanha, o senhor pretende demonstrar publicamente seu apoio, participando de programas de televisão, dividindo palanques e concedendo entrevistas?")
+	update_character("Secretário")
+	decisionA.text = "Sim"
+	update_functionA("quociente2")
+	decisionB.text = "Não"
+	update_functionB("quociente3")
+	month.text = "Março"
+	
+	
+func quociente2():
+	update_story("Sem dúvida, seu apoio será lembrado. Mas agora já estamos no meio do ano e precisamos discutir propagandas eleitorais. Estamos pensando em uma campanha nas redes sociais pra melhorar a popularidade do candidato. Podemos agendar uma sessão de fotos?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Sim"
+	update_functionA("quociente4")
+	decisionB.text = "Não"
+	update_functionB("quociente6a")
+	month.text = "Junho"
+	score.update_political(1)
+	score.update_social(-1)
+	
+	
+func quociente3():
+	update_story("Entendo, a democracia somente funciona quando os poderes são independentes. Mas agora já estamos no meio do ano e seria interessante liberar verbas para a construção de creches. O senhor concordaria em liberar essas verbas?")
+	update_character("Presidente da Câmara")
+	decisionA.text = "Sim"
+	update_functionA("quociente4")
+	decisionB.text = "Não"
+	update_functionB("quociente6a")
+	month.text = "Junho"
+	score.update_political(-1)
+	
+	
+func quociente4():
+	update_story("Agora vamos ganhar essas eleições. Sua ajuda foi fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
+	update_character("Secretário")
+	decisionA.text = "Não se posicionar"
+	update_functionA("quociente6a")
+	decisionB.text = "Se posicionar"
+	update_functionB("quociente6b")
+	month.text = "Outubro"
+	score.update_economic(-1)
+	score.update_social(1)
+	
+	
+func quociente6a():
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
+	update_character("Secretário")
+	decisionA.text = "Vamos proteger os direitos fundamentais"
+	update_functionA("quociente7")
+	decisionB.text = "OK"
+	update_functionB("quociente7")
+	month.text = "Dia seguinte às eleições"
+	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
+
+
+func quociente6b():
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
+	update_character("Secretário")
+	decisionA.text = "Vamos proteger os direitos fundamentais"
+	update_functionA("quociente7")
+	decisionB.text = "OK"
+	update_functionB("quociente7")
+	month.text = "Dia seguinte às eleições"
+	score.update_social(1)
+	score.update_social(-2)
+	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
+
+func quociente7():
+	update_story("Não fique triste, Presidente, apesar do seu Deputado ter perdido, você fez um ótimo mandato! O Brasil está muito melhor do que quando você começou.")
+	update_character("Secretário")
+	decisionA.text = "Vamos proteger os direitos fundamentais"
+	update_functionA("game_won")
+	decisionB.text = "OK"
+	update_functionB("game_won")
+	month.text = "Dia seguinte às eleições"
+	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
+
+
+# FINAL DO JOGO
 func game_won():
 	update_story("Parabéns! Você concluiu seu mandato com sucesso.")
 	update_character("Secretário")
