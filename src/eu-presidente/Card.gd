@@ -392,9 +392,9 @@ func orctet5b():
 func pec1():
 	update_story("No congresso nacional estão falando em uma PEC dos Jogos eletrônicos, isso altera a lei que taxa impostos sobre os jogos.")
 	update_character("Secretário")
-	decisionA.text = "Mas para que estão querendo fazer isso."
+	decisionA.text = "Mas para que estão querendo fazer isso?"
 	update_functionA("pec2")
-	decisionB.text = "Nossa, deve ser importante."
+	decisionB.text = "Nossa, deve ser importante!"
 	update_functionB("pec2")
 	month.text = "Fevereiro, ano 3"
 	
@@ -453,83 +453,107 @@ func pec4b():
 	
 	
 func pec6a():
-	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final, e foi aprovada!")
+	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final e foi aprovada. O que o senhor pensa em fazer agora?")
 	update_character("Presidente da Câmara")
-	decisionA.text = "Esperava esse resultado."
-	update_functionA("mpdec1")
-	decisionB.text = "Não esperava esse resultado."
-	update_functionB("mpdec1")
+	decisionA.text = "Vou apoiar essa PEC."
+	update_functionA("mpdec1a")
+	decisionB.text = "Mesmo aprovada, continuo contra."
+	update_functionB("mpdec1b")
 	month.text = "Julho, ano 3"
 	score.update_social(-3)
 	score.update_economic(1)
 	
 func pec6b():
-	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final, e foi aprovada!")
+	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final, e foi aprovada. O que o senhor pensa em fazer agora?")
 	update_character("Presidente da Câmara")
-	decisionA.text = "Esperava esse resultado."
-	update_functionA("mpdec1")
-	decisionB.text = "Não esperava esse resultado."
-	update_functionB("mpdec1")
+	decisionA.text = "Vou apoiar essa PEC."
+	update_functionA("mpdec1a")
+	decisionB.text = "Mesmo aprovada, continuo contra."
+	update_functionB("mpdec1b")
 	month.text = "Julho, ano 3"
 	score.update_social(2)
 	score.update_economic(-1)
 	score.update_political(-1)
 	
-func mpdec1():
+func mpdec1a():
 	update_story("Senhor presidente, a PEC passou pelo Congresso nacional. Mas indústrias precisam de equipamentos para produzir seus jogos")
 	update_character("Secretário")
-	decisionA.text = "Nossa, não pensei nisso"
-	update_functionA("mpdec2")
-	decisionB.text = "Verdade, você tem razão."
-	update_functionB("mpdec2")
+	decisionA.text = "Destinar a verba para as indústrias."
+	update_functionA("mpdec2a")
+	decisionB.text = "Esquecer esse assunto e guardar para investir futuramente em outra coisa."
+	update_functionB("mpdec2b")
 	month.text = "Agosto, ano 3"
+	score.update_social(-1)
+	score.update_political(1)
 	
-func mpdec2():
-	update_story("Eu acho que o meio para solucionar esse problema pode ser por meio de uma MP ou Decreto.")
+func mpdec1b():
+	update_story("Senhor presidente, a PEC passou pelo Congresso nacional. Mas indústrias precisam de equipamentos para produzir seus jogos.")
 	update_character("Secretário")
-	decisionA.text = "Por que?"
-	update_functionA("mpdec3")
-	decisionB.text = "Sério?"
-	update_functionB("mpdec3")
+	decisionA.text = "Destinar a verba para as indústrias."
+	update_functionA("mpdec2a")
+	decisionB.text = "Esquecer esse assunto e guardar para investir futuramente em outra coisa."
+	update_functionB("mpdec2b")
+	month.text = "Agosto, ano 3"
+	score.update_social(1)
+	score.update_political(-1)
+	score.update_economic(-1)
+	
+func mpdec2a():
+	update_story("Eu acho que o meio para solucionar esse problema pode ser por uma MP ou Decreto.")
+	update_character("Secretário")
+	decisionA.text = "Para quê serve a MP?"
+	update_functionA("mpdec3a")
+	decisionB.text = "Para quê serve o Decreto?"
+	update_functionB("mpdec3b")
 	month.text = "Setembro, ano 3"
+	score.update_social(1)
+	score.update_economic(-2)
 	
-	
-func mpdec3():
-	update_story("MP( medida provisória) você pode fazer e publicar como a mesma força de lei e decreto apenas irá complementar o que está na lei.")
+func mpdec2b():
+	update_story("Eu acho que o meio para solucionar esse problema pode ser por uma MP ou Decreto.")
 	update_character("Secretário")
-	decisionA.text = "Isso pode ser útil."
-	update_functionA("mpdec4")
-	decisionB.text = "Será mesmo que pode ser útil?"
-	update_functionB("mpdec4")
+	decisionA.text = "Para quê serve a MP?"
+	update_functionA("mpdec3a")
+	decisionB.text = "Para quê serve o Decreto?"
+	update_functionB("mpdec3b")
+	month.text = "Setembro, ano 3"
+	score.update_economic(1)
+	score.uopdate_social(-1)
+	
+func mpdec3a():
+	update_story("MP (medida provisória) você pode fazer e publicar igual a uma lei. Apenas as cláusulas pétreas que falam de direitos fundamentais não podem ser modificadas. Concorda em fazer a MP?")
+	update_character("Secretário")
+	decisionA.text = "Então vamos fazer uma MP."
+	update_functionA("mpdec6a")
+	decisionB.text = "Prefiro fazer um Decreto."
+	update_functionB("mpdec6b")
 	month.text = "Outubro, ano 3"
 	
-	
-func mpdec4():
-	update_story(" Uma MP pode ser muito útil, claro que você não pode colocar qualquer coisa! um exemplo são as cláusulas pétras, leis relacionadas aos direitos fundamentais de nossa democracia.")
+func mpdec3b():
+	update_story("O decreto é semelhante à MP, ele possui força de uma lei e pode complementar a sua decisão. Concorda em fazer o Decreto?")
 	update_character("Secretário")
-	decisionA.text = "Escolho emitir uma MP."
-	update_functionA("mpdec5")
-	decisionB.text = "Me fale mais sobre os decretos"
-	update_functionB("mpdec5")
-	month.text = "Novembro, ano 3"
+	decisionA.text = "Então vamos fazer um Decreto."
+	update_functionA("mpdec6a")
+	decisionB.text = "Prefiro fazer uma MP."
+	update_functionB("mpdec6b")
+	month.text = "Outubro, ano 3"
 	
-	
-func mpdec5():
-	update_story("O decreto é semelhante à MP, ele possui força de uma lei e pode complementar a sua decisão. Agora o senhor precisa decidir!")
+func mpdec6a():
+	update_story("Parabéns presidente! Foram publicadas uma MP e agora temos uma lei temporária em nossa constituição que ajuda as indústrias a comprarem equipamentos.")
 	update_character("Secretário")
-	decisionA.text = " Emitir uma MP e um Decreto"
-	update_functionA("mpdec6")
-	decisionB.text = "Aumentar o investimento na economia"
-	update_functionB("mpdec6")
-	month.text = "Dezembro, ano 3 "
-	
-	
-func mpdec6():
-	update_story("Parabéns presidente! Foram publicadas uma MP e um Decreto e agora a indústria brasileira podem comprar equipamento de fora, mas produzir jogos brasileiros!")
-	update_character("Secretário")
-	decisionA.text = "Fizemos um ótimo trabalho"
+	decisionA.text = "Fizemos um ótimo trabalho!"
 	update_functionA("quociente0")
-	decisionB.text = "Isso aí, estou satisfeito."
+	decisionB.text = "Ótimo! Estou satisfeito."
+	update_functionB("quociente0")
+	month.text = "Dezembro, ano 3"
+	score.update_political(1)
+	
+func mpdec6b():
+	update_story("Parabéns presidente! Foi publicado um Decreto e agora a lei reforça aquela nossa PEC. Assim as indútrias brasileiras conseguem produzir seus jogos eletrônicos.")
+	update_character("Secretário")
+	decisionA.text = "Fizemos um ótimo trabalho!"
+	update_functionA("quociente0")
+	decisionB.text = "Ótimo! Estou satisfeito."
 	update_functionB("quociente0")
 	month.text = "Dezembro, ano 3"
 	score.update_political(-1)
