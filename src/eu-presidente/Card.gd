@@ -518,7 +518,7 @@ func mpdec2b():
 	update_functionB("mpdec3b")
 	month.text = "Setembro, ano 3"
 	score.update_economic(1)
-	score.uopdate_social(-1)
+	score.update_social(-1)
 	
 func mpdec3a():
 	update_story("MP (medida provisória) você pode fazer e publicar igual a uma lei. Apenas as cláusulas pétreas que falam de direitos fundamentais não podem ser modificadas. Concorda em fazer a MP?")
