@@ -72,19 +72,12 @@ func _process(delta):
 	# Essas condicoes servem para determinar se a imagem deve se mexer para
 	# a esquerda ou direita, quando o jogador mover o mouse naquela direcao
 	if hover_left:
-		# portrait.rotate(-PI/200) <- velocidade que testei
-#		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta * -1)
 		portrait.position.x -= PORTRAIT_SPEED_X * delta
 	elif hover_right: 
-		# portrait.rotate(PI/200) <- velocidade que testei
-#		portrait.rotate(PORTRAIT_ANGULAR_VELOCITY * delta)
 		portrait.position.x += PORTRAIT_SPEED_X * delta
 	else:
 		portrait.position.x = PORTRAIT_ORIGINAL_X 
-#		portrait.rotation_degrees = 0
-	# Para evitar que a imagem rotacione alem de 45 graus ou saia da tela,
-	# limitamos aqui os valores possiveis para essas propriedades		
-	portrait.rotation_degrees = clamp(portrait.rotation_degrees, -25, 25)
+	# Para evitar que o retrato saia da tela, limitamos aqui os valores possiveis para essas propriedades		
 	portrait.position.x = clamp(portrait.position.x, 200, 500)
 
 
@@ -298,32 +291,6 @@ func quociente6a():
 	score.update_social(1)
 	score.update_political(-1)
 	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
-	#COMENTEI ISSO TUDO PORQUE NÃO SEI SE JÁ PODE APAGAR
-#	update_info("""
-#O quociente eleitoral ("QE") é o valor obtido a partir da seguinte fórmula: 
-#
-#[i]QE = número de votos válidos (todos os votos menos os em branco e os votos nulos) / número de vagas[/i].
-#
-#Ele serve para definir o mínimo de votos que os partidos precisam para ter direito a ocupar as vagas nas eleições proporcionais: câmara dos deputados, Câmaras de Vereadores, Assembléias legislativas dos estados e Câmara Legislativa do Distrito Federal.
-#
-#[b]Um Exemplo prático:[/b]
-#
-#Partido/coligação | Votos nominais + votos de legenda
-#Partido A 		| 4.900
-#Partido B 		| 3.350
-#Partido C 		| 550
-#Votos em branco | 300 (não contam)
-#Votos nulos | 250 (não contam)
-#Vagas a preencher 	| 9
-#Total de votos válidos | 3.800
-#
-#QE = 8.800 / 9 = 977,77... => [b]QE = 977[/b]
-#
-#Logo, apenas os partidos A e B conseguiram atingir o quociente eleitoral e terão direito a preencher as vagas disponíveis.
-#
-#Fonte: Tribunal Superior Eleitoral ("TSE")
-#""")
-
 
 func quociente6b():
 	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
