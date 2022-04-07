@@ -226,10 +226,10 @@ func start_card():
 	update_story("Senhor Presidente, que bom vê-lo aqui. Estamos na véspera da eleição para Deputado. O candidato João propõe a defesa do meio ambiente e a candidata Ana propõe a defesa das minorias. O senhor já decidiu quem vai apoiar?") #  Narrativa do card
 	update_character("Presidente da Câmara") # Personagem do Card
 	# PRIMEIRA DECISAO
-	decisionA.text = "Candidato {A}" # Texto da primeira decisao
+	decisionA.text = "Candidato João" # Texto da primeira decisao
 	update_functionA("quociente1") # Card que sera selecionado se o jogador clicar na primeira decisao
 	# SEGUNDA DECISAO
-	decisionB.text = "Candidato {B}" # Texto da segunda decisao
+	decisionB.text = "Candidata Ana" # Texto da segunda decisao
 	update_functionB("quociente1") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MODIFICAR OS INDICADORES
 	score.set_all(5, 5, 5) # Social, Politico, Economico - Setar Score para começar o jogo
@@ -258,7 +258,7 @@ func quociente2():
 	decisionA.text = "Sim"
 	update_functionA("quociente4")
 	decisionB.text = "Não"
-	update_functionB("quociente5")
+	update_functionB("quociente6a")
 	month.text = "Junho"
 	score.update_political(1)
 	score.update_social(-1)
@@ -270,7 +270,7 @@ func quociente3():
 	decisionA.text = "Sim"
 	update_functionA("quociente4")
 	decisionB.text = "Não"
-	update_functionB("quociente5")
+	update_functionB("quociente6a")
 	month.text = "Junho"
 	score.update_political(-1)
 	
