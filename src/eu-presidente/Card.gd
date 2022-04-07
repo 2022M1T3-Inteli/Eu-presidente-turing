@@ -223,7 +223,7 @@ func update_functionB(fn_name: String) -> void:
 
 func start_card():
 	# TEXTOS E IMAGENS
-	update_story("Senhor Presidente, que bom vê-lo aqui. Estamos na véspera da eleição para Deputado. O candidato {A} propõe a defesa do meio ambiente e o candidato {B} propõe a defesa das minorias. O senhor já decidiu quem vai apoiar?") #  Narrativa do card
+	update_story("Senhor Presidente, que bom vê-lo aqui. Estamos na véspera da eleição para Deputado. O candidato João propõe a defesa do meio ambiente e a candidata Ana propõe a defesa das minorias. O senhor já decidiu quem vai apoiar?") #  Narrativa do card
 	update_character("Presidente da Câmara") # Personagem do Card
 	# PRIMEIRA DECISAO
 	decisionA.text = "Candidato {A}" # Texto da primeira decisao
@@ -279,25 +279,12 @@ func quociente4():
 	update_story("Agora vamos ganhar essas eleições. Sua ajuda foi fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
 	decisionA.text = "Não se posicionar"
-	update_functionA("quociente5")
+	update_functionA("quociente6a")
 	decisionB.text = "Se posicionar"
-	update_functionB("quociente5")
+	update_functionB("quociente6b")
 	month.text = "Outubro"
 	score.update_economic(-1)
 	score.update_social(1)
-
-
-func quociente5():
-	update_story("De fato, manter sua independência é a melhor estratégia para atingir seus objetivos de melhorar nosso país. De todo modo, estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
-	update_character("Secretário")
-	decisionA.text = "Se posicionar"
-	update_functionA("quociente6a")
-	decisionB.text = "Não se posicionar"
-	update_functionB("quociente6b")
-	month.text = "Outubro"
-	score.update_economic(1)
-	score.update_social(-2)
-	score.update_political(-1)
 	
 	
 func quociente6a():
@@ -506,7 +493,6 @@ func pec4b():
 	month.text = "Maio, ano 3"
 	score.update_political(-2)
 	score.update_economic(-1)
-	
 	
 	
 func pec6a():
