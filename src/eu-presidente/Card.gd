@@ -310,30 +310,32 @@ func quociente6a():
 	month.text = "Dia seguinte as eleições"
 	score.update_social(1)
 	score.update_political(-1)
-	update_info("""
-O quociente eleitoral ("QE") é o valor obtido a partir da seguinte fórmula: 
-
-[i]QE = número de votos válidos (todos os votos menos os em branco e os votos nulos) / número de vagas[/i].
-
-Ele serve para definir o mínimo de votos que os partidos precisam para ter direito a ocupar as vagas nas eleições proporcionais: câmara dos deputados, Câmaras de Vereadores, Assembléias legislativas dos estados e Câmara Legislativa do Distrito Federal.
-
-[b]Um Exemplo prático:[/b]
-
-Partido/coligação | Votos nominais + votos de legenda
-Partido A 		| 4.900
-Partido B 		| 3.350
-Partido C 		| 550
-Votos em branco | 300 (não contam)
-Votos nulos | 250 (não contam)
-Vagas a preencher 	| 9
-Total de votos válidos | 3.800
-
-QE = 8.800 / 9 = 977,77... => [b]QE = 977[/b]
-
-Logo, apenas os partidos A e B conseguiram atingir o quociente eleitoral e terão direito a preencher as vagas disponíveis.
-
-Fonte: Tribunal Superior Eleitoral ("TSE")
-""")
+	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
+	#COMENTEI ISSO TUDO PORQUE NÃO SEI SE JÁ PODE APAGAR
+#	update_info("""
+#O quociente eleitoral ("QE") é o valor obtido a partir da seguinte fórmula: 
+#
+#[i]QE = número de votos válidos (todos os votos menos os em branco e os votos nulos) / número de vagas[/i].
+#
+#Ele serve para definir o mínimo de votos que os partidos precisam para ter direito a ocupar as vagas nas eleições proporcionais: câmara dos deputados, Câmaras de Vereadores, Assembléias legislativas dos estados e Câmara Legislativa do Distrito Federal.
+#
+#[b]Um Exemplo prático:[/b]
+#
+#Partido/coligação | Votos nominais + votos de legenda
+#Partido A 		| 4.900
+#Partido B 		| 3.350
+#Partido C 		| 550
+#Votos em branco | 300 (não contam)
+#Votos nulos | 250 (não contam)
+#Vagas a preencher 	| 9
+#Total de votos válidos | 3.800
+#
+#QE = 8.800 / 9 = 977,77... => [b]QE = 977[/b]
+#
+#Logo, apenas os partidos A e B conseguiram atingir o quociente eleitoral e terão direito a preencher as vagas disponíveis.
+#
+#Fonte: Tribunal Superior Eleitoral ("TSE")
+#""")
 
 
 func quociente6b():
@@ -356,7 +358,7 @@ func orctet1():
 	decisionB.text = "É muito difícil?"
 	update_functionB("orctet2")
 	month.text = "Fevereiro, ano 2"
-	
+	update_info("LDA (Lei de Diretrizes Orçamentárias) é o documento que define o que o governo pretende gastar no ano atual.")
 	
 func orctet2():
 	update_story("É necessário aplicar os recursos dos impostos em serviços públicos e isso dá bastante trabalho. Minha equipe técnica informou que o Plano Plurianual prevê 35% do orçamento para educação e saúde. Podemos direcionar essas verbas conforme previsto?")
@@ -366,7 +368,7 @@ func orctet2():
 	decisionB.text = "Vou consultar o Presidente da Câmara."
 	update_functionB("orctet3b")
 	month.text = "Abril, ano 2"
-	
+	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
 func orctet3a():
 	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
@@ -378,6 +380,7 @@ func orctet3a():
 	month.text = "Julho, ano 2"
 	score.update_social(2)
 	score.update_political(1)
+	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
 	
 func orctet3b():
@@ -388,7 +391,7 @@ func orctet3b():
 	decisionB.text = "Descumprir a Lei"
 	update_functionB("orctet4b")
 	month.text = "Julho, ano 2"
-	
+	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
 func orctet4a():
 	update_story("O Congresso debateu e votou o Lei de Diretrizes Orçamentárias, sendo necessário agora definir o orçamento. A prioridade é saúde e educação, mas os servidores públicos estão pedindo aumento. Não será possível fazer os dois sem descumprir o “Teto de Gastos”. Como vamos destinar os recursos públicos?")
@@ -400,6 +403,7 @@ func orctet4a():
 	month.text = "Novembro, ano 2"
 	score.update_social(1)
 	score.update_economic(1)
+	update_info("O ''Teto de Gastos'' fixa limites individualizados para as despesas primárias dos órgãos dos Poderes Executivo, Legislativo e Judiciário, do Ministério Público da União, do Conselho Nacional do Ministério Público e da Defensoria Pública da União.")
 	
 	
 func orctet4b():
@@ -413,6 +417,7 @@ func orctet4b():
 	score.update_political(-4)
 	score.update_economic(-4)
 	score.update_social(-4)
+	update_info("O ''Teto de Gastos'' fixa limites individualizados para as despesas primárias dos órgãos dos Poderes Executivo, Legislativo e Judiciário, do Ministério Público da União, do Conselho Nacional do Ministério Público e da Defensoria Pública da União.")
 	
 	
 func orctet5a():
@@ -425,6 +430,7 @@ func orctet5a():
 	month.text = "Dezembro, ano 2"
 	score.update_social(2)
 	score.update_political(-2)
+	update_info("PEC (Proposta de emenda constitucional) é uma modificação da constituição, resultando em mudanças pontuais do texto constitucional.")
 	
 	
 func orctet5b():
@@ -437,7 +443,7 @@ func orctet5b():
 	month.text = "Dezembro, ano 2"
 	score.update_social(-2)
 	score.update_political(1)
-	
+	update_info("PEC (Proposta de emenda constitucional) é uma modificação da constituição, resultando em mudanças pontuais do texto constitucional.")
 	
 func pec1():
 	update_story("No congresso nacional estão falando em uma PEC dos Jogos eletrônicos, isso altera a lei que taxa impostos sobre os jogos.")
