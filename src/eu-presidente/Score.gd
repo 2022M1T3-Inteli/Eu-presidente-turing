@@ -12,16 +12,10 @@ onready var social_modifier: Label = $HBoxContainer/VBoxContainer/SocialModifier
 onready var political_modifier: Label = $HBoxContainer/VBoxContainer2/PoliticalModifier
 onready var economic_modifier: Label = $HBoxContainer/VBoxContainer3/EconomicModifier
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	social_label.text = String(social)
 	political_label.text = String(political)
 	economic_label.text = String(economic)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 # Mostra o modifier temporariamente quando o score mudar
 func show_modifier(label: Label, pts: int):

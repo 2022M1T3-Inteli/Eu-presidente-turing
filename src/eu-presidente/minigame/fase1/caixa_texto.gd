@@ -17,10 +17,6 @@ var estado_atual = State.TERMINADO
 var texto_fila = []
 
 func _ready():
-	
-	#var world = get_tree().get_root()
-	#world.connect("npc_texto", self, "on_npc_texto")
-	
 	hide_textbox()
 	fila_texto("SECRETÁRIO: Olá Presidente, ainda bem que te encontrei...")
 	fila_texto("PRESIDENTE: Como assim? Onde estou?")
@@ -69,12 +65,4 @@ func mostrar_texto():
 
 func mudar_estado(proximo_estado):
 	estado_atual = proximo_estado
-
-
-#func _on_Tween_tween_all_completed(object, key):
-#	finalizar.text = "v"
-#	mudar_estado(State.TERMINADO)
-
-
-#func _on_World_npc_texto():
-#	mudar_estado(State.PRONTO)
+	
