@@ -48,7 +48,7 @@ const SAVE_PATH: String = SAVE_DIR + "save.dat" # Local do save
 
 # FUNCOES
 
-# BUILT INS
+# GODOT
 # Funcoes fornecidas pelo proprio Godot (comecam com _)
 
 func _ready():
@@ -81,7 +81,7 @@ func _process(delta):
 	portrait.position.x = clamp(portrait.position.x, 200, 500)
 
 
-# SWIPE ANIMATIONS
+# ANIMAÇÕES DE TRANSIÇÃO
 # Esse conjunto de funcoes serve para determinar se o jogador esta com o mouse
 # a direita ou esquerda da imagem do personagem, para rodar as animacoes necessarias
 func _on_LeftSwipeHitbox_mouse_entered():
@@ -108,7 +108,7 @@ func _on_RightSwipeHitbox_mouse_exited():
 	decisionA.add_color_override("font_color", Color("#000000"))
 	decisionB.add_color_override("font_color", Color("#000000"))
 
-# CLICK LISTENERS
+# OBSERVADORES
 # Esse conjunto de funcoes lida com o clique do mouse para selecionar uma das opcoes binarias
 func card_transition(fn, fn_name, direction):
 	change_card_sfx(random_sfx,ChangeCardSfx1,ChangeCardSfx2,ChangeCardSfx3)
@@ -142,7 +142,7 @@ func _on_RightSwipeHitbox_input_event(_viewport, event, _shape_idx):
 func _on_InfoButton_pressed():
 	popup.visible = !popup.visible
 
-# SAVE/LOAD
+# SALVAR/CARREGAR
 # Funcoes para salvar ou carregar o jogo (fonte: https://www.youtube.com/watch?v=d0B770ZM8Ic)
 func save_game():
 	var data = {
@@ -178,7 +178,7 @@ func load_game():
 			return true # Load carregado corretamente
 	return false # Erro no load
 
-# HELPERS
+# FUNÇÕES AUXILIARES
 # Esse conjunto de funcoes sao auxiliares (helpers) para as (varias) funcoes de card abaixo
 
 # Atualiza o texto da historia (narrativa) do card
@@ -673,7 +673,7 @@ func minigame_level_2():
 	if get_tree().change_scene("res://minigame/fase2/World.tscn") != OK:
 		print ("An unexpected error occured when trying to switch scenes")
 	
-# LOW SCORE OR GAME OVER CHECKS
+# VERIFICAÇÃO DE SCORE BAIXO OU FIM DO JOGO
 # Funcoes para checar se a pontuacao do jogador esta baixa ou se ele perdeu o jogo
 func check_scores():
 	if is_game_over():
@@ -695,7 +695,7 @@ func is_low_social():
 	pass
 
 		
-# TRIGGERED CARDS
+# CARDS ATIVADOS
 # Esses cards são ativados automaticamente caso o jogador tenha uma pontuação baixa
 
 func game_over():
