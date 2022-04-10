@@ -280,6 +280,7 @@ func orctet2a():
 	update_functionA("remendo1a")
 	decisionB.text = "Economia"
 	update_functionB("remendo1b")
+	month.text = "Março, ano 1 "
 	
 	
 func orctet2b():
@@ -289,11 +290,11 @@ func orctet2b():
 	update_functionA("remendo1a")
 	decisionB.text = "Economia"
 	update_functionB("remendo1b")
-	month.text = "Abril, ano 1"
+	month.text = "Março, ano 1"
 	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
 func remendo1a():
-	update_story("Tudo bem Presidente, nossos recursos foram distribuídos. Agora vamos discutir sobre o Plano Plurianual.")
+	update_story("Nossos recursos foram distribuídos. Agora vamos discutir sobre o Plano Plurianual.")
 	update_character("Secretário")
 	decisionA.text = "Perfeito"
 	update_functionA("orctet3a")
@@ -304,7 +305,7 @@ func remendo1a():
 	score.update_economic(-1)
 	
 func remendo1b():
-	update_story("Tudo bem Presidente, nossos recursos foram distribuídos. Agora vamos discutir sobre o Plano Plurianual.")
+	update_story("Nossos recursos foram distribuídos. Agora vamos discutir sobre o Plano Plurianual.")
 	update_character("Secretário")
 	decisionA.text = "Perfeito"
 	update_functionA("orctet3a")
@@ -321,20 +322,11 @@ func orctet3a():
 	update_functionA("orctet4a")
 	decisionB.text = "Descumprir a Lei"
 	update_functionB("orctet4b")
-	month.text = "Julho, ano 2"
+	month.text = "Maio, ano 1"
 #	score.update_social(2)
 #	score.update_political(1)
 	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
-#func orctet3b():
-#	update_story("O PPA foi elaborado em conjunto pela equipe técnica do Congresso e da Presidência. Caso não seja seguido sem motivo justificado, o senhor pode incorrer em penalidades por descumprimento de lei. Como o senhor irá proceder?")
-#	update_character("Presidente da Câmara")
-#	decisionA.text = "Seguir PPA"
-#	update_functionA("orctet4a")
-#	decisionB.text = "Descumprir a Lei"
-#	update_functionB("orctet4b")
-#	month.text = "Julho, ano 2"
-#	update_info("O PPA (Plano Plurianual) é Documento que define as metas e gastos para os próximos 4 anos de governo.")
 	
 func orctet4a():
 	update_story("O Congresso debateu e votou o Lei de Diretrizes Orçamentárias, sendo necessário agora definir o orçamento. A prioridade é saúde e educação, mas os servidores públicos estão pedindo aumento. Não será possível fazer os dois sem descumprir o “Teto de Gastos”. Como vamos destinar os recursos públicos?")
@@ -343,7 +335,7 @@ func orctet4a():
 	update_functionA("orctet5a")
 	decisionB.text = "Servidores públicos"
 	update_functionB("orctet5b")
-	month.text = "Novembro, ano 2"
+	month.text = "Setembro, ano 1"
 	score.update_social(1)
 	score.update_economic(1)
 	update_info("O ''Teto de Gastos'' fixa limites individualizados para as despesas primárias dos órgãos dos Poderes Executivo, Legislativo e Judiciário, do Ministério Público da União, do Conselho Nacional do Ministério Público e da Defensoria Pública da União.")
@@ -356,7 +348,7 @@ func orctet4b():
 	update_functionA("orctet5")
 	decisionB.text = "Servidores públicos"
 	update_functionB("orctet5b")
-	month.text = "Novembro, ano 2"
+	month.text = "Setembro, ano 1"
 	score.update_political(-4)
 	score.update_economic(-4)
 	score.update_social(-4)
@@ -370,7 +362,7 @@ func orctet5a():
 	update_functionA("pec1")
 	decisionB.text = ("Direitos Fundamentais")
 	update_functionB("pec1")
-	month.text = "Dezembro, ano 2"
+	month.text = "Março, ano 2"
 	score.update_social(2)
 	score.update_political(-2)
 	update_info("PEC (Proposta de emenda constitucional) é uma modificação da constituição, resultando em mudanças pontuais do texto constitucional.")
@@ -383,7 +375,7 @@ func orctet5b():
 	update_functionA("pec1")
 	decisionB.text = "Direitos Fundamentais"
 	update_functionB("pec1")
-	month.text = "Dezembro, ano 2"
+	month.text = "Março, ano 2"
 	score.update_social(-2)
 	score.update_political(1)
 	update_info("PEC (Proposta de emenda constitucional) é uma modificação da constituição, resultando em mudanças pontuais do texto constitucional.")
@@ -396,7 +388,7 @@ func pec1():
 	update_functionA("pec2")
 	decisionB.text = "Nossa, deve ser importante!"
 	update_functionB("pec2")
-	month.text = "Fevereiro, ano 3"
+	month.text = "Julho, ano 2"
 	
 	
 func pec2():
@@ -406,7 +398,7 @@ func pec2():
 	update_functionA("pec3a")
 	decisionB.text = "Não posso opinar nas decisões do legislativo. Eu acho que vou ficar quieto."
 	update_functionB("pec3b")
-	month.text = "Março, ano 3"
+	month.text = "Julho, ano 2"
 	
 	
 func pec3a():
@@ -416,7 +408,7 @@ func pec3a():
 	update_functionA("pec4a")
 	decisionB.text = ("Preciso me posicionar")
 	update_functionB("pec4b")
-	month.text = "Abril, ano 3"
+	month.text = "Agosto, ano 2"
 	
 	
 func pec3b():
@@ -426,7 +418,7 @@ func pec3b():
 	update_functionA("pec4a")
 	decisionB.text = ("Preciso me posicionar")
 	update_functionB("pec4b")
-	month.text = "Abril, ano 3"
+	month.text = "Agosto, ano 2"
 	score.update_political(1)
 	
 func pec4a():
@@ -436,7 +428,7 @@ func pec4a():
 	update_functionA("pec6a")
 	decisionB.text = "Contra PEC"
 	update_functionB("pec6b")
-	month.text = "Maio, ano 3"
+	month.text = "Agosto, ano 2"
 	score.update_social(-2)
 	score.update_economic(-1)
 	
@@ -447,7 +439,7 @@ func pec4b():
 	update_functionA("pec6a")
 	decisionB.text = "Contra PEC"
 	update_functionB("pec6b")
-	month.text = "Maio, ano 3"
+	month.text = "Agosto, ano 2"
 	score.update_political(-2)
 	score.update_economic(-1)
 	
@@ -459,18 +451,18 @@ func pec6a():
 	update_functionA("mpdec1a")
 	decisionB.text = "Mesmo aprovada, continuo contra."
 	update_functionB("mpdec1b")
-	month.text = "Julho, ano 3"
+	month.text = "Abril, ano 3"
 	score.update_social(-3)
 	score.update_economic(1)
 	
 func pec6b():
 	update_story("Foi bom o senhor se posicionar. Essa PEC estáva em processo de votação final, e foi aprovada. O que o senhor pensa em fazer agora?")
 	update_character("Presidente da Câmara")
-	decisionA.text = "Vou apoiar essa PEC."
+	decisionA.text = "OK."
 	update_functionA("mpdec1a")
 	decisionB.text = "Mesmo aprovada, continuo contra."
 	update_functionB("mpdec1b")
-	month.text = "Julho, ano 3"
+	month.text = "Abril, ano 3"
 	score.update_social(2)
 	score.update_economic(-1)
 	score.update_political(-1)
@@ -482,7 +474,7 @@ func mpdec1a():
 	update_functionA("mpdec2a")
 	decisionB.text = "Esquecer esse assunto e guardar para investir futuramente em outra coisa."
 	update_functionB("mpdec2b")
-	month.text = "Agosto, ano 3"
+	month.text = "Novembro, ano 3"
 	score.update_social(-1)
 	score.update_political(1)
 	
@@ -493,7 +485,7 @@ func mpdec1b():
 	update_functionA("mpdec2a")
 	decisionB.text = "Esquecer esse assunto e guardar para investir futuramente em outra coisa."
 	update_functionB("mpdec2b")
-	month.text = "Agosto, ano 3"
+	month.text = "Novembro, ano 3"
 	score.update_social(1)
 	score.update_political(-1)
 	score.update_economic(-1)
@@ -505,7 +497,7 @@ func mpdec2a():
 	update_functionA("mpdec3a")
 	decisionB.text = "Para quê serve o Decreto?"
 	update_functionB("mpdec3b")
-	month.text = "Setembro, ano 3"
+	month.text = "Novembro, ano 3"
 	score.update_social(1)
 	score.update_economic(-2)
 	
@@ -516,7 +508,7 @@ func mpdec2b():
 	update_functionA("mpdec3a")
 	decisionB.text = "Para quê serve o Decreto?"
 	update_functionB("mpdec3b")
-	month.text = "Setembro, ano 3"
+	month.text = "Novembro, ano 3"
 	score.update_economic(1)
 	score.update_social(-1)
 	
@@ -527,7 +519,7 @@ func mpdec3a():
 	update_functionA("mpdec6a")
 	decisionB.text = "Prefiro fazer um Decreto."
 	update_functionB("mpdec6b")
-	month.text = "Outubro, ano 3"
+	month.text = "Novembro, ano 3"
 	
 func mpdec3b():
 	update_story("O decreto é semelhante à MP, ele possui força de uma lei e pode complementar a sua decisão. Concorda em fazer o Decreto?")
@@ -536,7 +528,7 @@ func mpdec3b():
 	update_functionA("mpdec6a")
 	decisionB.text = "Prefiro fazer uma MP."
 	update_functionB("mpdec6b")
-	month.text = "Outubro, ano 3"
+	month.text = "Novembro, ano 3"
 	
 func mpdec6a():
 	update_story("Parabéns presidente! Foram publicadas uma MP e agora temos uma lei temporária em nossa constituição que ajuda as indústrias a comprarem equipamentos.")
@@ -545,7 +537,7 @@ func mpdec6a():
 	update_functionA("quociente0")
 	decisionB.text = "Ótimo! Estou satisfeito."
 	update_functionB("quociente0")
-	month.text = "Dezembro, ano 3"
+	month.text = "Maio, ano 4"
 	score.update_political(1)
 	
 func mpdec6b():
@@ -555,7 +547,7 @@ func mpdec6b():
 	update_functionA("quociente0")
 	decisionB.text = "Ótimo! Estou satisfeito."
 	update_functionB("quociente0")
-	month.text = "Dezembro, ano 3"
+	month.text = "Maio, ano 4"
 	score.update_political(-1)
 	
 
@@ -570,7 +562,7 @@ func quociente0():
 	decisionB.text = "Candidata Ana" # Texto da segunda decisao
 	update_functionB("quociente1") # Card que sera selecionado se o jogador clicar na segunda decisao
 	# MES DO JOGO
-	month.text = "Fevereiro, ano "
+	month.text = "Junho, ano 4 "
 	# INFORMACOES ADICIONAIS
 	update_info("Esse box trará mais informações úteis sobre os tópicos sendo discutidos.")
 
@@ -582,7 +574,7 @@ func quociente1():
 	update_functionA("quociente2")
 	decisionB.text = "Não"
 	update_functionB("quociente3")
-	month.text = "Março"
+	month.text = "Junho, ano 4 "
 	
 	
 func quociente2():
@@ -592,7 +584,7 @@ func quociente2():
 	update_functionA("quociente4")
 	decisionB.text = "Não"
 	update_functionB("quociente6a")
-	month.text = "Junho"
+	month.text = "Junho, ano 4"
 	score.update_political(1)
 	score.update_social(-1)
 	
@@ -604,39 +596,39 @@ func quociente3():
 	update_functionA("quociente4")
 	decisionB.text = "Não"
 	update_functionB("quociente6a")
-	month.text = "Junho"
+	month.text = "Junho, ano 4"
 	score.update_political(-1)
 	
 	
 func quociente4():
-	update_story("Agora vamos ganhar essas eleições. Sua ajuda foi fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
+	update_story("Agora vamos ganhar essas eleições. Sua ajuda será fundamental, Presidente!  Estamos na frente nas pesquisas, mas todo cuidado é pouco. Tenho ouvido falar de mobilizações para fazer boca de urna em zonas eleitorais. O senhor deseja se posicionar a respeito?")
 	update_character("Secretário")
 	decisionA.text = "Não se posicionar"
 	update_functionA("quociente6a")
 	decisionB.text = "Se posicionar"
 	update_functionB("quociente6b")
-	month.text = "Outubro"
+	month.text = "Junho, ano 4"
 	score.update_economic(-1)
 	score.update_social(1)
 	
 	
 func quociente6a():
-	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos.")
 	update_character("Secretário")
-	decisionA.text = "Vamos proteger os direitos fundamentais"
+	decisionA.text = "Entendi"
 	update_functionA("quociente7")
-	decisionB.text = "OK"
+	decisionB.text = "Que pena"
 	update_functionB("quociente7")
 	month.text = "Dia seguinte às eleições"
 	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
 
 
 func quociente6b():
-	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos. \n\n[b](Se quiser saber o que é o quociente eleitoral, clique no ícone no canto inferior direito da tela)[/b]")
+	update_story("Acredito ter sido a postura adequada, Presidente, mas infelizmente nosso candidato perdeu por causa do quociente eleitoral, embora tenha recebido a maioria dos votos.")
 	update_character("Secretário")
-	decisionA.text = "Vamos proteger os direitos fundamentais"
+	decisionA.text = "Entendi"
 	update_functionA("quociente7")
-	decisionB.text = "OK"
+	decisionB.text = "Que pena"
 	update_functionB("quociente7")
 	month.text = "Dia seguinte às eleições"
 	score.update_social(1)
@@ -646,9 +638,9 @@ func quociente6b():
 func quociente7():
 	update_story("Não fique triste, Presidente, apesar do seu Deputado ter perdido, você fez um ótimo mandato! O Brasil está muito melhor do que quando você começou.")
 	update_character("Secretário")
-	decisionA.text = "Vamos proteger os direitos fundamentais"
+	decisionA.text = "Fico muito feliz em ter ajudado"
 	update_functionA("game_won")
-	decisionB.text = "OK"
+	decisionB.text = "Acho que poderia ter sido melhor"
 	update_functionB("game_won")
 	month.text = "Dia seguinte às eleições"
 	update_info("Quociente eleitoral é um método pelo qual se distribuem as cadeiras nas eleições pelo sistema proporcional de votos em conjunto com o quociente partidário e a distribuição das sobras.")
@@ -658,7 +650,7 @@ func quociente7():
 func game_won():
 	update_story("Parabéns! Você concluiu seu mandato com sucesso.")
 	update_character("Secretário")
-	decisionA.text = "Parabéns!"
+	decisionA.text = "Obrigado!"
 	update_functionA("goto_start_menu")
 	decisionB.text = "Vamos para a próxima!"
 	update_functionB("goto_start_menu")
