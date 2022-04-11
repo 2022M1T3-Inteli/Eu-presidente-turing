@@ -114,7 +114,7 @@ margin_right = 196.0
 margin_bottom = 1072.0
 custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "Versao 1.4
+text = "Versao 1.8.0
 Equipe Turing"
 valign = 2
 __meta__ = {
