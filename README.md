@@ -20,117 +20,99 @@
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
-<br><br>
-Meu projeto é um exemplo de como utilizar o github.
-<br><br>
+O jogo inicia com a tela inicial de um menino pensativo, refletindo se ele pode ser o
+presidente. Logo em seguida, temos uma pequena animação de um menino que se atrasará na
+escola, já que seu ônibus quebrou. O mesmo contesta o prefeito da cidade, responsável por
+aquela situação. Posteriormente temos uma outra animação que mostra o menino
+lamentando que sua casa inundou e estragou seu dever de casa, não podendo entrega-lo para
+a professora no dia seguinte. Depois disso, nosso protagonista aborda que queria ser o
+presidente do Brasil, adormecendo logo depois.
 
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
+![tela inicial](https://user-images.githubusercontent.com/36526709/162799065-f597b4b6-cad1-4110-8d36-d687ef361032.png)
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+
+Diante dessa situação, o jogador se encontra em um minimapa, simulando o cenário de
+Brasília. Ele pode interagir com o NPC do secretário e o mesmo avisa que ele está na capital do
+Brasil e que ele é o novo presidente e precisa ir até o congresso para tomar decisões que
+influenciam no rumo do país. O jogador vai até o congresso (representado por uma pequena
+casa), e assim inicia o processo de decisões do cards. Vale importante ressaltar que nas
+decisões existem fatores que são essenciais para a boa administração pública, são eles o social
+(representando pela população e opinião pública), política (representado pela opinião do
+congresso sobre o presidente em questão) e o econômico (representadas pelas reservas
+econômicas que o país tem, além dos investimentos da nação). Para que o jogador/presidente
+permaneça no cargo durante os 4 anos, ele precisa balancear esses indicadores e tentar agradar a todas essas parcelas do mundo político.
+
+![card](https://user-images.githubusercontent.com/36526709/162799925-3779157d-e279-4fbe-8cbb-0bf5df587e63.png)
+
+O jogador precisa entender como controlar todos esses processos, é de suma importância que
+ele entenda como funciona esse processo decisório. Para que o jogador agrade a parte social é
+necessário que o mesmo atenda requisitos populares, como diminuição de impostos, atender
+os serviços básicos da sociedade (como saúde e educação), além de passar segurança no seu
+processo de decisões. Para que o jogador agrade o ponto político, o jogador precisa apoiar os
+projetos dos parlamentares e não interferir nas decisões do legislativo e precisa conhecer as
+PECs e as MPs em questão e, por fim, para que o jogador consiga se manter no cargo no ponto
+econômico é preciso que não invista em projetos arriscados e não tome decisões
+que envolva furar o teto de gastos. Enfim, esse é um resumo geral do jogo. Boa sorte!
+
+
 
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
 |<br>
 |-->documentos<br>
-&emsp;|-->antigos<br>
-&emsp;|GDD.docx<br>
+&emsp;|<br>
+&emsp;|GDD - GRUPO TURING.pdf<br>
+&emsp;|Homologação Sprint 2.docx<br>
+&emsp;|Homologação Sprint 2.pdf<br>
+&emsp;|Test Cases.pdf<br>
 |-->executáveis<br>
-&emsp;|-->windows<br>
-&emsp;|-->android<br>
+&emsp;|-->Android<br>
 &emsp;|-->HTML<br>
+&emsp;|-->Windows<br>
 |-->imagens<br>
 |-->src<br>
+&emsp;|-->eu-presidente<br>
+|.gitignore<br>
 |README.md<br>
-
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
-
-<b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há no mínimo 3 pastas, uma para binários <b>Windows</b>, uma para binários <b>android</b> e uma para a <b>Web/HTML</b>
-
-<b>imagens</b>: Algumas imagens do jogo/sistema e logos prontos para serem utilizados e visualizados.
-
-<b>src</b>: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
 
-<b>Android:</b>
+Não há instalação, o jogo pode ser executado no browser através do link abaixo:
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comando se for necessário
-```
-
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+[Eu, Presidente](https://itch.io/queue/c/2399268/eu-presidente?game_id=1463938)
 
 ## 📈 Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
-
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
-
-Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
+O projeto pode ser usado em instituições de ensino como material de apoio ensinar jovens sobre a Constituição Federal e as leis do Brasil.
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Para continuar a desenvolver este projeto você precisa baixar a ferramenta Godot, disponível no link abaixo:
 
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
+[Godot](https://godotengine.org/)
 
 ## 🗃 Histórico de lançamentos
 
-A cada atualização os detalhes devem ser lançados aqui.
-
-- 0.2.1 - 25/01/2022
-  - MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-- 0.2.0 - 15/01/2022
-  - MUDANÇA: Remove `setDefaultXYZ()`
-  - ADD: Adiciona `init()`
-- 0.1.1 - 11/01/2022
-  - CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-- 0.1.0 - 10/01/2022
-  - O primeiro lançamento adequado
-  - MUDANÇA: Renomeia `foo()` para `bar()`
-- 0.0.1 - 14/02/2022
+- 1.8.0 - 11/04/2022
+  - Preenchimento do item 5.3 do GDD. Melhorias no código e remoção de bugs.
+- 1.7.0 - 08/04/2022
+  -  Preenchimento dos itens 5.1 e 6.4 do GDD. Melhorias no código e remoção de bugs.
+- 1.6.0 - 04/04/2022
+  - Inclusão de teoria da mudança no item 1.6 do GDD. Integração do mapa com os cards.
+- 1.5.0 - 22/03/2022
+  - Preenchimento do item 6.2 do GDD. Introdução da mecânica de movimento do avatar do jogador em um mapa.
+- 1.4.0 - 08/03/2022
+  - Preenchimentos dos itens 2, 3, 4 e 6.1 do GDD. Aprimoramento da mecânica dos cards.
+- 1.3.0 - 23/02/2022
+  - Inclusão do value proposition canvas no item 1.6 do GDD. 
+- 1.2.0 - 17/02/2022
+  - Preenchimento dos itens 1.6 e 1.7 do GDD. Desenvolvimentos dos cards.
+- 1.1.0 - 14/02/2022
+  - Preenchimento dos itens 1.1 a 1.5 do GDD. Desenvolvimento da versão inicial dos cards. 
+- 1.0.0 - 07/02/2022
   - Projeto iniciado
+
 
 ## 📋 Licença/License
 
@@ -140,8 +122,16 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+Tilesets e Pixels:<br>
+
+1. <https://pipoya.itch.io/pipoya-free-rpg-character-sprites-32x32>
+2. <https://pipoya.itch.io/pipoya-free-rpg-world-tileset-32x32-40x40-48x48>
+
+Músicas:<br>
+
+3. <https://assetstore.unity.com/packages/audio/music/electronic/8-bit-music-free-136967#description>
+4. <https://soundcloud.com/cron-audio/8-bit-music-free>
+
+Códigos e Tutoriais:<br>
+
+5. <https://www.youtube.com/watch?v=mAbG8Oi-SvQ&list=PL9FzW-m48fn2SlrW0KoLT4n5egNdX-W9a>
