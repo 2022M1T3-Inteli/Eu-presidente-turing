@@ -36,10 +36,10 @@ __meta__ = {
 [node name="Title" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -335.0
-margin_top = 31.0
-margin_right = 385.0
-margin_bottom = 215.0
+margin_left = -359.0
+margin_top = 47.0
+margin_right = 361.0
+margin_bottom = 231.0
 custom_colors/font_color = Color( 0.2, 0.239216, 0.160784, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Eu, Presidente?"
