@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://placeholder2.gd" type="Script" id=1]
 [ext_resource path="res://assets/intro/boy_room.png" type="Texture" id=2]
 [ext_resource path="res://assets/intro/bedroom.png" type="Texture" id=3]
 [ext_resource path="res://assets/themes/text_box.tres" type="StyleBox" id=4]
+[ext_resource path="res://assets/intro/placeholder_correct.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://minigame/MEGAMAN10 copy.ttf"
@@ -20,14 +21,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 362, 540 )
+scale = Vector2( 23.625, 34.75 )
+texture = ExtResource( 5 )
+
 [node name="bedroom" type="Sprite" parent="."]
-position = Vector2( 311, 559 )
-scale = Vector2( 0.647265, 0.746625 )
+position = Vector2( 331, 483 )
+scale = Vector2( 0.675, 0.9 )
 texture = ExtResource( 3 )
 
 [node name="boy" type="Sprite" parent="."]
-position = Vector2( 584.9, 626.533 )
-scale = Vector2( 0.191375, 0.200667 )
+position = Vector2( 607, 628 )
+scale = Vector2( 0.22, 0.22 )
 texture = ExtResource( 2 )
 flip_h = true
 
@@ -36,6 +42,7 @@ margin_left = 16.0
 margin_top = 856.0
 margin_right = 703.0
 margin_bottom = 1056.0
+mouse_filter = 2
 custom_styles/panel = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
