@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Presidente do STF.png-ad9ee6480192797bb27726f6470a85af.stex"
+path="res://.import/presidente_stf_old.png-9e163ecf0908e9168c7c6cc6cb4831e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Presidente do STF.png"
-dest_files=[ "res://.import/Presidente do STF.png-ad9ee6480192797bb27726f6470a85af.stex" ]
+source_file="res://assets/characters/presidente_stf_old.png"
+dest_files=[ "res://.import/presidente_stf_old.png-9e163ecf0908e9168c7c6cc6cb4831e6.stex" ]
 
 [params]
 

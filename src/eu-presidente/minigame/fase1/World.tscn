@@ -385,6 +385,18 @@ region = Rect2( 32, 0, 32, 32 )
 atlas = ExtResource( 6 )
 region = Rect2( 64, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 32, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=70]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 96, 32, 32 )
@@ -409,23 +421,16 @@ region = Rect2( 32, 64, 32, 32 )
 atlas = ExtResource( 6 )
 region = Rect2( 64, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=64]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=65]
-atlas = ExtResource( 6 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=66]
-atlas = ExtResource( 6 )
-region = Rect2( 64, 32, 32, 32 )
-
 [sub_resource type="SpriteFrames" id=62]
 animations = [ {
 "frames": [ SubResource( 73 ), SubResource( 74 ), SubResource( 75 ) ],
 "loop": true,
 "name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
+"loop": true,
+"name": "walk_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
@@ -436,11 +441,6 @@ animations = [ {
 "frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
 "loop": true,
 "name": "walk_right",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
-"loop": true,
-"name": "walk_left",
 "speed": 5.0
 } ]
 
@@ -736,7 +736,6 @@ position = Vector2( 46.25, 2085.25 )
 scale = Vector2( 3.73437, 3.32812 )
 frames = SubResource( 59 )
 animation = "sleeping"
-frame = 4
 playing = true
 
 [node name="Area2D" type="Area2D" parent="npcs/fox"]

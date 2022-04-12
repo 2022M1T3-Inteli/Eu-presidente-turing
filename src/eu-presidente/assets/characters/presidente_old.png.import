@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Presidente.png-8786c3ff13707218b6c702b3de1be079.stex"
+path="res://.import/presidente_old.png-54c2d833cfdb46e78fa72334d9c5e145.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Presidente.png"
-dest_files=[ "res://.import/Presidente.png-8786c3ff13707218b6c702b3de1be079.stex" ]
+source_file="res://assets/characters/presidente_old.png"
+dest_files=[ "res://.import/presidente_old.png-54c2d833cfdb46e78fa72334d9c5e145.stex" ]
 
 [params]
 

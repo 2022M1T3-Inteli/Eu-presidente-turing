@@ -87,3 +87,4 @@ func _on_Area2D_dir_path1_body_entered(body):
 
 func _on_Area2D_dir_path2_body_entered(body):
 	body.position = $border_collisions/Position2D_dir_path2.position
+
