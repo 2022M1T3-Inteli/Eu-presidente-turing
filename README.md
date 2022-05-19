@@ -54,31 +54,44 @@ PECs e as MPs em questão e, por fim, para que o jogador consiga se manter no ca
 econômico é preciso que não invista em projetos arriscados e não tome decisões
 que envolva furar o teto de gastos. Enfim, esse é um resumo geral do jogo. Boa sorte!
 
-
-
 ## 🛠 Estrutura de pastas
-
--Raiz<br>
-|<br>
-|-->documentos<br>
-&emsp;|<br>
-&emsp;|GDD - GRUPO TURING.pdf<br>
-&emsp;|Homologação Sprint 2.docx<br>
-&emsp;|Homologação Sprint 2.pdf<br>
-&emsp;|Test Cases.pdf<br>
-|-->executáveis<br>
-&emsp;|-->Android<br>
-&emsp;|-->HTML<br>
-&emsp;|-->Windows<br>
-|-->imagens<br>
-|-->src<br>
-&emsp;|-->eu-presidente<br>
-|.gitignore<br>
-|README.md<br>
+    
+- Raiz<br><br>
+| --> documentos<br>
+  &emsp;| --> antigos<br>
+  &emsp;|  GDD - GRUPO TURING.pdf<br>
+| --> executáveis<br>
+  &emsp;| --> windows<br>
+  &emsp;| --> html<br>
+| --> imagens<br>
+| --> src<br>
+    &emsp;| --> eu-presidente<br>
+| readme.md<br>
 
 ## 🛠 Instalação
 
-Não há instalação, o jogo pode ser executado no browser através do link abaixo:
+<b>Windows:</b>
+
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em https://github.com/2022M1T3/Projeto2/tree/main/execut%C3%A1veis/Windows e execute "Eu_Presidente.exe" como qualquer outro programa.
+
+```
+Observe que é necessário que o arquivo "Eu_Presidente.pck" esteja
+no mesmo diretório que "Eu_Presidente.exe" para que o jogo inicie
+corretamente.
+```
+
+<b>HTML:</b>
+
+Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T4/Projeto3/tree/main/execut%C3%A1veis/HTML](https://github.com/2022M1T3/Projeto2/tree/main/execut%C3%A1veis/HTML) e execute-o como uma página da web (através de algum navegador).
+
+```sh
+Dependendo de suas configurações de firewall, talvez seja necessário
+instaurar um web service como xampp ou wampp para que o jogo rode lo-
+calmente.
+```
+
+
+O jogo também pode ser executado no browser através do link abaixo:
 
 [Eu, Presidente](https://itch.io/queue/c/2399268/eu-presidente?game_id=1463938)
 
